@@ -1,0 +1,16 @@
+.waw__header {
+    display: flex;
+}
+
+.waw__header-content {}
+
+.waw__header-content p {
+    /* align-self: center; */
+    margin-top: 5%;
+    color: #B8B8B8;
+    font-family: var(--font-family);
+}
+
+.waw__header-button-p {}
+
+.waw__header-button-p:hover {}

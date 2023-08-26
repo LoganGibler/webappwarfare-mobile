@@ -1,0 +1,147 @@
+.waw__navigation-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 6rem;
+    background: var(--lighter-color-bg)
+}
+
+.waw__navigation-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.waw__navigation-links-logo {
+    margin-right: 2rem;
+}
+
+..waw__navigation-links-logo img {
+    /* width: 66px;
+    height: 20px; */
+}
+
+.waw__navigation-links-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.waw__navigation-sign {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.waw__navigation-links-container p,
+.waw__navigation-sign p,
+.waw__navigation-menu-container p {
+    color: white;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+    margin: 0 1rem;
+}
+
+.waw__navigation-sign button,
+.waw__navigation-menu-container button {
+    padding: 0.5rem 1rem;
+    color: black;
+    background-color: silver;
+    font-family: var(--font-family);
+    font-size: 18px;
+    line-height: 20px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+.waw__navigation-menu {
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+}
+
+/* .waw__navigation-menu ham_menu:hover {
+    cursor: pointer;
+} */
+
+.ham-menu:hover {
+    cursor: pointer;
+}
+
+.ham-menu {
+    margin-left: 1rem;
+}
+
+.waw__navigation-menu-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background-color: black;
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin: 3rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 black;
+}
+
+.waw__navigation-menu-container p {
+    margin: 1rem 0;
+}
+
+.waw__navigation-menu-container-links-sign {
+    display: none;
+}
+
+.waw__navigation-menu-links-container {}
+
+@media screen and (max-width: 1050px) {
+    .waw__navigation-links-container {
+        display: none;
+    }
+
+    .waw__navigation-menu {
+        display: flex;
+    }
+}
+
+
+@media screen and (max-width: 700px) {
+    .waw__navigation {
+        padding: 2rem 4rem;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .waw__navigation {
+        padding: 2rem;
+    }
+
+    .waw__navigation-sign {
+        display: none;
+    }
+
+    .ham-menu {
+        margin-left: 99%;
+    }
+
+    ..waw__navigation-menu-container {
+        top: 20px
+    }
+
+    .waw__navigation-menu-container-links-sign {
+        display: block;
+    }
+
+}
