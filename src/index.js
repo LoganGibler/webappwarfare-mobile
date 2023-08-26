@@ -2,5 +2,6 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import App from "./App"
 import "./index.css"
+// CHODIKAR_USEPOLLING=true npm run start
 
 ReactDOM.render(<App />, document.getElementById("root"));

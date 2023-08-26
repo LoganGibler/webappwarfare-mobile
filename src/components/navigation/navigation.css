@@ -25,6 +25,7 @@
 .waw__navigation-links-container {
     display: flex;
     flex-direction: row;
+    margin-left: 8rem;
 }
 
 .waw__navigation-sign {
@@ -48,14 +49,30 @@
 .waw__navigation-sign button,
 .waw__navigation-menu-container button {
     padding: 0.5rem 1rem;
-    color: black;
-    background-color: silver;
+    color: white;
+    background-color: #384b59;
     font-family: var(--font-family);
     font-size: 18px;
     line-height: 20px;
     border-radius: 6px;
     border: none;
     outline: none;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.waw__navigation-sign p:hover {
+    cursor: pointer;
+}
+
+.waw__signupbutton:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+.waw__navigation-menu-container-links-sign p:hover {
     cursor: pointer;
 }
 

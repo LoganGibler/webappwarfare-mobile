@@ -57,8 +57,8 @@ const Navigation = () => {
             <div className="waw__navigation-menu-links-container">
               <Menu />
               <div className="waw__navigation-menu-container-links-sign">
-                <p>Sign in</p>
-                <button>Sign up</button>
+                <p>Sign In</p>
+                <button className="waw__signupbutton">Sign up</button>
               </div>
             </div>
           </div>
