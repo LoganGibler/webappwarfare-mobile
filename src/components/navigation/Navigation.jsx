@@ -1,16 +1,20 @@
 import React, { useState, useEffect } from "react";
 import "./navigation.css";
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
+import logo from "../../pics/logoBlue.png";
 // import logo here
 
 const Menu = () => {
   return (
     <>
       <p>
-        <a href="/Home">Home</a>
+        <a href="/Home" className="waw__navigation-home">Home</a>
       </p>
       <p>
         <a href="/Profile">Profile</a>
+      </p>
+      <p>
+        <a href="/Guides">Guides</a>
       </p>
       <p>
         <a href="/CreateGuide">CreateGuide</a>
@@ -26,7 +30,7 @@ const Navigation = () => {
     <div className="waw__navigation-div">
       <div className="waw__navigation-links">
         <div className="waw__navigation-links-logo">
-          <img src={""} alt="logo" />
+          <img src={logo} alt="logo" />
         </div>
         <div className="waw__navigation-links-container">
           <Menu />

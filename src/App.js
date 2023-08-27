@@ -1,20 +1,43 @@
 // CHODIKAR_USEPOLLING=true npm run start
 // new react comp: rafce
-import React from "react";
+import ReactDOM from "react-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  Redirect,
+} from "react-router-dom";
+import React, { Fragment } from "react";
 import { UserProfile, Guides, Header, Footer } from "./containers";
 import { Navigation, Home, Profile } from "./components";
-import "./app.css"
+import "./app.css";
 
 const App = () => {
   return (
-    <div className="App">
-      <div className="gradient_bg">
-        <Navigation />
-        <Header />
+    <Router>
+      <div className="App">
+        {/* <Navigation />
+        <Routes>
+          <Route path="/Home">
+            <Header />
+          </Route>
+        </Routes>
+
+        <Footer /> */}
+
+        <Fragment>
+          <Navigation />
+          <Routes>
+            {/* <Route path="/Profile" element={<Profile />}/> */}
+          </Routes>
+          <Routes>
+            <Route path="/Profile" element={<Profile />} />
+            <Route path="/Home" element={<Header />} />
+          </Routes>
+          <Footer />
+        </Fragment>
       </div>
-    {/* <route path="/UserProfile"></route> */}
-    <Footer />
-    </div>
+    </Router>
   );
 };
 

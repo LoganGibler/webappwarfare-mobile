@@ -1,12 +1,12 @@
 import React from "react";
 import "./header.css";
-import hacker_img from "../../pics/hacker-1-11556285293dsnmjzxigd.png";
+import logo from "../../pics/pngegg (1).png";
 
 const Header = () => {
   return (
     <div className="waw__header" id="home">
       <div className="waw__header-content">
-        <h1 className="gradient_text">Let's Practice Hacking Today.</h1>
+        <h1 className="gradient_text">Let's Practice Hacking.</h1>
         <p className="waw__header_subtext">
           Any and all Guides posted are purely for the purpose of learning. All
           techniques learned here will only be used ethically. Any unethical
@@ -30,7 +30,7 @@ const Header = () => {
       </div>
 
       <div className="waw__header-image">
-        <img src={hacker_img}></img>
+        <img src={logo}></img>
       </div>
     </div>
   );
