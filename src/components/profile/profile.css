@@ -1,50 +1,165 @@
+.waw__profile {
+  /* display: flex; */
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.waw__profile-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+.waw__profile-header-div {
+  display: flex;
+  /* padding: 0rem 22rem; */
+  /* margin-left: 10rem; */
+  justify-content: center;
+  align-items: center;
+  /* margin: 1rem 1rem 1rem 1rem; */
+}
+
 .waw__profile-content h1 {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+  animation: typing 0.9s steps(40, step-end), blink-caret 0.75s step-end infinite;
+  font-family: var(--font-family);
+  /* font-weight: 600; */
+  line-height: 30px;
+  font-size: 30px;
+  margin-top: 1%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  color: linear-gradient(
+    90deg,
+    hsla(212, 35%, 58%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+}
 
-    white-space: nowrap; /* Keeps the content on a single line */
-    /* margin: 0 auto; */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-    typing 1s steps(40, end),
-    blink-caret .75s step-end infinite;
+.waw__profile-content img {
+  width: 60%;
+  height: 60%;
+  border-radius: 50%;
+  border: 1px solid #c3d1db;
+  box-shadow: 0px 0px 10px 0px #c3d1db;
+  margin: 3rem 1rem 1rem 1rem;
+  align-self: center;
+}
+
+.waw__profile-img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 1rem 1rem 1rem;
+}
+.waw__profile-p-div{
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
+  padding-bottom: 5rem;
+}
+.waw__profile-content p {
+  font-family: var(--font-family);
+  font-size: 20px;
+  line-height: 40px;
+  margin-top: 1.5%;
+  /* margin-left: 18rem; */
+  align-self: center;
+
+  /* margin-left: 15%; */
+  /* padding: 2rem 5rem 2rem 33rem; */
+  color: #c3d1db;
+}
+
+.waw__profile-content a:hover {
+  color: white;
+  cursor: pointer;
+}
+
+/* The typing effect */
+@keyframes typing {
+  from {
+    width: 0;
   }
-  
-  /* The typing effect */
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+  to {
+    width: 100%;
   }
-  
-  /* The typewriter cursor effect */
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: lightblue; }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: lightblue;
+  }
+}
+
+@media screen and (max-width: 1077px) {
+  .waw__profile-content h1 {
+    font-size: 25px;
+  }
+  .waw__profile-content p {
+    font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .waw__profile-content h1 {
+    overflow: none;
+    white-space: normal;
+    letter-spacing: none;
+    animation: none;
   }
 
-    .waw__profile {
-        
-        display: flex;
-        /* flex-direction: column; */
-        /* justify-content: center; */
-        align-items: center;
-        background: var(--color-bg);
-        padding: 2rem;
-        border-radius: 10px;
-        margin: 2rem;
-        box-shadow: 0 0 10px black;
-        color: white;
-        font-family: var(--font-family);
-        /* font-weight: 400; */
-        /* font-size: 20px; */
-        /* line-height: 30px; */
-        text-align: center;
-        width: 100%;
-    }
+  .waw__profile-p-div {
+    /* display: flex;
+    flex-direction: column; */
+    padding-bottom: 1rem;
+  }
 
-    .waw__profile-content h1{
-        font-size: 40px;
-        line-height: 50px;
-        /* text-align: center; */
-        margin: 1rem;
-        font-size: 25px;
-    }
+  .waw__profile-content img{
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 805px) {
+  .waw__profile-content h1 {
+    font-size: 19px;
+    overflow: auto;
+  }
+  .waw__profile-content p {
+    font-size: 15px;
+  }
+  .waw__profile-content img{
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .waw__profile {
+    display: flex;
+  }
+
+  .waw__profile-content h1 {
+    text-align: center;
+  }
+  .waw__profile-content p {
+    line-height: 25px;         
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 480px){
+  .waw__profile-content img{
+    width: 250px;
+  }
+}
