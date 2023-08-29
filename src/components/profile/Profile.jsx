@@ -75,7 +75,7 @@ const Profile = () => {
                       if (guide_id === guide._id) {
                         return (
                           <div className="waw__profile-image-div">
-                            <img src={image}></img>
+                            <img src={image} alt="img"></img>
                           </div>
                         );
                       }
@@ -84,7 +84,7 @@ const Profile = () => {
                     <div className="waw__profile-image-div">
                       <img
                         src="https://www.ecpi.edu/sites/default/files/whitehat.png"
-                        className=""
+                        alt="img"
                       ></img>
                     </div>
                   )}
@@ -94,7 +94,7 @@ const Profile = () => {
                     <div>
                       <p>{guide.difficulty}</p>
                       <p>{guide.date}</p>
-                      <p>{guide.author}</p>
+                      <p className="waw__profile-guide-info-date">{guide.author}</p>
                     </div>
                   </div>
                 </div>

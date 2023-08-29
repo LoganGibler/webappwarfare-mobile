@@ -1,0 +1,38 @@
+.waw__guides {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+.waw__guides-mainguide-div{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 3rem 3rem;
+}
+
+.waw__guide {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem 2rem;
+  margin: 1rem;
+  border: 1px solid transparent;
+  background-color: white;
+  border-radius: 10px;
+}
+
+
+.waw__guides-image-div{
+
+}
+
+.waw__guides-image-div img{
+  width: 135px;
+  height: 135px;
+}
+
+.waw__guides-description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 12rem;
+}

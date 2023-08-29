@@ -16,15 +16,6 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        {/* <Navigation />
-        <Routes>
-          <Route path="/Home">
-            <Header />
-          </Route>
-        </Routes>
-
-        <Footer /> */}
-
         <Fragment>
           <Navigation />
           <Routes>
@@ -33,6 +24,7 @@ const App = () => {
           <Routes>
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Home" element={<Header />} />
+            <Route path="/Guides" element={<Guides />} />
           </Routes>
           <Footer />
         </Fragment>

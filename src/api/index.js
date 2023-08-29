@@ -41,3 +41,12 @@ export async function getPublishedUnapprovedGuides() {
       throw error;
     }
   }
+
+  export async function getAllPublishedGuides() {
+    try {
+      const { data } = await axios.get(`${BASE}/allPublishedGuides`);
+      return data;
+    } catch (error) {
+      throw error;
+    }
+  }
