@@ -67,13 +67,18 @@ const Guides = () => {
                       <img src="https://www.ecpi.edu/sites/default/files/whitehat.png" />
                     </div>
                   )}
-                  <div>
-                    <h1>{guide.vmtitle}</h1>
+                  <div className="waw__guides-details-div">
+                    <h3>{guide.vmtitle}</h3>
                     <div>
-                      <p className="waw__guides-description">{guide.description}</p>
-                      <p>{guide.difficulty}</p>
-                      <p>{guide.hostedby}</p>
-                      <p>{guide.author}</p>
+                      <p>
+                        Rating: <a>{guide.difficulty}</a>
+                      </p>
+                      <p>
+                        Host: <a>{guide.hostedby}</a>
+                      </p>
+                      {/* <p className="waw__guides-description">
+                        {guide.description}
+                      </p> */}
                     </div>
                   </div>
                 </div>

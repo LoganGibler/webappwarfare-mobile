@@ -15,14 +15,14 @@ const Header = () => {
           granted permission to attack these Vulnerable boxes.
         </p>
         <p className="waw__header_subtext">
-          For new cybersecurity geeks out there, learn how to setup your own
+          For those just starting out, learn how to setup your own
           home lab here:
         </p>
         <button className="waw__header-button-p-homelab">
           Create a Home Lab &nbsp; →
         </button>
         <p className="waw__header_subtext">
-          For experienced pentesters, jump to guides here:
+          For those ready to follow some guides, click below:
         </p>
         <button className="waw__header-button-p-viewguides">
           View Guides &nbsp; →

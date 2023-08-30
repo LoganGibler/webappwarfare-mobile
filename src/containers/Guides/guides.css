@@ -4,30 +4,47 @@
   align-content: center;
   align-items: center;
 }
-.waw__guides-mainguide-div{
-    display: flex;
-    flex-wrap: wrap;
-    padding: 3rem 3rem;
+.waw__guides-mainguide-div {
+  display: flex;
+  flex-direction: row;
+  /* background-color: lightgrey; */
+  flex-wrap: wrap;
+  padding: 3rem 1rem 1rem 1rem; 
+  /* width: 73%; */
+  align-items: center;
+  align-content: center;
+  justify-content: center;
 }
 
 .waw__guide {
-  display: flex;
+  font-family: var(--font-family);
   flex-direction: column;
-  padding: 0.5rem 2rem;
-  margin: 1rem;
+  padding: 0.5rem 0.9rem;
+  margin: 0.5rem;
   border: 1px solid transparent;
-  background-color: white;
+  /* background-color: rgba(8,60,62,1); */
+  width: 170px;
+  background-color: #263143;
   border-radius: 10px;
+  transition: all .25s ease-in-out;
+  /* box-shadow: 0px 0px 8px 2px #60efff; */
+}
+
+.waw__guide:hover{
+  transform: scale(104%);
+  cursor: pointer;
 }
 
 
-.waw__guides-image-div{
-
+.waw__guides-image-div {
+  display: flex;
+  justify-content: center;
 }
 
-.waw__guides-image-div img{
-  width: 135px;
-  height: 135px;
+.waw__guides-image-div img {
+  width: 90px;
+  height: 90px;
+  border: 1px solid #60efff;
 }
 
 .waw__guides-description {
@@ -35,4 +52,46 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 12rem;
+}
+
+.waw__guides-details-div h3{
+  text-align: center;
+  line-height: 25px;
+  color: #60efff;
+  font-weight: 300;
+  letter-spacing: .1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 9rem;
+}
+
+.waw__guides-details-div p{
+  color: #c3d1db;
+  text-align: center;
+}
+
+.waw__guides-details-div a{
+  color: #60efff;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+
+@media screen and (max-width: 430px) {
+  .waw__guides-mainguide-div {
+    padding: 3rem 0rem 1rem 0rem; 
+  }
+  .waw__guide {
+    width: 150px;
+  }
+  .waw__guides-details-div h3{
+    font-size: 18px;
+  }
+  .waw__guides-details-div p{
+    font-size: 14px;
+  }
+  .waw__guides-details-div a{
+    font-size: 14px;
+  }
 }

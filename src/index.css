@@ -7,9 +7,14 @@
     --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
     /*  background: linear-gradient(90deg, rgba(3, 0, 6, 1) 0%, rgba(56, 25, 54, 1) 0%, rgba(9, 107, 120, 0.83) 100%); */
 
-    --color-bg: linear-gradient(80deg, rgba(23,87,91,1) 0%, rgba(8,60,62,1) 0%, rgba(1,15,15,1) 100%, rgba(0,0,0,1) 100%);
+    /* --color-bg: linear-gradient(80deg, rgba(23,87,91,1) 0%, rgba(8,60,62,1) 0%, rgba(1,15,15,1) 100%, rgba(0,0,0,1) 100%); */
+    --color-bg: #1a2332;
 }
 
+/* background-color: #1e1e1e; */
+/* background-color: #1a2332 */
+/* background-color: #263143; */
+/* color: #a4b1cd; */
 
 /* text gradient light blue */
 
