@@ -75,7 +75,11 @@ const Profile = () => {
                       if (guide_id === guide._id) {
                         return (
                           <div className="waw__profile-image-div">
-                            <img src={image} alt="img"></img>
+                            <img
+                              src={image}
+                              alt="img"
+                              className="waw__profile-guide-img"
+                            ></img>
                           </div>
                         );
                       }
@@ -84,17 +88,22 @@ const Profile = () => {
                     <div className="waw__profile-image-div">
                       <img
                         src="https://www.ecpi.edu/sites/default/files/whitehat.png"
+                        className="waw__profile-guide-img"
                         alt="img"
                       ></img>
                     </div>
                   )}
                   <div className="waw__profile-guide-info">
                     <h4>{guide.vmtitle}</h4>
-                    <p className="waw__profile-guide-description">{guide.description}</p>
+                    <p className="waw__profile-guide-description">
+                      {guide.description}
+                    </p>
                     <div>
                       <p>{guide.difficulty}</p>
                       <p>{guide.date}</p>
-                      <p className="waw__profile-guide-info-date">{guide.author}</p>
+                      <p className="waw__profile-guide-info-date">
+                        {guide.author}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -124,13 +133,13 @@ const Profile = () => {
               </p>
             </div>
 
-            <div className="waw__profile-img-div">
-              <img src={logo}></img>
+            <div className="waw__profile-img-div-logo">
+              <img src={logo} className="waw__profile_logo"></img>
             </div>
           </div>
         )}
       </div>
-      <div>{guides.length ? guides.map((guide) => {}) : null}</div>
+      {/* <div>{guides.length ? guides.map((guide) => {}) : null}</div> */}
     </div>
   );
 };

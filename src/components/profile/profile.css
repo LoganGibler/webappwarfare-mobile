@@ -9,9 +9,10 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  margin: 1rem 4rem 0rem 4rem;
   align-items: center;
   /* width: 100%; */
-  padding: 3rem 3rem 3rem 3rem;
+  padding: 2rem 2rem 3rem 3rem;
 }
 
 .waw__profile-header-div {
@@ -35,13 +36,11 @@
   margin-top: 1%;
   padding-top: 1rem;
   padding-bottom: 3rem;
-  color: linear-gradient(
-    90deg,
-    hsla(212, 35%, 58%, 1) 0%,
-    hsla(186, 100%, 69%, 1) 100%
-  );
+  color: linear-gradient(90deg,
+      hsla(212, 35%, 58%, 1) 0%,
+      hsla(186, 100%, 69%, 1) 100%);
+  text-align: center;
 }
-
 
 .waw__profile-img-div {
   display: flex;
@@ -49,12 +48,14 @@
   align-items: center;
   margin: 1rem 1rem 1rem 1rem;
 }
+
 .waw__profile-p-div {
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
   padding-bottom: 5rem;
 }
+
 .waw__profile-content p {
   font-family: var(--font-family);
   font-size: 20px;
@@ -62,7 +63,7 @@
   margin-top: 1.5%;
   /* margin-left: 18rem; */
   align-self: center;
-
+  text-align: center;
   /* margin-left: 15%; */
   /* padding: 2rem 5rem 2rem 33rem; */
   color: #c3d1db;
@@ -84,26 +85,25 @@
   border-right: 4px solid transparent; */
   /* background: linear-gradient(0deg, hsla(180, 92%, 5%, 1) 0%, hsla(180, 9%, 25%, 1) 0%, hsla(182, 65%, 11%, 1) 100%); */
   /* background-color: #004747; */
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
   /* box-shadow: 0px 0px 10px 0px black; */
 }
 
-.waw__profile-guide-div:hover{
+.waw__profile-guide-div:hover {
   /* background-color: #c3d1db; */
   cursor: pointer;
   transform: scale(103%);
 }
 
-  /* border: 1px solid #c3d1db; */
+/* border: 1px solid #c3d1db; */
 
-
-.waw__profile-guide-div:hover img{
+.waw__profile-guide-div:hover img {
   /* background-color: #c3d1db; */
   box-shadow: 0px 0px 10px 0px white;
   /* border: 1px solid #c3d1db; */
 }
 
-.waw__profile-guide-div:hover p{
+.waw__profile-guide-div:hover p {
   color: white;
 }
 
@@ -123,7 +123,7 @@
   /* border-left: 4px solid grey; */
 }
 
-.waw__profile-guide-info h4{
+.waw__profile-guide-info h4 {
   font-family: var(--font-family);
   font-weight: 600;
   color: white;
@@ -131,19 +131,18 @@
   padding-left: 1.3rem;
   padding-top: 0.5rem;
 }
-.waw__profile-guide-info div{
+
+.waw__profile-guide-info div {
   display: flex;
- 
 }
 
-.waw__profile-guide-info div p{
+.waw__profile-guide-info div p {
   font-family: var(--font-family);
   font-weight: 400;
   color: #c3d1db;
   padding: 0rem 1.3rem;
   line-height: 0.5rem;
 }
-
 
 .waw__profile-guide-description {
   /* margin-top: 1%; */
@@ -157,33 +156,30 @@
   padding: 0rem 0.5rem 0.5rem 0.5rem;
 }
 
-/* The typing effect */
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+.waw__profile-img-div-logo {
+  display: flex;
+  justify-content: center;
 }
 
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: lightblue;
-  }
+.waw__profile_logo {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 800px;
 }
 
 @media screen and (max-width: 1077px) {
   .waw__profile-content h1 {
     font-size: 25px;
   }
+
   .waw__profile-content p {
     font-size: 18px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .waw__profile_logo {
+    width: 600px;
   }
 }
 
@@ -194,29 +190,31 @@
     letter-spacing: none;
     animation: none;
   }
-  .waw__profile-guide-description{
+
+  .waw__profile-guide-description {
     display: none;
   }
-  .waw__profile-guide-div{
-   
-  }
 
-  .waw__profile-content img {
+  .waw__profile-guide-div {}
+
+  .waw__profile-guide-img {
     width: 80px;
     height: 80px;
   }
+
   .waw__profile-guide-info h4 {
     padding: 1rem 0rem 0rem 1rem;
     font-size: 20px;
     line-height: 25px;
   }
-  .waw__profile-guide-info div{
+
+  .waw__profile-guide-info div {
     margin-top: 1rem;
   }
-  .waw__profile-guide-info div p{
+
+  .waw__profile-guide-info div p {
     padding: 0rem 0rem 0rem 1rem;
   }
-
 }
 
 @media screen and (max-width: 805px) {
@@ -224,80 +222,133 @@
     font-size: 19px;
     overflow: auto;
   }
+
   .waw__profile-content p {
     font-size: 15px;
   }
 
   .waw__profile-content {
-
     padding: 2rem;
   }
 
-  .waw__profile-guide-description{
+  .waw__profile-guide-description {
     font-size: 12px;
   }
- 
 }
 
 @media screen and (max-width: 655px) {
+  .waw__profile-img-div-logo {
+    margin: none;
+    padding: none;
+  }
+
+  .waw__profile_logo {
+    width: 250px;
+    margin: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
   .waw__profile {
     display: flex;
+  }
+
+  .waw__profile-content {
+    padding: 2rem 2rem;
+    padding-bottom: 0rem;
   }
 
   .waw__profile-content h1 {
     text-align: center;
   }
+
   .waw__profile-content p {
     line-height: 25px;
     padding: 1rem;
   }
 }
 
+@media screen and (max-width: 500px) {
+  .waw__profile-content {
+    padding: 0rem 0rem 0rem 0rem;
+  }
+}
+
 @media screen and (max-width: 480px) {
-  .waw__profile-content img {
+  .waw__profile-guide-img {
     width: 70px;
     height: 70px;
   }
-  .waw__profile-guides-header h1{
+
+  .waw__profile-p-div {
+    padding-bottom: 2rem;
+  }
+
+  .waw__profile-content h1 {
+    font-size: 19px;
+    overflow: auto;
+    padding-bottom: 1rem;
+  }
+
+  .waw__profile-guides-header h1 {
     padding: 1rem 2rem 1rem;
   }
+
   .waw__profile-guide-info h4 {
     font-size: 18px;
     line-height: 20px;
   }
+
   .waw__profile-guide-info div p {
     padding: 0rem 0rem 0rem 0.4rem;
   }
-  .waw__profile-guide-info-date{
+
+  .waw__profile-guide-info-date {
     display: hide;
   }
 }
 
-
 @media screen and (max-width: 385px) {
+  .waw__profile_logo {
+    width: 150px;
+    margin: none;
+  }
+
+  .waw__profile-p-div {
+    padding-bottom: 1.5rem;
+  }
+
   .waw__profile-content h1 {
     font-size: 15px;
+    padding-bottom: 0rem;
   }
+
   .waw__profile-content p {
     font-size: 12px;
   }
+
   .waw__profile-content {
-    padding: 2rem 2rem;
+    padding: 0rem 0rem;
   }
+
   .waw__profile-guide-info h4 {
     font-size: 15px;
     line-height: 20px;
   }
+
   .waw__profile-guide-info div p {
     padding: 0rem 0rem 0rem 0.5rem;
   }
-  .waw__profile-guide-info div{
+
+  .waw__profile-guide-info div {
     margin-top: 0.5rem;
   }
-  .waw__profile-guide-description{
+
+  .waw__profile-guide-description {
     font-size: 10px;
   }
-  .waw__profile-guide-div{
+
+  .waw__profile-guide-div {
     padding: 0.5rem 1rem 0.3rem 1rem;
   }
 }
