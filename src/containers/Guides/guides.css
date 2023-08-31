@@ -9,7 +9,7 @@
   flex-direction: row;
   /* background-color: lightgrey; */
   flex-wrap: wrap;
-  padding: 3rem 1rem 1rem 1rem; 
+  padding: 3rem 1rem 1rem 1rem;
   /* width: 73%; */
   align-items: center;
   align-content: center;
@@ -26,15 +26,14 @@
   width: 170px;
   background-color: #263143;
   border-radius: 10px;
-  transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
   /* box-shadow: 0px 0px 8px 2px #60efff; */
 }
 
-.waw__guide:hover{
+.waw__guide:hover {
   transform: scale(104%);
   cursor: pointer;
 }
-
 
 .waw__guides-image-div {
   display: flex;
@@ -54,44 +53,43 @@
   max-width: 12rem;
 }
 
-.waw__guides-details-div h3{
+.waw__guides-details-div h3 {
   text-align: center;
   line-height: 25px;
   color: #60efff;
   font-weight: 300;
-  letter-spacing: .1rem;
+  letter-spacing: 0.1rem;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   max-width: 9rem;
 }
 
-.waw__guides-details-div p{
+.waw__guides-details-div p {
   color: #c3d1db;
   text-align: center;
 }
 
-.waw__guides-details-div a{
+.waw__guides-details-div a {
   color: #60efff;
   text-decoration: none;
   font-weight: 400;
 }
 
-
 @media screen and (max-width: 430px) {
   .waw__guides-mainguide-div {
-    padding: 3rem 0rem 1rem 0rem; 
+    padding: 3rem 0rem 1rem 0rem;
   }
   .waw__guide {
     width: 150px;
   }
-  .waw__guides-details-div h3{
+  .waw__guides-details-div h3 {
     font-size: 17px;
   }
-  .waw__guides-details-div p{
+  .waw__guides-details-div p {
     font-size: 14px;
   }
-  .waw__guides-details-div a{
+  .waw__guides-details-div a {
     font-size: 14px;
   }
 }

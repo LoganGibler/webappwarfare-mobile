@@ -3,12 +3,13 @@ import "./guides.css";
 import { useNavigate } from "react-router-dom";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
-import { getAllPublishedGuides } from "../../api/index.js";
+import { getAllPublishedGuides, getGuidesBySearch } from "../../api/index.js";
 let imageListReg = ref(storage, "/guidepfp/");
 
 const Guides = () => {
   const [guides, setGuides] = useState([]);
   const [imageDirectoryList, setImageDirectoryList] = useState([]);
+  const [search, setSearch] = useState("");
   const navigate = useNavigate();
   let list = [];
 
@@ -31,15 +32,42 @@ const Guides = () => {
 
   return (
     <div className="waw__guides">
-      {console.log("guides", guides)}
+      {/* {console.log("guides", guides)} */}
       <div>
-        <input placeholder="Search Guides"></input>
-        <button>Search</button>
+        <input
+          placeholder="Search Guides"
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
+        ></input>
+        <button
+          onClick={async () => {
+            let sortedGuides = [];
+            if (search.length > 0) {
+              let foundGuides = await getGuidesBySearch(search);
+              console.log("foundGuides", foundGuides.allFoundGuides);
+              // setGuides(foundGuides.allFoundGuides);
+              if (foundGuides.allFoundGuides !== undefined) {
+                  guides.map((guide) => {
+                  console.log("guide", guide);
+                  if (guide.published === true) {
+                    sortedGuides.push(guide);
+                  }
+                });
+              }
+              setGuides(sortedGuides)
+              console.log("This is sortedGuides:",sortedGuides)
+            }
+
+          }}
+        >
+          Search
+        </button>
       </div>
       <div className="waw__guides-mainguide-div">
         {guides.length
           ? guides.map((guide) => {
-              console.log("guide", guide);
+              // console.log("guide", guide);
               return (
                 <div
                   className="waw__guide"
