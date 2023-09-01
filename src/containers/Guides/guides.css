@@ -5,13 +5,50 @@
   align-items: center;
 }
 
+.waw__guides-searchbar-div {
+  display: flex;
+  /* color: white; */
+  padding: 0.5rem;
+  /* width: 25vh; */
+}
+
+.waw__guides-searchbar-div button,
+.waw__guides-searchbar-div input {
+  background-color: #263143;
+  border: 1px solid #b8b8b8;
+  color: #60efff;
+  font-family: var(--font-family);
+}
+
+.waw__guides-searchbar-div input {
+  padding: 0.2rem;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  /* padding: 0.3rem 2rem 0rem 0rem; */
+  text-indent: 10px;
+  width: 40vh;
+  font-size: 17px;
+}
+
+.waw__guides-searchbar-div button {
+  padding: 0.3rem;
+  width: 11vh;
+  font-size: 18px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.waw__guides-searchbar-div button:hover {
+  cursor: pointer;
+}
+
 .waw__guides-mainguide-div {
   display: flex;
   flex-direction: row;
   /* background-color: lightgrey; */
   max-width: 1000px;
   flex-wrap: wrap;
-  padding: 3rem 1rem 1rem 1rem;
+  padding: 0rem 1rem 1rem 1rem;
   /* width: 73%; */
   align-items: center;
   align-content: center;
@@ -47,7 +84,8 @@
 .waw__guides-image-div img {
   width: 120px;
   height: 120px;
-  border: 1px solid #60efff;
+  border: 1px solid black;
+  border-radius: 20px;
 }
 
 /* .waw__guides-description {
@@ -82,7 +120,6 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-
 }
 
 .waw__guides-details-div a {
@@ -91,9 +128,27 @@
   font-weight: 400;
 }
 
-@media screen and (max-width: 430px) {
+@media screen and (max-width: 950px) {
+  .waw__guides-searchbar-div input {
+    width: 30vh;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .waw__guides-searchbar-div input {
+    width: 25vh;
+    padding: 0.2rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .waw__guides-searchbar-div input {
+    width: 20vh;
+    padding: 0.2rem;
+  }
+
   .waw__guides-mainguide-div {
-    padding: 3rem 0rem 1rem 0rem;
+    padding: 0.5rem 0rem 1rem 0rem;
   }
 
   .waw__guide {
@@ -110,5 +165,47 @@
 
   .waw__guides-details-div a {
     font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  .waw__guides-details-div h3 {
+    font-size: 15px;
+  }
+
+  .waw__guides-searchbar-div input {
+    width: 20vh;
+    padding: 0.2rem;
+    font-size: 15px;
+  }
+
+  .waw__guides-searchbar-div button {
+    /* width: 20vh; */
+    padding: 0.2rem;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .waw__guides-image-div img {
+    width: 90px;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 20px;
+  }
+
+  .waw__guide {
+    width: 130px;
+    padding: 0.5rem 0rem 0rem 0rem;
+    margin: 0.4rem;
+  }
+
+  .waw__guides-details-div div a,
+  .waw__guides-details-div div p {
+    font-size: 10px;
+  }
+
+  .waw__guides-details-div h3 {
+    font-size: 13px;
   }
 }

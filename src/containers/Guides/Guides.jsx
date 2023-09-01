@@ -33,7 +33,7 @@ const Guides = () => {
   return (
     <div className="waw__guides">
       {/* {console.log("guides", guides)} */}
-      <div>
+      <div className="waw__guides-searchbar-div">
         <input
           placeholder="Search Guides"
           onChange={(e) => {
@@ -47,18 +47,15 @@ const Guides = () => {
               let foundGuides = await getGuidesBySearch(search);
               console.log("foundGuides", foundGuides.allFoundGuides);
               // setGuides(foundGuides.allFoundGuides);
-              if (foundGuides.allFoundGuides !== undefined) {
-                  guides.map((guide) => {
-                  console.log("guide", guide);
-                  if (guide.published === true) {
-                    sortedGuides.push(guide);
-                  }
+              if (foundGuides.allFoundGuides !== null) {
+                foundGuides.allFoundGuides.map((guide) => {
+                  console.log("guidesfrom search:", guide);
+                  console.log("Found Guide:", guide[0].vmtitle);
+                  sortedGuides.push(guide[0]);
                 });
               }
-              setGuides(sortedGuides)
-              console.log("This is sortedGuides:",sortedGuides)
+              setGuides(sortedGuides);
             }
-
           }}
         >
           Search

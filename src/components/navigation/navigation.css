@@ -171,6 +171,10 @@
 }
 
 @media screen and (max-width: 550px) {
+  .waw__navigation-links-logo img {
+    width: 60px;
+  }
+
   .waw__navigation {
     padding: 2rem;
   }

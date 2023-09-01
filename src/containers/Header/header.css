@@ -9,7 +9,8 @@
   align-items: flex-start;
   flex-direction: column;
   /* margin-right: 1rem; */
-  padding: 1rem 1rem 3rem 5rem;
+  margin-left: 2.5rem;
+  padding: 1rem 1rem 3rem 6rem;
 }
 
 .waw__header-content h1 {
@@ -19,6 +20,8 @@
   font-size: 57px;
   margin-top: 7%;
   padding-bottom: 1rem;
+  align-self: center;
+  text-align: center;
 }
 
 .waw__header-content p {
@@ -27,7 +30,7 @@
   font-family: var(--font-family);
   font-size: 20px;
   line-height: 27px;
-  margin-top: 1.5%;
+  margin-top: 3rem;
   padding: 1rem;
 }
 
@@ -93,6 +96,7 @@
   /* width: 80%;
     height: 75%; */
   width: 100%;
+  margin-bottom: 10rem;
   /* min-height: 80%; */
 }
 
@@ -103,11 +107,14 @@
 
   .waw__header-content h1 {
     font-size: 40;
-    padding: 0 3rem;
+    text-align: center;
+    align-self: center;
   }
 
   .waw__header-content {
-    margin: 0rem 2rem 2rem 2rem;
+    /* margin: 0rem 2rem 2rem 0rem; */
+    margin-left: 0rem;
+    padding: 1rem 5rem;
   }
 
   .waw__header-image img {
@@ -121,7 +128,9 @@
   }
 
   .waw__header-content {
-    padding: 0 0 0 0;
+    padding: 0rem 3rem;
+    /* text-align: center;
+    justify-content: center; */
   }
 
   .waw__header-content button {
@@ -139,8 +148,7 @@
     padding: 0rem;
   }
 
-  .waw__header-content p {
-  }
+  .waw__header-content p {}
 
   .waw__header p {
     font-size: 15px;
