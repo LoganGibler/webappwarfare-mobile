@@ -12,6 +12,19 @@
   /* width: 25vh; */
 }
 
+.waw__guides-searchbar-div div {
+  border-bottom: 1px white solid;
+  width: 17vh;
+  /* padding-right: 0.3rem; */
+  text-align: center;
+  margin-right: 2rem;
+}
+
+.waw__guides-searchbar-div h4 {
+  font-family: var(--font-family);
+  font-size: 30px;
+}
+
 .waw__guides-searchbar-div button,
 .waw__guides-searchbar-div input {
   background-color: #263143;
@@ -25,7 +38,7 @@
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
   /* padding: 0.3rem 2rem 0rem 0rem; */
-  text-indent: 10px;
+  text-indent: 15px;
   width: 40vh;
   font-size: 17px;
 }

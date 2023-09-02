@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { getAllPublishedGuides, getGuidesBySearch } from "../../api/index.js";
+import { FeaturedGuides } from "../../components";
 let imageListReg = ref(storage, "/guidepfp/");
 
 const Guides = () => {
@@ -32,8 +33,12 @@ const Guides = () => {
 
   return (
     <div className="waw__guides">
+    <FeaturedGuides />
       {/* {console.log("guides", guides)} */}
       <div className="waw__guides-searchbar-div">
+        <div>
+          <h4 className="gradient_text">All Guides</h4>
+        </div>
         <input
           placeholder="Search Guides"
           onChange={(e) => {

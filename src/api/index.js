@@ -59,3 +59,12 @@ export async function getGuidesBySearch(search) {
     throw error;
   }
 }
+
+export async function getFeaturedGuides() {
+  try {
+    const { data } = await axios.get(`${BASE}/getFeaturedGuides`);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
