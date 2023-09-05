@@ -33,7 +33,7 @@ const Guides = () => {
 
   return (
     <div className="waw__guides">
-    <FeaturedGuides />
+      <FeaturedGuides />
       {/* {console.log("guides", guides)} */}
       <div className="waw__guides-searchbar-div">
         <div>

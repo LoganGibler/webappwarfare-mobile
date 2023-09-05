@@ -11,9 +11,11 @@
   padding: 0.5rem;
   /* width: 25vh; */
 }
-
+.waw__guides-searchbar-div{
+  border-bottom: 3px solid #263143;
+}
 .waw__guides-searchbar-div div {
-  border-bottom: 1px white solid;
+  /* border-bottom: 1px white solid; */
   width: 17vh;
   /* padding-right: 0.3rem; */
   text-align: center;
@@ -147,10 +149,44 @@
   }
 }
 
+@media screen and  (max-width: 730px){
+  .waw__guides-searchbar-div div h4 {
+    font-family: var(--font-family);
+    font-size: 20px;
+    text-align: center;
+    padding: 0.5rem 2rem;
+    width: 11rem;
+  }
+
+  .waw__guides-searchbar-div div{
+    margin-right: 0rem;
+  }
+}
+
+
+
+
+
+
 @media screen and (max-width: 760px) {
   .waw__guides-searchbar-div input {
     width: 25vh;
     padding: 0.2rem;
+  }
+}
+
+@media screen and  (max-width: 650px){
+  .waw__guides-searchbar-div div{
+    display: none;
+  }
+
+  .waw__guides-searchbar-div div{
+    margin-right: 0rem;
+    
+  }
+  .waw__guides-searchbar-div{
+    margin-right: 0rem;
+    
   }
 }
 

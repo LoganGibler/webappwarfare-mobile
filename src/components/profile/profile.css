@@ -21,6 +21,7 @@
   /* margin-left: 10rem; */
   justify-content: center;
   align-items: center;
+  
   /* margin: 1rem 1rem 1rem 1rem; */
   /* margin-left: 16rem; */
 }
@@ -349,6 +350,9 @@
     font-size: 19px;
     overflow: auto;
     padding-bottom: 1rem;
+  }
+
+  .waw__profile-guides-header{
   }
 
   .waw__profile-guides-header h1 {

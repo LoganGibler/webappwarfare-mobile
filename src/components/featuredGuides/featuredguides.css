@@ -4,8 +4,13 @@
     position: relative;
     margin-bottom: 5rem;
     justify-content: center;
+    font-family: var(--font-family);
 }
-
+.waw__FG-imageslider-container div h2{
+    padding: 0.5rem;
+    margin-left: 1rem;
+    border-bottom: 2px solid #263143;
+}
 .waw__FG-imageslider {
     display: flex;
     width: 58.5rem;
@@ -14,8 +19,8 @@
 }
 
 .waw__FG-imageslider-card-overlay img {
-    height: 185px;
-    width: 185px;
+    height: 175px;
+    width: 175px;
     border-radius: 50px;
 }
 
@@ -27,7 +32,7 @@
     background-color: #263143;
     border-radius: 20px;
     display: flex;
-    padding: 1.5rem 2rem 1.5rem;
+    padding: 1.5rem 3rem 1.5rem;
     align-items: center;
 }
 
@@ -46,13 +51,175 @@
     padding: 1rem;
 }
 
+.waw__FG-details-div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    padding: 1rem;
+    color: #c3d1db;
+    font-family: var(--font-family);
+}
+.waw__FG-details-host-diff-div{
+    margin-bottom: 0.3rem;
+    font-weight: 700;
+}
+.waw__FG-details-diff{
+    margin-left: 1rem;
+}
+.waw__FG-details-div h4{
+    /* color: ; */
+    font-size: 28px;
+    font-weight: 1000;
+}
+.waw__FG-details-div div{
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.waw__FG-details-date{
+    margin-left: 2rem;
+}
+
 .waw__FG-arrow-right,
 .waw__FG-arrow-left {
     position: absolute;
     font-size: 45px;
     color: white;
-    top: 50%;
-    transform: translate(0, -50%);
+    /* top: 50%; */
     display: flex;
     align-items: center;
+    height: 45px;
+    width: 45px;
+    cursor: pointer;
 }
+
+.waw__FG-arrow-left{
+    left: 2rem;
+    top: 55%;
+}
+
+.waw__FG-arrow-right{
+    top: 55%;
+    right: 2rem;
+    rotate: 180deg;
+    /* transform: translate(0, -50%); */
+}
+
+@media screen and (max-width: 1000px){
+    .waw__FG-imageslider-container{
+
+    }
+    .waw__FG-imageslider{
+        justify-content: center;
+        width: 63vh;
+    }
+
+    .waw__FG-details-description{
+        font-size: 15px;
+    }
+    .waw__FG-imageslider-card-active{
+        width: 70vh;
+    }
+    .waw__FG-imageslider-card-overlay{
+        /* width: 70vh; */
+    }
+    .waw__FG-arrow-left{
+        left: 2rem;
+        top: 55%;
+    }
+    
+    .waw__FG-arrow-right{
+        top: 55%;
+        right: 2rem;
+        rotate: 180deg;
+        /* transform: translate(0, -50%); */
+    }
+    .waw__FG-imageslider-card-overlay img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (max-width: 840px){
+    .waw__FG-imageslider-container{
+        margin-bottom: 1rem;
+    }
+    .waw__FG-imageslider{
+        justify-content: center;
+        width: 60vh;
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .waw__FG-details-description{
+        display: none;
+    }
+    .waw__FG-imageslider-card-active{
+        width: 70vh;
+        padding: 0.5rem;
+    }
+    .waw__FG-imageslider-card-overlay{
+        /* width: 70vh; */
+        padding: 0.5rem 3rem 0.5rem;
+        height: 10rem;
+    }
+    .waw__FG-arrow-left{
+        left: 1.5rem;
+        top: 46.5%;
+    }
+    
+    .waw__FG-arrow-right{
+        top: 46.5%;
+        right: 1.5rem;
+        rotate: 180deg;
+        /* transform: translate(0, -50%); */
+    }
+    .waw__FG-imageslider-card-overlay img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50px;
+    }
+}
+
+@media screen and (max-width: 720px){
+    .waw__FG-imageslider-container{
+        margin-bottom: 1rem;
+    }
+    .waw__FG-imageslider{
+        justify-content: center;
+        width: 50vh;
+        height: 10rem;
+        margin-bottom: 2rem;
+    }
+
+    .waw__FG-details-description{
+        display: none;
+    }
+    .waw__FG-imageslider-card-active{
+        width: 70vh;
+        padding: 0.5rem;
+    }
+    .waw__FG-imageslider-card-overlay{
+        /* width: 70vh; */
+        padding: 0.5rem 3rem 0.5rem;
+        height: 10rem;
+    }
+    .waw__FG-arrow-left{
+        left: 1.5rem;
+        top: 46.5%;
+    }
+    
+    .waw__FG-arrow-right{
+        top: 46.5%;
+        right: 1.5rem;
+        rotate: 180deg;
+        /* transform: translate(0, -50%); */
+    }
+    .waw__FG-imageslider-card-overlay img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50px;
+    }
+}
+
