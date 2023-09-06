@@ -19,20 +19,20 @@ const FeaturedGuides = () => {
   // }, []);
 
   const slideRight = () => {
-    if (current === 3){
-      setCurrent(0)
-    } else{
-      setCurrent(current + 1)
+    if (current === 3) {
+      setCurrent(0);
+    } else {
+      setCurrent(current + 1);
     }
-  }
+  };
 
   const slideLeft = () => {
-    if (current === 0){
-      setCurrent(3)
-    } else{
-      setCurrent(current - 1)
+    if (current === 0) {
+      setCurrent(3);
+    } else {
+      setCurrent(current - 1);
     }
-  }
+  };
 
   return (
     <div className="waw__FG-imageslider-container">
@@ -55,6 +55,9 @@ const FeaturedGuides = () => {
               }
             >
               <div className="waw__FG-imageslider-card-overlay">
+              <div className="waw__FG-arrow-left" onClick={slideLeft}>
+                  &lsaquo;
+                </div>
                 <div>
                   <img src={feature.image}></img>
                 </div>
@@ -68,14 +71,15 @@ const FeaturedGuides = () => {
                   <p className="waw__FG-details-description">
                     {feature.description}
                   </p>
-                  <div>
-                    <p>Author: {feature.author}</p>
+                  <div className="waw__FG-date-author">
+                    <p className="waw__FG-details-author">Author: {feature.author}</p>
                     <p className="waw__FG-details-date">{feature.date}</p>
                   </div>
                 </div>
+                <div className="waw__FG-arrow-right" onClick={slideRight}>
+                  &lsaquo;
+                </div>
               </div>
-              <div className="waw__FG-arrow-left" onClick={slideLeft}>&lsaquo;</div>
-              <div className="waw__FG-arrow-right" onClick={slideRight}>&lsaquo;</div>
             </div>
           );
         })}

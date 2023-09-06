@@ -11,7 +11,7 @@ export const features = [
     date: "09/02/2023",
     difficulty: "Easy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
+      "Lorem ut labore et dolore magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
     image: pic1,
     title: "MrRobot",
     author: "LoganGibler",
@@ -23,7 +23,7 @@ export const features = [
     date: "09/02/2023",
     difficulty: "Easy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
+      "Lorem ipsum magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
     image: pic2,
     title: "CoolVM1",
     author: "LoganGibler",
@@ -35,7 +35,7 @@ export const features = [
     date: "09/02/2023",
     difficulty: "Easy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
+      "Lorem ipsum magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
     image: pic3,
     title: "CoolVM2",
     author: "LoganGibler",
@@ -47,7 +47,7 @@ export const features = [
     date: "09/02/2023",
     difficulty: "Easy",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
+      "Lorem ipsum Nibh nisl condimentum id venenatis a condimentum vitae. Faucibus scelerisque eleifend donec pretium vulputate sapien. Nulla facilisi morbi tempus iaculis. Cursus eget nunc scelerisque viverra.",
     image: pic4,
     title: "CoolVM3",
     author: "LoganGibler",

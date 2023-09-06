@@ -145,7 +145,7 @@
 
 @media screen and (max-width: 950px) {
   .waw__guides-searchbar-div input {
-    width: 30vh;
+    width: 25vh;
   }
 }
 
@@ -175,7 +175,7 @@
   }
 }
 
-@media screen and  (max-width: 650px){
+@media screen and  (max-width: 725px){
   .waw__guides-searchbar-div div{
     display: none;
   }
