@@ -68,3 +68,14 @@ export async function getFeaturedGuides() {
     throw error;
   }
 }
+
+export async function getGuideByID(_id) {
+  try {
+    const { data } = await axios.post(`${BASE}/getBlogById`, {
+      _id: _id,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}

@@ -1,0 +1,37 @@
+.waw__guide-main-container {
+    margin: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid white;
+    align-items: center;
+    font-family: var(--font-family);
+    color: #c3d1db;
+}
+
+.waw__guide-div {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid orange;
+    padding: 1rem 4rem;
+    max-width: 1100px;
+}
+
+.waw__guide-header-div {
+    display: flex;
+    border: 1px solid yellow;
+    padding: 1rem;
+}
+
+.waw__guidepage_details-div {
+    padding-left: 1rem;
+    /* margin-left: 1rem; */
+}
+
+.waw__guide-header-div h3 {
+    text-align: center;
+}
+
+.waw__guidepage-img {
+    height: 200px;
+    width: 200px;
+}

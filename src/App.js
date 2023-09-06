@@ -9,7 +9,7 @@ import {
 } from "react-router-dom";
 import React, { Fragment } from "react";
 import { UserProfile, Guides, Header, Footer } from "./containers";
-import { Navigation, Home, Profile } from "./components";
+import { Navigation, Home, Profile, Guide } from "./components";
 import "./app.css";
 
 const App = () => {
@@ -25,6 +25,7 @@ const App = () => {
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Home" element={<Header />} />
             <Route path="/Guides" element={<Guides />} />
+            <Route path="/Guide/:id" element={<Guide />}></Route>
           </Routes>
           <Footer />
         </Fragment>
