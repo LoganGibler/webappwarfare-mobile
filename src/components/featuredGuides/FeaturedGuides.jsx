@@ -9,14 +9,6 @@ const FeaturedGuides = () => {
   let [current, setCurrent] = useState(0);
   let [guides, setGuides] = useState([]);
 
-  // async function fetchFeaturedGuides() {
-  //   const featuredGuides = await getFeaturedGuides();
-  //   setGuides(featuredGuides.featuredGuides);
-  // }
-
-  // useEffect(() => {
-  //   // fetchFeaturedGuides();
-  // }, []);
 
   const slideRight = () => {
     if (current === 3) {

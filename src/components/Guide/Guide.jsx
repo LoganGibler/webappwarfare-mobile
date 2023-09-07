@@ -1,23 +1,44 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getGuideByID } from "../../api";
-// import { ref, uploadBytes, listAll, getDownloadURL } from "firebase/storage";
-// import { storage } from "../firebase.js";
+import { useNavigate } from "react-router-dom";
+import { storage } from "../../firebase.js";
+import { ref, listAll, getDownloadURL } from "firebase/storage";
 import "./guide.css";
 
 const Guide = () => {
   const { id } = useParams();
   const [guide, setGuide] = useState([]);
   const steps = guide.steps;
-  console.log("This is steps: ", steps);
+  const [guidePFP, setGuidePFP] = useState([]);
+  const [stepImages, setStepImages] = useState([]);
+  let list = [];
+  let stepCounter = 0;
+  let counter = 0;
+  const stepImagesRef = ref(storage, "/images/" + id);
+  const guidePFPRef = ref(storage, "/guidepfp/");
+
   async function fetchGuide() {
     const fetchedGuide = await getGuideByID(id);
-    console.log(fetchedGuide.blog);
     setGuide(fetchedGuide.blog);
   }
 
   useEffect(() => {
     fetchGuide();
+    listAll(stepImagesRef).then((res) => {
+      res.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setStepImages((prev) => [...prev, url]);
+        });
+      });
+    });
+    listAll(guidePFPRef).then((res) => {
+      res.items.forEach((item) => {
+        getDownloadURL(item).then((url) => {
+          setGuidePFP((prev) => [...prev, url]);
+        });
+      });
+    });
   }, []);
 
   return (
@@ -25,16 +46,43 @@ const Guide = () => {
       <div className="waw__guide-div">
         <div className="waw__guide-header-div">
           <div>
-            <img src={"https://www.ecpi.edu/sites/default/files/whitehat.png"} alt="guide-pfp" className="waw__guidepage-img"></img>
+            {guidePFP &&
+              guidePFP.map((image) => {
+                let guideImageId = image.split("_");
+                guideImageId = guideImageId[1];
+                list.push(guideImageId);
+                if (guide._id === guideImageId) {
+                  return (
+                    <div className="waw__guidepage-pfp-div">
+                      <img src={image}></img>
+                    </div>
+                  );
+                }
+              })}
+            {!list.includes(guide._id) && (
+              <div className="waw__guidepage-pfp-div">
+                <img src="https://www.ecpi.edu/sites/default/files/whitehat.png" />
+              </div>
+            )}
           </div>
           <div className="waw__guidepage_details-div">
             <h3 className="gradient_text">{guide.vmtitle}</h3>
-            <p>{guide.difficulty}</p>
-            <p>{guide.hostedby}</p>
+            <p>
+              Created On: <a>{guide.date}</a>
+            </p>
+            <p>
+              Posted By: <a>{guide.author}</a>
+            </p>
+            <p>
+              Hosted By: <a>{guide.hostedby}</a>
+            </p>
+            <p>
+              Rating: <a>{guide.difficulty}</a>
+            </p>
           </div>
         </div>
 
-        <div>
+        <div className="waw__guidepage-description-div">
           <p>{guide.description}</p>
         </div>
 
@@ -42,9 +90,39 @@ const Guide = () => {
         {steps ? (
           steps.map((step) => {
             console.log(step);
+            if (step.step === null) {
+              stepCounter += 1;
+              var stepCounterIndex = stepCounter - 1;
+              return;
+            }
+            counter = counter + 1;
+            var index = counter - 1;
+            var stepCounterIndex = stepCounter;
+            stepCounter += 1;
             return (
-              <div>
-                <p>{step.step}</p>
+              <div className="waw__guidepage-step-div">
+                <div className="waw__stepcounter-div">
+                  <p>Step {counter}:</p>
+                </div>
+                <div className="waw__step-div">
+                  <p>{step.step}</p>
+                </div>
+                {stepImages.length &&
+                  stepImages.map((image) => {
+                    let imageIndex = image.split("?");
+                    imageIndex = imageIndex[imageIndex.length - 1];
+                    {
+                      /* console.log(image);
+                    console.log("this is image index", imageIndex); */
+                    }
+                    if (imageIndex === stepCounterIndex.toString()) {
+                      return (
+                        <div>
+                          <img src=""></img>
+                        </div>
+                      );
+                    }
+                  })}
               </div>
             );
           })

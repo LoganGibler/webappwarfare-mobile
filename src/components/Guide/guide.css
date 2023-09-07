@@ -12,26 +12,66 @@
     display: flex;
     flex-direction: column;
     border: 2px solid orange;
-    padding: 1rem 4rem;
+    padding: 3rem 4rem;
     max-width: 1100px;
 }
 
 .waw__guide-header-div {
     display: flex;
     border: 1px solid yellow;
-    padding: 1rem;
+    padding: 2rem;
 }
 
 .waw__guidepage_details-div {
-    padding-left: 1rem;
+    padding-left: 2rem;
     /* margin-left: 1rem; */
 }
 
 .waw__guide-header-div h3 {
     text-align: center;
+    font-size: 45px;
 }
 
-.waw__guidepage-img {
+.waw__guidepage_details-div p {
+    padding: 0.42rem;
+}
+
+.waw__guidepage_details-div a {
+    padding-left: 1rem;
+    font-weight: 700;
+}
+
+.waw__guidepage-pfp-div img {
     height: 200px;
     width: 200px;
+    border-radius: 30px;
+    border: 1px solid #c3d1db;
+}
+
+.waw__guidepage-description-div {
+    padding: 1rem 2rem;
+    border: 1px solid white;
+}
+
+.waw__guidepage-step-div {
+    padding: 2rem 2rem;
+    border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+}
+
+.waw__stepcounter-div {
+    position: absolute;
+    border: 1px solid white;
+}
+
+.waw__step-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem 6rem;
+}
+
+.waw__step-div p {
+    text-align: center;
+    word-wrap: break-word;
 }
