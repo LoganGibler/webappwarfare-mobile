@@ -9,7 +9,6 @@ const FeaturedGuides = () => {
   let [current, setCurrent] = useState(0);
   let [guides, setGuides] = useState([]);
 
-
   const slideRight = () => {
     if (current === 3) {
       setCurrent(0);
@@ -28,8 +27,7 @@ const FeaturedGuides = () => {
 
   return (
     <div className="waw__FG-imageslider-container">
-      {console.log(guides)}
-      <div>
+      <div className="waw__FG-imageslider-header-div">
         <h2 className="gradient_text">Recommended Guides</h2>
       </div>
       <div className="waw__FG-imageslider">
@@ -47,7 +45,7 @@ const FeaturedGuides = () => {
               }
             >
               <div className="waw__FG-imageslider-card-overlay">
-              <div className="waw__FG-arrow-left" onClick={slideLeft}>
+                <div className="waw__FG-arrow-left" onClick={slideLeft}>
                   &lsaquo;
                 </div>
                 <div>
@@ -64,7 +62,9 @@ const FeaturedGuides = () => {
                     {feature.description}
                   </p>
                   <div className="waw__FG-date-author">
-                    <p className="waw__FG-details-author">Author: {feature.author}</p>
+                    <p className="waw__FG-details-author">
+                      Author: {feature.author}
+                    </p>
                     <p className="waw__FG-details-date">{feature.date}</p>
                   </div>
                 </div>

@@ -9,25 +9,7 @@ if (env === "main") {
   var BASE = "http://localhost:8000";
 }
 
-export async function getPublishedUnapprovedGuides() {
-  try {
-    const { data } = await axios.get(`${BASE}/getPublishedUnapprovedGuides`);
-    return data;
-  } catch (error) {
-    throw error;
-  }
-}
-
-export async function getGuidesByUsername(author) {
-  try {
-    const { data } = await axios.post(`${BASE}/getGuidesByAuthor`, {
-      author: author,
-    });
-    return data;
-  } catch (error) {
-    throw error;
-  }
-}
+// USER API CALLS
 
 export async function getUserByID(_id) {
   try {
@@ -40,6 +22,32 @@ export async function getUserByID(_id) {
   }
 }
 
+export async function createUser(username, password) {
+  try {
+    const user = await axios.post(`${BASE}/Register`, {
+      username: username,
+      password: password,
+    });
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function loginUser(username, password) {
+  try {
+    const user = await axios.post(`${BASE}/Login`, {
+      username: username,
+      password: password,
+    });
+    console.log(user);
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
+
+// GUIDE API CALLS
 export async function getAllPublishedGuides() {
   try {
     const { data } = await axios.get(`${BASE}/allPublishedGuides`);
@@ -73,6 +81,26 @@ export async function getGuideByID(_id) {
   try {
     const { data } = await axios.post(`${BASE}/getBlogById`, {
       _id: _id,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function getPublishedUnapprovedGuides() {
+  try {
+    const { data } = await axios.get(`${BASE}/getPublishedUnapprovedGuides`);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function getGuidesByUsername(author) {
+  try {
+    const { data } = await axios.post(`${BASE}/getGuidesByAuthor`, {
+      author: author,
     });
     return data;
   } catch (error) {

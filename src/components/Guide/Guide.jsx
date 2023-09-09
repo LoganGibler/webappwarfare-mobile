@@ -80,6 +80,13 @@ const Guide = () => {
               Rating: <a>{guide.difficulty}</a>
             </p>
           </div>
+          <div className="waw__guidepage_details-mobile-div">
+          <h3 className="gradient_text">{guide.vmtitle}</h3>
+            <p>{guide.date}</p>
+            <p>{guide.author}</p>
+            <p>{guide.hostedby}</p>
+            <p>{guide.difficulty}</p>
+          </div>
         </div>
 
         <div className="waw__guidepage-description-div">
@@ -105,7 +112,7 @@ const Guide = () => {
                   <p>Step {counter}:</p>
                 </div>
                 <div className="waw__step-div">
-                  <p>{step.step}</p>
+                  <p><a>Step {counter}: </a>{step.step}</p>
                 </div>
                 {stepImages.length &&
                   stepImages.map((image) => {
@@ -117,8 +124,8 @@ const Guide = () => {
                     }
                     if (imageIndex === stepCounterIndex.toString()) {
                       return (
-                        <div>
-                          <img src=""></img>
+                        <div className="waw__step-image-div">
+                          <img src="" alt="step-image"></img>
                         </div>
                       );
                     }

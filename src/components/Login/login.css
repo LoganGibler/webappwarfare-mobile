@@ -1,0 +1,89 @@
+.waw__login {
+    padding: 0rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
+    display: flex;
+    font-family: var(--font-family);
+    color: black;
+    justify-content: center;
+}
+
+.waw__login-form {
+    margin-top: 6rem;
+    margin-bottom: 8rem;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 2.5rem 2.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.waw__login-form label {
+    font-weight: 700;
+    padding: 1rem 0rem 0.3rem 0rem;
+    outline: none;
+    border: none;
+    font-size: 20px;
+}
+
+.waw__login-form input {
+    margin-top: 0.2rem;
+    width: 22rem;
+    border: 2px solid #1a2332;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 0.4rem;
+    text-indent: 5px;
+}
+
+.waw__login-form button {
+    font-weight: 800;
+    padding: 0.5rem 0rem 0.5rem 0rem;
+    font-size: 18px;
+    margin-top: 2rem;
+    border: none;
+    outline: none;
+    background-color: var(--color-bg);
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid #1a2332;
+    font-family: var(--font-family);
+}
+
+.waw__login-form button:hover {
+    cursor: pointer;
+    color: white;
+}
+
+.waw__login-form div {
+    display: flex;
+    justify-content: center;
+}
+
+.waw__login-form div h4 {
+    padding: 0.6rem 1rem 2rem;
+    font-size: 24px;
+}
+
+.waw__login-form div img {
+    height: 55px;
+    width: 70px;
+}
+
+.waw__login-form u {
+    padding: 2rem 2rem;
+    text-align: center;
+    font-weight: 700;
+}
+
+.waw__login-form u:hover {
+    cursor: pointer;
+    color: blue;
+}
+
+/* background-color: #1e1e1e; */
+/* background-color: #1a2332 */
+/* background-color: #263143; */
+/* color: #a4b1cd; */
+/* color: #c3d1db; */

@@ -1,77 +1,513 @@
 .waw__guide-main-container {
-    margin: 0rem 0rem 0rem 0rem;
     display: flex;
-    flex-direction: column;
-    border: 1px solid white;
-    align-items: center;
     font-family: var(--font-family);
     color: #c3d1db;
+    justify-content: center;
 }
 
 .waw__guide-div {
+    justify-content: center;
+    border-radius: 15px;
     display: flex;
     flex-direction: column;
-    border: 2px solid orange;
-    padding: 3rem 4rem;
-    max-width: 1100px;
+    /* border: 2px solid orange; */
+    padding: 2rem 1rem;
+    margin: 2rem 1rem;
+    max-width: 900px;
+    height: none;
+    overflow: auto;
+
+    -webkit-box-shadow: 0px 0px 9px 7px rgba(145, 148, 148, 1);
+    -moz-box-shadow: 0px 0px 9px 7px rgba(145, 148, 148, 1);
+    box-shadow: 0px 0px 9px 7px rgba(145, 148, 148, 1);
+
+    /* align-items: flex-start; */
+
+    /* -webkit-box-shadow: inset 0px 0px 9px 7px rgba(145, 148, 148, 1);
+    -moz-box-shadow: inset 0px 0px 9px 7px rgba(145, 148, 148, 1);
+    box-shadow: inset 0px 0px 9px 7px rgba(145, 148, 148, 1); */
+}
+
+.waw__guidepage_details-mobile-div {
+    display: none;
 }
 
 .waw__guide-header-div {
     display: flex;
-    border: 1px solid yellow;
-    padding: 2rem;
+    /* border: 1px solid blue; */
+    padding: 1rem 2rem 1rem;
+    overflow: auto;
+    border-radius: 20px;
+    /* width: 50vh; */
+    /* width: 100%; */
 }
 
 .waw__guidepage_details-div {
-    padding-left: 2rem;
+    padding-left: 1.8rem;
     /* margin-left: 1rem; */
 }
 
 .waw__guide-header-div h3 {
     text-align: center;
-    font-size: 45px;
+    font-size: 37px;
 }
 
 .waw__guidepage_details-div p {
-    padding: 0.42rem;
+    padding: 0.3rem;
+    font-size: 15px;
 }
 
 .waw__guidepage_details-div a {
-    padding-left: 1rem;
+    padding-left: 0.5rem;
     font-weight: 700;
 }
 
 .waw__guidepage-pfp-div img {
-    height: 200px;
-    width: 200px;
+    height: 180px;
+    width: 180px;
     border-radius: 30px;
     border: 1px solid #c3d1db;
 }
 
 .waw__guidepage-description-div {
-    padding: 1rem 2rem;
-    border: 1px solid white;
+    display: flex;
+    padding: 1rem 1rem;
+    font-size: 18px;
+    /* border: 1px solid white; */
+    /* text-align: center; */
+}
+
+.waw__guidepage-description-div p {
+    word-wrap: break-word;
+    padding: 1rem;
+    overflow: wrap;
 }
 
 .waw__guidepage-step-div {
     padding: 2rem 2rem;
-    border: 1px solid yellow;
+    /* border: 1px solid yellow; */
     display: flex;
     flex-direction: column;
+    text-align: center;
+    font-size: 16px;
+    /* align-items: flex-start; */
 }
 
 .waw__stepcounter-div {
+    padding: 2rem 0rem;
     position: absolute;
-    border: 1px solid white;
 }
 
 .waw__step-div {
     display: flex;
     flex-direction: column;
-    padding: 0rem 6rem;
+    padding: 2rem 6rem;
+    text-align: center;
 }
 
 .waw__step-div p {
     text-align: center;
     word-wrap: break-word;
+    font-size: 18px;
+}
+
+.waw__step-image-div {}
+
+.waw__step-image-div img {
+    max-height: 600px;
+    max-width: 600px;
+}
+
+.waw__step-div a {
+    display: none;
+}
+
+@media screen and (max-width: 905px) {
+    .waw__guide-div {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+    }
+
+    .waw__guide-header-div {
+        display: flex;
+        /* border: 1px solid blue; */
+        padding: 0rem 2rem 1rem;
+        overflow: auto;
+        /* width: 100%; */
+    }
+
+    .waw__guidepage_details-div {
+        padding-left: 2rem;
+        /* margin-left: 1rem; */
+    }
+
+    .waw__guide-header-div h3 {
+        text-align: center;
+        font-size: 34px;
+    }
+
+    .waw__guidepage_details-div p {
+        padding: 0.2rem;
+    }
+
+    .waw__guidepage_details-div a {
+        padding-left: 1rem;
+        font-weight: 700;
+    }
+
+    .waw__guidepage-pfp-div img {
+        height: 165px;
+        width: 165px;
+        border-radius: 30px;
+        border: 1px solid #c3d1db;
+    }
+
+    .waw__guidepage-description-div {
+        display: flex;
+        padding: 1rem 1rem;
+        /* border: 1px solid white; */
+        /* text-align: center; */
+    }
+
+    .waw__guidepage-description-div p {
+        word-wrap: break-word;
+        padding: 1rem;
+        overflow: wrap;
+        font-size: 16px;
+    }
+
+    .waw__guidepage-step-div {
+        padding: 2rem 1rem;
+        /* border: 1px solid yellow; */
+        display: flex;
+        text-align: center;
+        /* align-items: flex-start; */
+    }
+
+    .waw__stepcounter-div {
+        padding: 2rem 1rem;
+        /* position: absolute; */
+    }
+
+    .waw__step-div {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 2rem 0rem 5rem;
+        text-align: center;
+    }
+
+    .waw__step-div p {
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .waw__step-image-div {}
+
+    .waw__step-image-div img {
+        max-height: 600px;
+        max-width: 600px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .waw__guide-header-div {
+        display: flex;
+        /* border: 1px solid blue; */
+        padding: 2rem 2rem 2rem;
+        overflow: auto;
+        /* align-items: center; */
+        justify-content: center;
+        /* width: 100%; */
+    }
+
+    .waw__guidepage_details-div {
+        padding-left: 2rem;
+        /* margin-left: 1rem; */
+    }
+
+    .waw__guide-header-div h3 {
+        text-align: center;
+        font-size: 30px;
+    }
+
+    .waw__guidepage_details-div p {
+        padding: 0.1rem;
+    }
+
+    .waw__guidepage_details-div a {
+        padding-left: 0.3rem;
+        font-weight: 700;
+    }
+
+    .waw__guidepage-pfp-div img {
+        height: 140px;
+        width: 140px;
+        border-radius: 30px;
+        border: 1px solid #c3d1db;
+    }
+
+    .waw__guidepage-description-div {
+        display: flex;
+        padding: 1rem 1rem;
+        font-size: 16px;
+        /* border: 1px solid white; */
+        text-align: center;
+    }
+
+    .waw__guidepage-description-div p {
+        word-wrap: break-word;
+        padding: 1rem;
+        overflow: wrap;
+    }
+
+    .waw__guidepage-step-div {
+        padding: 2rem 1rem;
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* align-items: flex-start; */
+    }
+
+    .waw__stepcounter-div {
+        /* padding: 2rem 0rem; */
+        /* position: absolute; */
+        display: none;
+    }
+
+    .waw__step-div a {
+        display: flex;
+        padding: 0rem 1rem 2rem 0rem;
+        font-weight: 700;
+    }
+
+    .waw__step-div {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 1rem 0rem 1rem;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .waw__step-div p {
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .waw__step-image-div {}
+
+    .waw__step-image-div img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .waw__guide-div {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+
+        padding: 1rem 0.3rem;
+        margin: 0rem 0.3rem;
+    }
+
+    .waw__guide-header-div {
+        display: flex;
+        /* border: 1px solid blue; */
+        padding: 1rem 1rem 1rem;
+        overflow: auto;
+        /* align-items: center; */
+        justify-content: center;
+        /* width: 100%; */
+    }
+
+    .waw__guidepage_details-div {
+        padding-left: 1rem;
+        /* margin-left: 1rem; */
+    }
+
+    .waw__guide-header-div h3 {
+        text-align: center;
+        font-size: 29px;
+    }
+
+    .waw__guidepage_details-div p {
+        padding: 0.1rem;
+        font-size: 13px;
+    }
+
+    .waw__guidepage_details-div a {
+        padding-left: 0.3rem;
+        font-weight: 700;
+        font-size: 15px;
+    }
+
+    .waw__guidepage-pfp-div img {
+        height: 140px;
+        width: 140px;
+        border-radius: 30px;
+        border: 1px solid #c3d1db;
+    }
+
+    .waw__guidepage-description-div {
+        display: flex;
+        padding: 1rem 1rem;
+        font-size: 16px;
+        /* border: 1px solid white; */
+        text-align: center;
+    }
+
+    .waw__guidepage-description-div p {
+        word-wrap: break-word;
+        padding: 1rem;
+        overflow: wrap;
+    }
+
+    .waw__guidepage-step-div {
+        padding: 2rem 1rem;
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* align-items: flex-start; */
+    }
+
+    .waw__stepcounter-div {
+        /* padding: 2rem 0rem; */
+        /* position: absolute; */
+        display: none;
+    }
+
+    .waw__step-div a {
+        display: flex;
+        padding: 0rem 1rem 0.5rem 0rem;
+        font-weight: 700;
+    }
+
+    .waw__step-div {
+        display: flex;
+        flex-direction: column;
+        padding: 2rem 0.3rem 0rem 0.3rem;
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .waw__step-div p {
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .waw__step-image-div {}
+
+    .waw__step-image-div img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .waw__guide-header-div {
+        display: flex;
+        /* border: 1px solid blue; */
+        padding: 1rem 1rem 1rem;
+        overflow: auto;
+        /* align-items: center; */
+        justify-content: center;
+        /* width: 100%; */
+    }
+
+    .waw__guidepage_details-div {
+        padding-left: 1rem;
+        /* margin-left: 1rem; */
+        display: none;
+    }
+
+    .waw__guide-header-div h3 {
+        text-align: center;
+        font-size: 25px;
+    }
+
+    .waw__guidepage_details-div p {
+        padding: 0.1rem;
+        font-size: 13px;
+        display: none;
+    }
+
+    .waw__guidepage_details-div a {
+        padding-left: 0.2rem;
+        font-weight: 700;
+        font-size: 13px;
+    }
+
+    .waw__guidepage-pfp-div img {
+        height: 120px;
+        width: 120px;
+        border-radius: 30px;
+        border: 1px solid #c3d1db;
+    }
+
+    .waw__guidepage-description-div {
+        display: flex;
+        padding: 1rem 0.3rem;
+        font-size: 13px;
+        /* border: 1px solid white; */
+        text-align: center;
+    }
+
+    .waw__guidepage-description-div p {
+        word-wrap: break-word;
+        padding: 1rem 0.5rem;
+        overflow: wrap;
+        font-size: 14px;
+    }
+
+    .waw__guidepage-step-div {
+        padding: 2rem 1rem;
+        /* border: 1px solid yellow; */
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        /* align-items: flex-start; */
+    }
+
+    .waw__stepcounter-div {
+        /* padding: 2rem 0rem; */
+        /* position: absolute; */
+        display: none;
+    }
+
+    .waw__step-div a {
+        display: flex;
+        padding: 0rem 1rem 2rem 0rem;
+        font-weight: 700;
+    }
+
+    .waw__step-div {
+        display: flex;
+        flex-direction: column;
+        /* padding: 2rem 1rem 0rem 1rem; */
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .waw__step-div p {
+        text-align: center;
+        word-wrap: break-word;
+    }
+
+    .waw__step-image-div {}
+
+    .waw__step-image-div img {
+        max-height: 300px;
+        max-width: 300px;
+    }
+
+    .waw__guidepage_details-mobile-div {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        padding-left: 1rem;
+    }
 }

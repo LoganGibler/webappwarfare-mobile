@@ -150,7 +150,7 @@
 
 @media screen and (max-width: 1050px) {
   .waw__navigation-links-container {
-    display: none;
+    /* display: none; */
   }
 
   .waw__navigation-menu {
@@ -159,6 +159,12 @@
 
   .waw__navigation-links-logo img {
     min-width: 20%;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .waw__navigation-links-container {
+    display: none;
   }
 }
 

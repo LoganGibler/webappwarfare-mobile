@@ -12,7 +12,7 @@
   margin: 1rem 4rem 0rem 4rem;
   align-items: center;
   /* width: 100%; */
-  padding: 2rem 2rem 3rem 3rem;
+  padding: 2rem 2rem 3rem;
 }
 
 .waw__profile-header-div {
@@ -21,7 +21,7 @@
   /* margin-left: 10rem; */
   justify-content: center;
   align-items: center;
-  
+
   /* margin: 1rem 1rem 1rem 1rem; */
   /* margin-left: 16rem; */
 }
@@ -346,14 +346,18 @@
     padding-bottom: 2rem;
   }
 
+  .waw__profile-content {
+    padding: 0rem 1rem 0rem;
+  }
+
   .waw__profile-content h1 {
     font-size: 19px;
     overflow: auto;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
+    padding: 2rem 1rem 0rem;
   }
 
-  .waw__profile-guides-header{
-  }
+  .waw__profile-guides-header {}
 
   .waw__profile-guides-header h1 {
     padding: 1rem 2rem 1rem;
