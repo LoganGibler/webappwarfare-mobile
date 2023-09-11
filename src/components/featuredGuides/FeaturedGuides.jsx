@@ -51,7 +51,6 @@ const FeaturedGuides = () => {
                 <div>
                   <img src={feature.image}></img>
                 </div>
-                {console.log(index)}
                 <div className="waw__FG-details-div">
                   <h4 className="gradient_text">{feature.title}</h4>
                   <div className="waw__FG-details-host-diff-div">

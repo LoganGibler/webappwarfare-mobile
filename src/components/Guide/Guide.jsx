@@ -20,7 +20,7 @@ const Guide = () => {
 
   async function fetchGuide() {
     const fetchedGuide = await getGuideByID(id);
-    setGuide(fetchedGuide.blog);
+    setGuide(fetchedGuide.blog[0]);
   }
 
   useEffect(() => {
@@ -43,6 +43,7 @@ const Guide = () => {
 
   return (
     <div className="waw__guide-main-container">
+      {console.log("this is guide", guide)}
       <div className="waw__guide-div">
         <div className="waw__guide-header-div">
           <div>
@@ -81,7 +82,7 @@ const Guide = () => {
             </p>
           </div>
           <div className="waw__guidepage_details-mobile-div">
-          <h3 className="gradient_text">{guide.vmtitle}</h3>
+            <h3 className="gradient_text">{guide.vmtitle}</h3>
             <p>{guide.date}</p>
             <p>{guide.author}</p>
             <p>{guide.hostedby}</p>
@@ -96,7 +97,7 @@ const Guide = () => {
         {/* loop over steps here */}
         {steps ? (
           steps.map((step) => {
-            console.log(step);
+            // console.log(step);
             if (step.step === null) {
               stepCounter += 1;
               var stepCounterIndex = stepCounter - 1;
@@ -112,7 +113,10 @@ const Guide = () => {
                   <p>Step {counter}:</p>
                 </div>
                 <div className="waw__step-div">
-                  <p><a>Step {counter}: </a>{step.step}</p>
+                  <p>
+                    <a>Step {counter}: </a>
+                    {step.step}
+                  </p>
                 </div>
                 {stepImages.length &&
                   stepImages.map((image) => {
