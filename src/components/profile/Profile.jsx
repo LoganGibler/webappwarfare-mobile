@@ -57,7 +57,7 @@ const Profile = () => {
         {guides.length ? (
           <div className="waw__profile-guides-header">
             <h1 className="gradient_text waw__profile-guides-header-title">
-              Hey {activeUser}. Here are your created Guides.
+              Created Guides
             </h1>
             <div className="waw__profile-outside-container">
               {guides.map((guide) => {

@@ -8,8 +8,15 @@ import {
   Redirect,
 } from "react-router-dom";
 import React, { Fragment } from "react";
-import { UserProfile, Guides, Header, Footer } from "./containers";
-import { Navigation, Home, Profile, Guide, Login, Register } from "./components";
+import { UserProfile, Guides, Header, Footer, Editguide } from "./containers";
+import {
+  Navigation,
+  Home,
+  Profile,
+  Guide,
+  Login,
+  Register,
+} from "./components";
 import "./app.css";
 
 const App = () => {
@@ -28,6 +35,7 @@ const App = () => {
             <Route path="/Guide/:id" element={<Guide />}></Route>
             <Route path="/Register" element={<Register />}></Route>
             <Route path="/Login" element={<Login />}></Route>
+            <Route path="/editguide/:id" element={<Editguide />}></Route>
           </Routes>
           <Footer />
         </Fragment>
