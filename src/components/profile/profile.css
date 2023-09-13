@@ -37,9 +37,11 @@
   margin-top: 1%;
   padding-top: 1rem;
   padding-bottom: 3rem;
-  color: linear-gradient(90deg,
-      hsla(212, 35%, 58%, 1) 0%,
-      hsla(186, 100%, 69%, 1) 100%);
+  color: linear-gradient(
+    90deg,
+    hsla(212, 35%, 58%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
   text-align: center;
 }
 
@@ -297,7 +299,6 @@
 }
 
 @media screen and (max-width: 550px) {
-
   .waw__profile-content h1 {
     padding: 0.5rem 2rem 3rem;
   }
@@ -357,7 +358,8 @@
     padding: 2rem 1rem 0rem;
   }
 
-  .waw__profile-guides-header {}
+  .waw__profile-guides-header {
+  }
 
   .waw__profile-guides-header h1 {
     padding: 1rem 2rem 1rem;
@@ -381,7 +383,8 @@
   }
 }
 
-@media screen and (max-width: 435px) {}
+@media screen and (max-width: 435px) {
+}
 
 @media screen and (max-width: 385px) {
   .waw__profile_logo {

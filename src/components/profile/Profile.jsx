@@ -127,16 +127,15 @@ const Profile = () => {
           </div>
         ) : (
           <div className="waw__profile-noguides-header">
-            <div className="waw__profile-header-div">
-              <h1 className="gradient_text">
-                This is where you can view and edit your created guides.
-              </h1>
+            <div className="waw__profile-header-noguides-div">
+              <h1 className="gradient_text">Welcome to your profile page.</h1>
             </div>
-            <div className="waw__profile-p-div">
+            <div className="waw__profile-p-noguides-div">
+              <p>This is where you can view and edit your created guides.</p>
               <p>
                 Any guides you create will not be public until you publish it.
               </p>
-              <p>
+              {/* <p>
                 <a
                   onClick={() => {
                     navigate("/createGuide");
@@ -144,10 +143,11 @@ const Profile = () => {
                 >
                   Click here to create a guide. &nbsp; →
                 </a>
-              </p>
+              </p> */}
+              <button href="/createGuide">Click here to create a guide. &nbsp; →</button>
             </div>
 
-            <div className="waw__profile-img-div-logo">
+            <div className="waw__profile-img-noguides-div-logo">
               <img src={logo} className="waw__profile_logo"></img>
             </div>
           </div>

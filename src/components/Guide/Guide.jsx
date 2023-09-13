@@ -20,7 +20,7 @@ const Guide = () => {
 
   async function fetchGuide() {
     const fetchedGuide = await getGuideByID(id);
-    setGuide(fetchedGuide.blog[0]);
+    setGuide(fetchedGuide.blog);
   }
 
   useEffect(() => {

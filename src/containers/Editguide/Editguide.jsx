@@ -3,7 +3,7 @@ import { getGuideByID } from "../../api";
 import { useParams } from "react-router";
 
 const Editguide = () => {
-    let {id} = useParams();
+  let { id } = useParams();
   const [guide, setGuide] = useState([]);
 
   async function fetchGuide() {
