@@ -104,7 +104,7 @@ const Profile = () => {
                           {guide.difficulty}
                         </p>
                         <p className="waw__profile-guide-info-author">
-                          {guide.author}
+                          {guide.hostedby}
                         </p>
                         <p className="waw__profile-guide-info-date">
                           {guide.date}

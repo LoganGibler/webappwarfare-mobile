@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import "./guides.css";
+import "./guides1.css";
 import { useNavigate } from "react-router-dom";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { getAllPublishedGuides, getGuidesBySearch } from "../../api/index.js";
-import { FeaturedGuides } from "../../components";
+import { FeaturedGuides, RecommendedGuides } from "../../components";
 let imageListReg = ref(storage, "/guidepfp/");
 
 const Guides = () => {
@@ -33,38 +33,39 @@ const Guides = () => {
 
   return (
     <div className="waw__guides">
-      <FeaturedGuides />
+      {/* <FeaturedGuides /> */}
+      <RecommendedGuides />
       {/* {console.log("guides", guides)} */}
       <div className="waw__guides-searchbar-div">
         <div>
           <h4 className="gradient_text">All Guides</h4>
-        </div>
-        <input
-          placeholder="Search Guides"
-          onChange={(e) => {
-            setSearch(e.target.value);
-          }}
-        ></input>
-        <button
-          onClick={async () => {
-            let sortedGuides = [];
-            if (search.length > 0) {
-              let foundGuides = await getGuidesBySearch(search);
-              console.log("foundGuides", foundGuides.allFoundGuides);
-              // setGuides(foundGuides.allFoundGuides);
-              if (foundGuides.allFoundGuides !== null) {
-                foundGuides.allFoundGuides.map((guide) => {
-                  console.log("guidesfrom search:", guide);
-                  console.log("Found Guide:", guide[0].vmtitle);
-                  sortedGuides.push(guide[0]);
-                });
+          <input
+            placeholder="Search Guides"
+            onChange={(e) => {
+              setSearch(e.target.value);
+            }}
+          ></input>
+          <button
+            onClick={async () => {
+              let sortedGuides = [];
+              if (search.length > 0) {
+                let foundGuides = await getGuidesBySearch(search);
+                console.log("foundGuides", foundGuides.allFoundGuides);
+                // setGuides(foundGuides.allFoundGuides);
+                if (foundGuides.allFoundGuides !== null) {
+                  foundGuides.allFoundGuides.map((guide) => {
+                    console.log("guidesfrom search:", guide);
+                    console.log("Found Guide:", guide[0].vmtitle);
+                    sortedGuides.push(guide[0]);
+                  });
+                }
+                setGuides(sortedGuides);
               }
-              setGuides(sortedGuides);
-            }
-          }}
-        >
-          Search
-        </button>
+            }}
+          >
+            Search
+          </button>
+        </div>
       </div>
       <div className="waw__guides-mainguide-div">
         {guides.length
@@ -99,17 +100,12 @@ const Guides = () => {
                   )}
                   <div className="waw__guides-details-div">
                     <h3>{guide.vmtitle}</h3>
-                    <div>
-                      <p>
-                        Rating: <a>{guide.difficulty}</a>
-                      </p>
-                      <p>
-                        Host: <a>{guide.hostedby}</a>
-                      </p>
-                      {/* <p className="waw__guides-description">
-                        {guide.description}
-                      </p> */}
-                    </div>
+                    <p className="waw__guides-details-diff">
+                      {guide.difficulty}
+                    </p>
+                    <p className="waw__guides-details-host">{guide.hostedby}</p>
+                    <p className="waw__guides-details-author">{guide.author}</p>
+                    <p className="waw__guides-details-date">{guide.date}</p>
                   </div>
                 </div>
               );
