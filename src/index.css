@@ -1,14 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 :root {
-    --font-family: "Manrope", sans-serif;
+  --font-family: "Manrope", sans-serif;
 
-    --gradient-text: linear-gradient(90deg, hsla(212, 35%, 58%, 1) 0%, hsla(186, 100%, 69%, 1) 100%);
-    --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
-    /*  background: linear-gradient(90deg, rgba(3, 0, 6, 1) 0%, rgba(56, 25, 54, 1) 0%, rgba(9, 107, 120, 0.83) 100%); */
+  --gradient-text: linear-gradient(
+    90deg,
+    hsla(212, 35%, 58%, 1) 0%,
+    hsla(186, 100%, 69%, 1) 100%
+  );
+  --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
+  /*  background: linear-gradient(90deg, rgba(3, 0, 6, 1) 0%, rgba(56, 25, 54, 1) 0%, rgba(9, 107, 120, 0.83) 100%); */
 
-    /* --color-bg: linear-gradient(80deg, rgba(23,87,91,1) 0%, rgba(8,60,62,1) 0%, rgba(1,15,15,1) 100%, rgba(0,0,0,1) 100%); */
-    --color-bg: #1a2332;
+  /* --color-bg: linear-gradient(80deg, rgba(23,87,91,1) 0%, rgba(8,60,62,1) 0%, rgba(1,15,15,1) 100%, rgba(0,0,0,1) 100%); */
+  --color-bg: #1a2332;
 }
 
 /* background-color: #1e1e1e; */
@@ -28,7 +32,6 @@ filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#6D90B9", en
 
 /* decent */
 /* linear-gradient(80deg, rgba(2,89,138,1) 0%, rgba(0,22,22,1) 100%, rgba(2,0,36,1) 100%); */
-
 
 /* dark background */
 /* background: hsla(0, 0%, 0%, 1);

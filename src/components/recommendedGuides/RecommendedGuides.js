@@ -10,7 +10,7 @@ const RecommendedGuides = () => {
   const [guides, setGuides] = useState([]);
   const [guideImgs, setGuideImgs] = useState([]);
   const navigate = useNavigate();
-  let list = [];
+  const list = [];
 
   async function fetchFeaturedGuides() {
     const fetchedGuides = await getFeaturedGuides();
@@ -31,25 +31,44 @@ const RecommendedGuides = () => {
 
   return (
     <div className="waw__rec-guides">
-      {console.log(guideImgs)}
       <div className="waw__rec-guides-container">
-        {guides &&
-          guides.map((guide) => {
-            {
-              guideImgs &&
-                guideImgs.map((image) => {
-                  let spliced_image_id = image.split("_")[1];
-                  {/* console.log(image); */}
-                  if (guide._id === spliced_image_id) {
-                    return (
-                        <div>
-                            <img src={image}></img>
-                        </div>
-                    )
-                  }
-                });
-            }
-          })}
+        <h2 className="gradient_text">Recommended Guides</h2>
+        <div className="waw__rec-guides-main-div">
+          {guides.length
+            ? guides.map((guide) => {
+                console.log("This is guide:", guide);
+                return (
+                  <div className="waw__rec-guide">
+                    {guideImgs &&
+                      guideImgs.map((image) => {
+                        const imageGuideID = image.split("_")[1];
+                        list.push(imageGuideID);
+                        if (guide._id === imageGuideID) {
+                          return (
+                            <div className="waw__rec-guides-img-div">
+                              <img src={image} alt="defaultIMG"></img>
+                            </div>
+                          );
+                        }
+                      })}
+                    {!list.includes(guide._id) && (
+                      <div className="waw__rec-guides-img-div">
+                        <img
+                          src="https://www.ecpi.edu/sites/default/files/whitehat.png"
+                          alt="defaultIMG"
+                        ></img>
+                      </div>
+                    )}
+                    <div className="waw__rec-guides-details">
+                      <h4>{guide.vmtitle}</h4>
+                      <p>{guide.difficulty}</p>
+                      <p>{guide.hostedby}</p>
+                    </div>
+                  </div>
+                );
+              })
+            : null}
+        </div>
       </div>
     </div>
   );
