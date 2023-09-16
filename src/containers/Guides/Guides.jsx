@@ -49,12 +49,12 @@ const Guides = () => {
               let sortedGuides = [];
               if (search.length > 0) {
                 let foundGuides = await getGuidesBySearch(search);
-                console.log("foundGuides", foundGuides.allFoundGuides);
+                // console.log("foundGuides", foundGuides.allFoundGuides);
                 // setGuides(foundGuides.allFoundGuides);
                 if (foundGuides.allFoundGuides !== null) {
                   foundGuides.allFoundGuides.map((guide) => {
-                    console.log("guidesfrom search:", guide);
-                    console.log("Found Guide:", guide[0].vmtitle);
+                    // console.log("guidesfrom search:", guide);
+                    // console.log("Found Guide:", guide[0].vmtitle);
                     sortedGuides.push(guide[0]);
                   });
                 }
@@ -97,7 +97,7 @@ const Guides = () => {
                       <img src="https://www.ecpi.edu/sites/default/files/whitehat.png" />
                     </div>
                   )}
-                  <div className="waw__guides-details-div">
+                  <div className="waw__guides-details-div" key={guide._id}>
                     <h3>{guide.vmtitle}</h3>
                     <p className="waw__guides-details-diff">
                       {guide.difficulty}

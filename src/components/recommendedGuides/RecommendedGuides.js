@@ -36,9 +36,8 @@ const RecommendedGuides = () => {
         <div className="waw__rec-guides-main-div">
           {guides.length
             ? guides.map((guide) => {
-                console.log("This is guide:", guide);
                 return (
-                  <div className="waw__rec-guide">
+                  <div className="waw__rec-guide" key={guide._id}>
                     {guideImgs &&
                       guideImgs.map((image) => {
                         const imageGuideID = image.split("_")[1];

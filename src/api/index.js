@@ -16,6 +16,7 @@ export async function getUserByID(_id) {
     const { data } = await axios.post(`${BASE}/getUserByID`, {
       _id: _id,
     });
+    console.log("data", data);
     return data;
   } catch (error) {
     throw error;
@@ -46,7 +47,7 @@ export async function loginUser(username, password) {
     throw error;
   }
 }
-
+/////////////////////////////////////////////////////////////////
 // GUIDE API CALLS
 export async function getAllPublishedGuides() {
   try {
@@ -101,6 +102,18 @@ export async function getGuidesByUsername(author) {
   try {
     const { data } = await axios.post(`${BASE}/getGuidesByAuthor`, {
       author: author,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function updateDescription(id, description) {
+  try {
+    const { data } = await axios.post(`${BASE}/updateDescription`, {
+      id: id,
+      description: description,
     });
     return data;
   } catch (error) {
