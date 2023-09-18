@@ -1,5 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { getGuideByID, getUserByID, updateDescription } from "../../api";
+import {
+  getGuideByID,
+  getUserByID,
+  updateDescription,
+  addStep,
+} from "../../api";
 import { useNavigate, useParams } from "react-router";
 import { getID, getUser } from "../../auth";
 import { storage } from "../../firebase.js";
@@ -25,9 +30,12 @@ const Editguide = () => {
 
   const [descriptionStatus, setDescriptionStatus] = useState(true);
   const [descriptionHtml, setDescriptionHtml] = useState(null);
-  const [showEditDescriptionButton, setShowEditDescriptionButton] = useState(
-    true
-  );
+  const [showEditDescriptionButton, setShowEditDescriptionButton] =
+    useState(true);
+
+  const [showAddStepButton, setShowAddStepButton] = useState(true);
+  const [newStepHtml, setNewStepHtml] = useState(null);
+
   const stepImagesRef = ref(storage, "/images/" + id);
   const guidePFPRef = ref(storage, "/guidepfp/");
   let inputed_img;
@@ -139,11 +147,64 @@ const Editguide = () => {
     }
   }
 
+  function renderNewStep(id, stepIndex) {
+    try {
+      async function getStepData() {
+        let newStepData = document.getElementById("step-area").value;
+        // console.log("this should be new step data:", newStepData);
+        if (newStepData !== null) {
+          let addedSteppie = await addStep(id, newStepData);
+          return addedSteppie;
+        } else {
+          alert("Please enter Step data.");
+          window.location.reload();
+        }
+      }
+
+      return (
+        <div className="waw__editguide-newstep-div">
+          <div>
+            <textarea
+              id="step-area"
+              maxLength="1000"
+              placeholder="Enter new step here..."
+            ></textarea>
+            <div>
+              <button
+                onClick={() => {
+                  getStepData();
+                }}
+              >
+                Submit Step
+              </button>
+              <input
+                className="waw__editguide-step-image-input"
+                type="file"
+                accept="image/jpg, image/jpeg, image/png"
+                onChange={handleImageChange}
+              ></input>
+              <button
+                className="waw__editguide-uploadss"
+                onClick={() => {
+                  uploadImage(id, stepIndex);
+                }}
+              >
+                Upload Screenshot
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    } catch (error) {
+      throw error;
+    }
+  }
+
   async function fetchGuide() {
     const foundGuide = await getGuideByID(id);
     const user = await getUserByID(key);
     setGuide(foundGuide.blog);
-    setUser(user.user[0].username);
+    setUser(user.user);
   }
 
   useEffect(() => {
@@ -273,6 +334,19 @@ const Editguide = () => {
                 <h3>Guide Has no steps.</h3>
               )}
             </div>
+            {newStepHtml}
+            {showAddStepButton && (
+              <div className="waw__editguide-addstep-div">
+                <button
+                  onClick={() => {
+                    setShowAddStepButton(false);
+                    setNewStepHtml(renderNewStep(guide._id, stepCounter));
+                  }}
+                >
+                  Add New Step &nbsp; ↑
+                </button>
+              </div>
+            )}
           </div>
         )}
       </div>

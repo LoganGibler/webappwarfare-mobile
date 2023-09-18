@@ -14,6 +14,7 @@ const RecommendedGuides = () => {
 
   async function fetchFeaturedGuides() {
     const fetchedGuides = await getFeaturedGuides();
+    console.log(fetchedGuides);
     setGuides(fetchedGuides.featuredGuides);
   }
 

@@ -120,3 +120,19 @@ export async function updateDescription(id, description) {
     throw error;
   }
 }
+
+export async function addStep(_id, step) {
+  // console.log("_id on api:", _id);
+  // console.log("step on api:", step);
+  try {
+    const { data } = await axios.post(`${BASE}/addstep`, {
+      _id: _id,
+      step: step,
+    });
+
+    // console.log("this is data after frontend api", data);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
