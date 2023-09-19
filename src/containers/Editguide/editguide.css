@@ -202,7 +202,7 @@
   display: flex;
   justify-content: center;
   padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-bottom: 0rem;
 }
 
 .waw__editguide-step p {
@@ -211,6 +211,7 @@
   max-width: 50rem;
   text-align: center;
   font-size: 17px;
+  padding-bottom: 1.5rem;
 }
 
 .waw__editguide-editstep-button {
@@ -268,10 +269,11 @@
 .waw__editguide-newstep-div textarea {
   background-color: #1a2332;
   color: #c3d1db;
-  padding: 0.5rem;
+  padding: 1rem;
   width: 50rem;
   height: 20rem;
   resize: vertical;
+  font-size: 17px;
 }
 
 .waw__editguide-newstep-div div button {
@@ -282,6 +284,7 @@
   color: #c3d1db;
   font-size: 17px;
   /* width: 10rem; */
+  font-family: var(--font-family);
 }
 
 .waw__editguide-newstep-div button:hover {
@@ -290,20 +293,84 @@
   border: 1px solid white;
 }
 
-.waw__editguide-uploadss{
-
+.waw__editguide-uploadss {
 }
 
-.waw__editguide-newstep-div div input{
+.waw__editguide-newstep-div div input {
   font-size: 18px;
-   margin-left: 18rem;
-   width: 15rem;
-   color: #c3d1db;
+  margin-left: 18rem;
+  width: 15rem;
+  color: #c3d1db;
 }
 
-.waw__editguide-newstep-div div input::-webkit-file-upload-button{
+.waw__editguide-newstep-div div input::-webkit-file-upload-button {
   border-radius: 5px;
   padding: 0.3rem;
 }
 
+.waw__editguide-editstep-div {
+  display: flex;
+}
 
+.waw__editguide-editstep-div div textarea {
+  background-color: #1a2332;
+  color: #c3d1db;
+  padding: 1rem;
+  width: 50rem;
+  height: 20rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+  font-size: 17px;
+}
+
+.waw__editguide-editstep-div div div {
+  display: flex;
+}
+
+.waw__editguide-editstep-div div div button {
+  background-color: #1a2332;
+  padding: 0.4rem;
+  color: #c3d1db;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 17px;
+}
+
+.waw__editguide-editstep-div div div button:hover {
+  cursor: pointer;
+  color: white;
+  border: 1px solid white;
+}
+
+.waw__editguide-editstep-div div div input {
+  background-color: #1a2332;
+  padding: 0.4rem;
+  color: #c3d1db;
+  border-radius: 5px;
+  border: 1px solid grey;
+  font-size: 17px;
+  width: 15rem;
+  margin-left: 12rem;
+}
+
+.waw__editguide-editstep-div div div input::-webkit-file-upload-button {
+  border-radius: 5px;
+  padding: 0.1rem;
+}
+
+.waw__editguide-editstep-div div div input::-webkit-file-upload-button:hover {
+  cursor: pointer;
+}
+
+.editguide-uploaded-img-div {
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.editguide-uploaded-img-div img {
+  max-width: 800px;
+  max-height: 800px;
+  border-radius: 5px;
+  border: 1px solid grey;
+}

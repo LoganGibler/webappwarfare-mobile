@@ -136,3 +136,30 @@ export async function addStep(_id, step) {
     throw error;
   }
 }
+
+export async function deleteStep(_id, index) {
+  try {
+    console.log("This is passed in index", index);
+    const deletedStep = await axios.post(`${BASE}/deleteStep`, {
+      _id: _id,
+      index: index,
+    });
+
+    return deletedStep;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function updateSteppie(id, index, newStepData) {
+  try {
+    const { data } = await axios.post(`${BASE}/updateStep`, {
+      id: id,
+      index: index,
+      newStepData: newStepData,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}

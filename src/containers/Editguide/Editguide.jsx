@@ -4,6 +4,8 @@ import {
   getUserByID,
   updateDescription,
   addStep,
+  deleteStep,
+  updateSteppie,
 } from "../../api";
 import { useNavigate, useParams } from "react-router";
 import { getID, getUser } from "../../auth";
@@ -36,6 +38,10 @@ const Editguide = () => {
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
 
+  const [showEditStepButton, setShowEditStepButton] = useState(true);
+  const [editedStepIndex, setEditedStepIndex] = useState("");
+  const [editedStepHtml, setEditedStepHtml] = useState(null);
+
   const stepImagesRef = ref(storage, "/images/" + id);
   const guidePFPRef = ref(storage, "/guidepfp/");
   let inputed_img;
@@ -62,10 +68,13 @@ const Editguide = () => {
       alert("Please select an image to upload.");
       return;
     }
-
+    // const deleteRef = ref(storage, "/images/" + id + "/" + index);
+    //   deleteObject(deleteRef).then(() => {
+    //     // deletes existing image
+    //   });
     // console.log("this is image upload", imageUpload)
     const imageRef = ref(storage, `${"images/" + id + "/" + index}`);
-    // console.log("this is imageRef",imageRef)
+    console.log("this is imageRef", imageRef);
     uploadBytes(imageRef, inputed_img, metadata).then((snapshot) => {
       if (index === "_main") {
         alert("Guide PFP uploaded.");
@@ -173,6 +182,7 @@ const Editguide = () => {
               <button
                 onClick={() => {
                   getStepData();
+                  window.location.reload();
                 }}
               >
                 Submit Step
@@ -190,6 +200,65 @@ const Editguide = () => {
                 }}
               >
                 Upload Screenshot
+              </button>
+            </div>
+          </div>
+        </div>
+      );
+    } catch (error) {
+      throw error;
+    }
+  }
+
+  function renderEditStepBox(id, index, stepCounter, step) {
+    try {
+      console.log("stepCounter: ", stepCounter);
+      console.log("index: ", index);
+      console.log("step: ", step);
+
+      async function getNewStepData() {
+        let newStepData = document.getElementById("editguide-step-data").value;
+        console.log("newStepData: ", newStepData);
+        let newStep = await updateSteppie(id, stepCounter, newStepData);
+        console.log("updatedStep after api call:", newStep);
+        return newStep;
+      }
+
+      return (
+        <div className="waw__editguide-editstep-div">
+          <div>
+            <textarea id="editguide-step-data">{step}</textarea>
+            <div>
+              <button
+                onClick={() => {
+                  getNewStepData();
+                  window.location.reload();
+                }}
+              >
+                Update Step
+              </button>
+              <button
+                className="caution"
+                onClick={async () => {
+                  await deleteStep(id, stepCounter);
+                  alert("Step deleted.");
+                  window.location.reload();
+                }}
+              >
+                Delete &nbsp; ↑
+              </button>
+              <input
+                className="waw__editguide-step-image-input"
+                type="file"
+                accept="image/jpg, image/jpeg, image/png"
+                onChange={handleImageChange}
+              ></input>
+              <button
+                onClick={() => {
+                  uploadImage(id, stepCounter);
+                }}
+              >
+                Upload/Change Img
               </button>
             </div>
           </div>
@@ -273,7 +342,6 @@ const Editguide = () => {
             <div className="waw__editguide-uploadpfp-div">
               <button
                 onClick={() => {
-                  // uploadImage(id, "_main");
                   uploadImagePFP(id);
                 }}
               >
@@ -298,7 +366,7 @@ const Editguide = () => {
                       setDescriptionHtml(renderDescriptionBox(guide._id));
                     }}
                   >
-                    Update Description
+                    Update Description &nbsp; ↑
                   </button>
                 )}
               </div>
@@ -321,11 +389,56 @@ const Editguide = () => {
                   return (
                     <div className="waw__editguide-step">
                       <div className="waw__editguide-step-step">
-                        <p>{step.step}</p>
+                        {editedStepIndex === index ? (
+                          <div> {editedStepHtml}</div>
+                        ) : (
+                          <div>
+                            <p>{step.step}</p>
+
+                            {stepImages
+                              ? stepImages.map((image) => {
+                                  let index = image.split("?")[0];
+                                  index = index[index.length - 1];
+                                  console.log(
+                                    "This is index parsed out of url",
+                                    index
+                                  );
+                                  console.log(
+                                    "This is stepCounter Index",
+                                    stepCounterIndex
+                                  );
+                                  if (index === stepCounterIndex.toString()) {
+                                    return (
+                                      <div className="editguide-uploaded-img-div">
+                                        <img src={image} alt="Step Img" />
+                                      </div>
+                                    );
+                                  }
+                                })
+                              : null}
+                          </div>
+                        )}
                       </div>
 
                       <div className="waw__editguide-editstep-button">
-                        <button>Edit Step</button>
+                        {editedStepIndex !== index && (
+                          <button
+                            onClick={() => {
+                              console.log("clicked on step index:", index);
+                              setEditedStepIndex(index);
+                              setEditedStepHtml(
+                                renderEditStepBox(
+                                  id,
+                                  index,
+                                  stepCounterIndex,
+                                  step.step
+                                )
+                              );
+                            }}
+                          >
+                            Edit &nbsp; →
+                          </button>
+                        )}
                       </div>
                     </div>
                   );
