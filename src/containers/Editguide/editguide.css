@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   font-family: var(--font-family);
+  margin: 0rem 2rem;
 }
 
 /* background-color: #1e1e1e; */
@@ -11,7 +12,8 @@
 /* color: #c3d1db; */
 .waw__editguide-container {
   display: flex;
-  width: 55rem;
+  margin: 1rem 2rem;
+  max-width: 60rem;
   background-color: #263143;
   border-radius: 5px;
   border: 1px solid grey;
@@ -49,7 +51,7 @@
 
 .waw__editguide_details-div h3 {
   padding: 0rem 0rem 0.3rem 0rem;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: 550;
 }
 
@@ -67,7 +69,7 @@
 
 .waw__editguide-description-div {
   padding: 1rem 1rem 4rem;
-  max-width: 55rem;
+  /* max-width: 55rem; */
 }
 
 .waw__editguide-description-div p {
@@ -102,7 +104,7 @@
 
 .waw__editguide-rendered-description-div {
   display: flex;
-  width: 55rem;
+  /* width: 55rem; */
   padding: 1rem;
   justify-content: center;
 }
@@ -132,6 +134,7 @@
   background-color: #1a2332;
   border: 1px solid grey;
   color: #c3d1db;
+  width: 10rem;
 }
 
 .waw__editguide-rendered-description-div div button:hover {
@@ -198,24 +201,29 @@
   margin: 0rem;
 }
 
+
+.waw__editguide-step-step div{
+  /* max-width: 36rem; */
+}
+
 .waw__editguide-step-step {
   display: flex;
   justify-content: center;
-  padding-top: 3rem;
+  padding-top: 1rem;
   padding-bottom: 0rem;
 }
 
 .waw__editguide-step p {
   font-family: var(--font-family);
   word-wrap: break-word;
-  max-width: 50rem;
+  /* max-width: 50rem; */
   text-align: center;
   font-size: 17px;
-  padding-bottom: 1.5rem;
+  padding: 0rem 2rem 1rem;
 }
 
 .waw__editguide-editstep-button {
-  margin: 1rem 0rem;
+  margin: 1rem 0rem 0rem 2rem;
 }
 
 .waw__editguide-editstep-button button {
@@ -226,6 +234,7 @@
   color: #c3d1db;
   font-size: 17px;
   font-family: var(--font-family);
+  margin-right: 33rem;
 }
 
 .waw__editguide-editstep-button button:hover {
@@ -262,8 +271,13 @@
 }
 
 .waw__editguide-newstep-div div {
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
+  padding-bottom: 1rem;
+}
+
+.waw__editguide-newstep-div div div{
+ display:inline;
 }
 
 .waw__editguide-newstep-div textarea {
@@ -373,4 +387,1202 @@
   max-height: 800px;
   border-radius: 5px;
   border: 1px solid grey;
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 895px) {
+  .waw__editguide {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
+  
+  /* background-color: #1e1e1e; */
+  /* background-color: #1a2332 */
+  /* background-color: #263143; */
+  /* color: #a4b1cd; */
+  /* color: #c3d1db; */
+  .waw__editguide-container {
+    display: flex;
+    /* width: 45rem; */
+    background-color: #263143;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  
+  .waw__editguide-guide {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+  
+  .waw__editguide-header-div {
+    display: flex;
+    padding: 1rem 1rem 1rem;
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-img-div {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  .waw__editguide-img-div img {
+    height: 180px;
+    width: 180px;
+    border-radius: 15px;
+    border: 1px solid grey;
+  }
+  
+  .waw__editguide_details-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  
+  .waw__editguide_details-div h3 {
+    padding: 0rem 0rem 0.3rem 0rem;
+    font-size: 30px;
+    font-weight: 550;
+  }
+  
+  .waw__editguide_details-div p {
+    color: #c3d1db;
+    font-size: 20px;
+    padding: 0.2rem 0rem;
+  }
+  
+  .waw__editguide_details-div a {
+    color: white;
+    font-weight: 550;
+    font-size: 20px;
+  }
+  
+  .waw__editguide-description-div {
+    padding: 1rem 1rem 4rem;
+    max-width: 45rem;
+  }
+  
+  .waw__editguide-description-div p {
+    padding: 1rem;
+    font-size: 18.5px;
+    color: #c3d1db;
+    word-wrap: break-word;
+  }
+  
+  /* background-color: #1e1e1e; */
+  /* background-color: #1a2332 */
+  /* background-color: #263143; */
+  /* color: #a4b1cd; */
+  /* color: #c3d1db; */
+  .waw__editguide-description-div button {
+    padding: 0.5rem;
+    font-size: 17px;
+    font-family: var(--font-family);
+    margin-left: 0.8rem;
+    background-color: #1a2332;
+    border: 1px solid #c3d1db;
+    outline: none;
+    color: #c3d1db;
+    border-radius: 5px;
+  }
+  
+  .waw__editguide-description-div button:hover {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  
+  .waw__editguide-rendered-description-div {
+    display: flex;
+    width: 45rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .waw__editguide-rendered-description-div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .waw__editguide-rendered-description-div div textarea {
+    font-family: var(--font-family);
+    color: #c3d1db;
+    resize: vertical;
+    background-color: #1a2332;
+    padding: 0.8rem 1rem;
+    width: 40rem;
+    font-size: 18.5px;
+    height: 20rem;
+    border-radius: 5px;
+    /* flex-direction: column; */
+  }
+  
+  .waw__editguide-rendered-description-div div button {
+    font-size: 20px;
+    padding: 0.3rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+  }
+  
+  .waw__editguide-rendered-description-div div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadpfp-div {
+    display: flex;
+    margin-left: 2rem;
+  }
+  
+  .waw__editguide-uploadpfp-div button {
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 550;
+  }
+  
+  .waw__editguide-uploadpfp-div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadpfp-div input {
+    border-radius: 5px;
+    font-size: 17px;
+    align-self: center;
+    color: #c3d1db;
+    background-color: #1a2332;
+    width: 15rem;
+  }
+  
+  .waw__editguide-uploadpfp-div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    font-weight: 550;
+  }
+  
+  .waw__editguide-uploadpfp-div input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+  
+  .waw__editguide-step-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .waw__editguide-step {
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    color: #c3d1db;
+    padding: 3rem 1.5rem;
+    margin: 0rem;
+  }
+  
+  .waw__editguide-step-step {
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    padding-bottom: 0rem;
+    max-width: 40rem;
+  }
+  
+  .waw__editguide-step p {
+    font-family: var(--font-family);
+    word-wrap: break-word;
+    max-width: 40rem;
+    text-align: center;
+    font-size: 17px;
+    padding-bottom: 1.5rem;
+  }
+  
+  .waw__editguide-editstep-button {
+    
+  }
+  
+  .waw__editguide-editstep-button button {
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-size: 17px;
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-editstep-button button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .waw__editguide-addstep-div {
+    display: flex;
+    padding: 1rem 1.5rem;
+  }
+  
+  .waw__editguide-addstep-div button {
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    font-size: 17px;
+  }
+  
+  .waw__editguide-addstep-div button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .waw__editguide-newstep-div {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  .waw__editguide-newstep-div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .waw__editguide-newstep-div textarea {
+    background-color: #1a2332;
+    color: #c3d1db;
+    padding: 1rem;
+    width: 40rem;
+    height: 20rem;
+    resize: vertical;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-newstep-div div button {
+    background-color: #1a2332;
+    border-radius: 5px;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-size: 17px;
+    /* width: 10rem; */
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-newstep-div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadss {
+  }
+  
+  .waw__editguide-newstep-div div input {
+    font-size: 18px;
+    margin-left: 7rem;
+    width: 15rem;
+    color: #c3d1db;
+  }
+  
+  .waw__editguide-newstep-div div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    padding: 0.3rem;
+  }
+  
+  .waw__editguide-editstep-div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .waw__editguide-editstep-div div{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .waw__editguide-editstep-div div textarea {
+    background-color: #1a2332;
+    color: #c3d1db;
+    padding: 1rem;
+    width: 40rem;
+    height: 20rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 17px;
+    align-self: center;
+  }
+  
+  .waw__editguide-editstep-div div div {
+    /* display: flex; */
+    display: inline;
+  }
+  
+  .waw__editguide-editstep-div div div button {
+    background-color: #1a2332;
+    padding: 0.4rem;
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-editstep-div div div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-editstep-div div div input {
+    background-color: #1a2332;
+    padding: 0.2rem;
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 17px;
+    width: 15rem;
+    margin-left: 2rem;
+  }
+  
+  .waw__editguide-editstep-div div div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    padding: 0.1rem;
+  }
+  
+  .waw__editguide-editstep-div div div input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+  
+  .editguide-uploaded-img-div {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .editguide-uploaded-img-div img {
+    max-width: 600px;
+    max-height: 600px;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  
+}
+
+
+
+
+
+@media screen and (max-width: 733px){
+  .waw__editguide {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
+  
+  /* background-color: #1e1e1e; */
+  /* background-color: #1a2332 */
+  /* background-color: #263143; */
+  /* color: #a4b1cd; */
+  /* color: #c3d1db; */
+  .waw__editguide-container {
+    margin: 1rem 1rem 0rem 2rem;
+    display: flex;
+    /* width: 38rem; */
+    background-color: #263143;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  
+  .waw__editguide-guide {
+    width: 38rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+  
+  .waw__editguide-header-div {
+    width: 38rem;
+    display: flex;
+    padding: 1rem 1rem 1rem;
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-img-div {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  .waw__editguide-img-div img {
+    height: 160px;
+    width: 160px;
+    border-radius: 15px;
+    border: 1px solid grey;
+  }
+  
+  .waw__editguide_details-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+  }
+  
+  .waw__editguide_details-div h3 {
+    padding: 0rem 0rem 0.3rem 0rem;
+    font-size: 28px;
+    font-weight: 550;
+  }
+  
+  .waw__editguide_details-div p {
+    color: #c3d1db;
+    font-size: 18px;
+    padding: 0.2rem 0rem;
+  }
+  
+  .waw__editguide_details-div a {
+    color: white;
+    font-weight: 550;
+    font-size: 18px;
+  }
+  
+  .waw__editguide-description-div {
+    padding: 1rem 1rem 4rem;
+    max-width: 38rem;
+  }
+  
+  .waw__editguide-description-div p {
+    padding: 1rem;
+    font-size: 18px;
+    color: #c3d1db;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  /* background-color: #1e1e1e; */
+  /* background-color: #1a2332 */
+  /* background-color: #263143; */
+  /* color: #a4b1cd; */
+  /* color: #c3d1db; */
+  .waw__editguide-description-div button {
+    padding: 0.5rem;
+    font-size: 17px;
+    font-family: var(--font-family);
+    margin-left: 0.8rem;
+    background-color: #1a2332;
+    border: 1px solid #c3d1db;
+    outline: none;
+    color: #c3d1db;
+    border-radius: 5px;
+  }
+  
+  .waw__editguide-description-div button:hover {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  
+  .waw__editguide-rendered-description-div {
+    display: flex;
+    width: 38rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .waw__editguide-rendered-description-div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .waw__editguide-rendered-description-div div textarea {
+    font-family: var(--font-family);
+    color: #c3d1db;
+    resize: vertical;
+    background-color: #1a2332;
+    padding: 0.8rem 1rem;
+    width: 36rem;
+    font-size: 18.5px;
+    height: 20rem;
+    border-radius: 5px;
+    /* flex-direction: column; */
+  }
+  
+  .waw__editguide-rendered-description-div div button {
+    font-size: 18px;
+    padding: 0.3rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+  }
+  
+  .waw__editguide-rendered-description-div div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadpfp-div {
+    display: flex;
+    margin-left: 2rem;
+  }
+  
+  .waw__editguide-uploadpfp-div button {
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 550;
+  }
+  
+  .waw__editguide-uploadpfp-div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadpfp-div input {
+    border-radius: 5px;
+    font-size: 17px;
+    align-self: center;
+    color: #c3d1db;
+    background-color: #1a2332;
+    width: 15rem;
+  }
+  
+  .waw__editguide-uploadpfp-div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    font-weight: 550;
+  }
+  
+  .waw__editguide-uploadpfp-div input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+  
+  .waw__editguide-step-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .waw__editguide-step {
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    color: #c3d1db;
+    padding: 1.8rem 1.5rem;
+    margin: 0rem;
+  }
+  
+  .waw__editguide-step-step {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    max-width: 37rem;
+  }
+  
+  .waw__editguide-step p {
+    font-family: var(--font-family);
+    word-wrap: break-word;
+    max-width: 36rem;
+    text-align: center;
+    font-size: 17px;
+    padding-bottom: 1.5rem;
+  }
+  
+  .waw__editguide-editstep-button {
+    margin: 1rem 0rem;
+  }
+  
+  .waw__editguide-editstep-button button {
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-size: 17px;
+    font-family: var(--font-family);
+    width: 6rem;
+    margin-left: 4.7rem;
+  }
+  
+  .waw__editguide-editstep-button button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .waw__editguide-addstep-div {
+    display: flex;
+    padding: 1rem 1.5rem;
+  }
+  
+  .waw__editguide-addstep-div button {
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    font-size: 17px;
+  }
+  
+  .waw__editguide-addstep-div button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .waw__editguide-newstep-div {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  .waw__editguide-newstep-div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .waw__editguide-newstep-div textarea {
+    background-color: #1a2332;
+    color: #c3d1db;
+    padding: 1rem;
+    width: 36rem;
+    height: 20rem;
+    resize: vertical;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-newstep-div div button {
+    background-color: #1a2332;
+    border-radius: 5px;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-size: 17px;
+    /* width: 10rem; */
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-newstep-div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadss {
+  }
+  
+  .waw__editguide-newstep-div div input {
+    font-size: 18px;
+    margin-left: 3rem;
+    width: 15rem;
+    color: #c3d1db;
+  }
+  
+  .waw__editguide-newstep-div div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    padding: 0.3rem;
+  }
+  
+  .waw__editguide-editstep-div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .waw__editguide-editstep-div div{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .waw__editguide-editstep-div div textarea {
+    background-color: #1a2332;
+    color: #c3d1db;
+    padding: 1rem;
+    width: 36rem;
+    height: 20rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 17px;
+    align-self: center;
+  }
+  
+  .waw__editguide-editstep-div div div {
+    /* display: flex; */
+    display: inline;
+  }
+  
+  .waw__editguide-editstep-div div div button {
+    background-color: #1a2332;
+    padding: 0.4rem;
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-editstep-div div div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-editstep-div div div input {
+    background-color: #1a2332;
+    padding: 0.2rem;
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 17px;
+    width: 13rem;
+    margin-left: 0rem;
+  }
+  
+  .waw__editguide-editstep-div div div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    padding: 0.1rem;
+  }
+  
+  .waw__editguide-editstep-div div div input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+  
+  .editguide-uploaded-img-div {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .editguide-uploaded-img-div img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+}
+
+
+@media screen and (max-width: 660px) {
+  .waw__editguide {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
+  
+  /* background-color: #1e1e1e; */
+  /* background-color: #1a2332 */
+  /* background-color: #263143; */
+  /* color: #a4b1cd; */
+  /* color: #c3d1db; */
+  .waw__editguide-container {
+    margin: 1rem 4rem 0rem 2rem;
+    display: flex;
+    width: 34rem;
+    background-color: #263143;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
+  
+  .waw__editguide-guide {
+    width: 34rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+  }
+  
+  .waw__editguide-header-div {
+    width: 34rem;
+    display: flex;
+    padding: 1rem 1rem 1rem;
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-img-div {
+    display: flex;
+    padding: 1rem;
+  }
+  
+  .waw__editguide-img-div img {
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    border: 1px solid grey;
+  }
+  
+  .waw__editguide_details-div {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 0.5rem;
+  }
+  
+  .waw__editguide_details-div h3 {
+    padding: 0rem 0rem 0.3rem 0rem;
+    font-size: 26px;
+    font-weight: 550;
+  }
+  
+  .waw__editguide_details-div p {
+    color: #c3d1db;
+    font-size: 17px;
+    padding: 0.2rem 0rem;
+  }
+  
+  .waw__editguide_details-div a {
+    color: white;
+    font-weight: 550;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-description-div {
+    padding: 1rem 1rem 4rem;
+    max-width: 34rem;
+  }
+  
+  .waw__editguide-description-div p {
+    padding: 1rem;
+    font-size: 17px;
+    color: #c3d1db;
+    word-wrap: break-word;
+    text-align: center;
+  }
+  
+  /* background-color: #1e1e1e; */
+  /* background-color: #1a2332 */
+  /* background-color: #263143; */
+  /* color: #a4b1cd; */
+  /* color: #c3d1db; */
+  .waw__editguide-description-div button {
+    padding: 0.5rem;
+    font-size: 16px;
+    font-family: var(--font-family);
+    margin-left: 0.8rem;
+    background-color: #1a2332;
+    border: 1px solid #c3d1db;
+    outline: none;
+    color: #c3d1db;
+    border-radius: 5px;
+  }
+  
+  .waw__editguide-description-div button:hover {
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+  }
+  
+  .waw__editguide-rendered-description-div {
+    display: flex;
+    width: 34rem;
+    padding: 1rem;
+    justify-content: center;
+  }
+  
+  .waw__editguide-rendered-description-div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .waw__editguide-rendered-description-div div textarea {
+    font-family: var(--font-family);
+    color: #c3d1db;
+    resize: vertical;
+    background-color: #1a2332;
+    padding: 0.8rem 1rem;
+    width: 32rem;
+    font-size: 17px;
+    height: 20rem;
+    border-radius: 5px;
+    /* flex-direction: column; */
+  }
+  
+  .waw__editguide-rendered-description-div div button {
+    font-size: 18px;
+    padding: 0.3rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+  }
+  
+  .waw__editguide-rendered-description-div div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadpfp-div {
+    display: flex;
+    margin-left: 2rem;
+  }
+  
+  .waw__editguide-uploadpfp-div button {
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    padding: 0.4rem;
+    border-radius: 5px;
+    font-size: 17px;
+    font-weight: 550;
+  }
+  
+  .waw__editguide-uploadpfp-div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadpfp-div input {
+    border-radius: 5px;
+    font-size: 17px;
+    align-self: center;
+    color: #c3d1db;
+    background-color: #1a2332;
+    width: 15rem;
+  }
+  
+  .waw__editguide-uploadpfp-div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    font-size: 17px;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    font-weight: 550;
+  }
+  
+  .waw__editguide-uploadpfp-div input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+  
+  .waw__editguide-step-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .waw__editguide-step {
+    border-top: 1px solid grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* text-align: center; */
+    color: #c3d1db;
+    padding: 1.8rem 1.5rem;
+    margin: 0rem;
+  }
+  
+  .waw__editguide-step-step {
+    display: flex;
+    justify-content: center;
+    padding-top: 1rem;
+    padding-bottom: 0rem;
+    max-width: 37rem;
+  }
+  
+  .waw__editguide-step p {
+    font-family: var(--font-family);
+    word-wrap: break-word;
+    max-width: 36rem;
+    text-align: center;
+    font-size: 17px;
+    padding-bottom: 1.5rem;
+  }
+  
+  .waw__editguide-editstep-button {
+    margin: 1rem 0rem;
+  }
+  
+  .waw__editguide-editstep-button button {
+    padding: 0.4rem 0.6rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-size: 17px;
+    font-family: var(--font-family);
+    width: 6rem;
+    margin-left: 4.7rem;
+  }
+  
+  .waw__editguide-editstep-button button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .waw__editguide-addstep-div {
+    display: flex;
+    padding: 1rem 1.5rem;
+  }
+  
+  .waw__editguide-addstep-div button {
+    padding: 0.4rem;
+    border-radius: 5px;
+    background-color: #1a2332;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    font-size: 17px;
+  }
+  
+  .waw__editguide-addstep-div button:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+  }
+  
+  .waw__editguide-newstep-div {
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+  }
+  
+  .waw__editguide-newstep-div div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .waw__editguide-newstep-div textarea {
+    background-color: #1a2332;
+    color: #c3d1db;
+    padding: 1rem;
+    width: 36rem;
+    height: 20rem;
+    resize: vertical;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-newstep-div div button {
+    background-color: #1a2332;
+    border-radius: 5px;
+    padding: 0.4rem;
+    border: 1px solid grey;
+    color: #c3d1db;
+    font-size: 17px;
+    /* width: 10rem; */
+    font-family: var(--font-family);
+  }
+  
+  .waw__editguide-newstep-div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-uploadss {
+  }
+  
+  .waw__editguide-newstep-div div input {
+    font-size: 18px;
+    margin-left: 3rem;
+    width: 15rem;
+    color: #c3d1db;
+  }
+  
+  .waw__editguide-newstep-div div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    padding: 0.3rem;
+  }
+  
+  .waw__editguide-editstep-div {
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+  }
+
+  .waw__editguide-editstep-div div{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  .waw__editguide-editstep-div div textarea {
+    background-color: #1a2332;
+    color: #c3d1db;
+    padding: 1rem;
+    width: 36rem;
+    height: 20rem;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 17px;
+    align-self: center;
+  }
+  
+  .waw__editguide-editstep-div div div {
+    /* display: flex; */
+    display: inline;
+  }
+  
+  .waw__editguide-editstep-div div div button {
+    background-color: #1a2332;
+    padding: 0.4rem;
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 17px;
+  }
+  
+  .waw__editguide-editstep-div div div button:hover {
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+  }
+  
+  .waw__editguide-editstep-div div div input {
+    background-color: #1a2332;
+    padding: 0.2rem;
+    color: #c3d1db;
+    border-radius: 5px;
+    border: 1px solid grey;
+    font-size: 17px;
+    width: 13rem;
+    margin-left: 0rem;
+  }
+  
+  .waw__editguide-editstep-div div div input::-webkit-file-upload-button {
+    border-radius: 5px;
+    padding: 0.1rem;
+  }
+  
+  .waw__editguide-editstep-div div div input::-webkit-file-upload-button:hover {
+    cursor: pointer;
+  }
+  
+  .editguide-uploaded-img-div {
+    margin: 1rem;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .editguide-uploaded-img-div img {
+    max-width: 500px;
+    max-height: 500px;
+    border-radius: 5px;
+    border: 1px solid grey;
+  }
 }

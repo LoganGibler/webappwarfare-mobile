@@ -229,37 +229,39 @@ const Editguide = () => {
           <div>
             <textarea id="editguide-step-data">{step}</textarea>
             <div>
-              <button
-                onClick={() => {
-                  getNewStepData();
-                  window.location.reload();
-                }}
-              >
-                Update Step
-              </button>
-              <button
-                className="caution"
-                onClick={async () => {
-                  await deleteStep(id, stepCounter);
-                  alert("Step deleted.");
-                  window.location.reload();
-                }}
-              >
-                Delete &nbsp; ↑
-              </button>
-              <input
-                className="waw__editguide-step-image-input"
-                type="file"
-                accept="image/jpg, image/jpeg, image/png"
-                onChange={handleImageChange}
-              ></input>
-              <button
-                onClick={() => {
-                  uploadImage(id, stepCounter);
-                }}
-              >
-                Upload/Change Img
-              </button>
+              <div>
+                <button
+                  onClick={() => {
+                    getNewStepData();
+                    window.location.reload();
+                  }}
+                >
+                  Update Step
+                </button>
+                <button
+                  className="caution"
+                  onClick={async () => {
+                    await deleteStep(id, stepCounter);
+                    alert("Step deleted.");
+                    window.location.reload();
+                  }}
+                >
+                  Delete &nbsp; ↑
+                </button>
+                <input
+                  className="waw__editguide-step-image-input"
+                  type="file"
+                  accept="image/jpg, image/jpeg, image/png"
+                  onChange={handleImageChange}
+                ></input>
+                <button
+                  onClick={() => {
+                    uploadImage(id, stepCounter);
+                  }}
+                >
+                  Upload/Change Img
+                </button>
+              </div>
             </div>
           </div>
         </div>
