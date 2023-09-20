@@ -426,7 +426,6 @@ const Editguide = () => {
                         {editedStepIndex !== index && (
                           <button
                             onClick={() => {
-                              console.log("clicked on step index:", index);
                               setEditedStepIndex(index);
                               setEditedStepHtml(
                                 renderEditStepBox(
