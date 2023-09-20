@@ -16,6 +16,7 @@ import {
   Guide,
   Login,
   Register,
+  GuideForm,
 } from "./components";
 import "./app.css";
 
@@ -35,6 +36,7 @@ const App = () => {
             <Route path="/Guide/:id" element={<Guide />}></Route>
             <Route path="/Register" element={<Register />}></Route>
             <Route path="/Login" element={<Login />}></Route>
+            <Route path="/createGuide" element={<GuideForm />}></Route>
             <Route path="/editguide/:id" element={<Editguide />}></Route>
           </Routes>
           <Footer />
