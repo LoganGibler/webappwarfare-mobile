@@ -70,7 +70,7 @@
 
 .waw__editguide-description-div {
   padding: 1rem 1rem 4rem;
-  /* max-width: 55rem; */
+  max-width: 55rem;
 }
 
 .waw__editguide-description-div p {
@@ -216,7 +216,7 @@
 .waw__editguide-step p {
   display: flex;
   font-family: var(--font-family);
-  word-wrap: break-word;
+  word-break: break-all;
   /* max-width: 50rem; */
   text-align: center;
   font-size: 17px;
@@ -308,8 +308,7 @@
   border: 1px solid white;
 }
 
-.waw__editguide-uploadss {
-}
+.waw__editguide-uploadss {}
 
 .waw__editguide-newstep-div div input {
   font-size: 18px;
@@ -608,6 +607,7 @@
     font-size: 17px;
     padding-bottom: 1.5rem;
   }
+
   .waw__editguide-editstep-button {
     display: flex;
     padding: 0.5rem 33rem 0rem 0rem;
@@ -621,6 +621,7 @@
     color: #c3d1db;
     font-family: var(--font-family);
   }
+
   .waw__editguide-editstep-button button:hover {
     cursor: pointer;
     border: 1px solid white;
@@ -686,8 +687,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
@@ -1088,8 +1088,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
@@ -1488,8 +1487,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
@@ -1802,6 +1800,7 @@
     width: 30rem;
     text-align: center;
   }
+
   .waw__editguide-step-step {
     display: flex;
     justify-content: center;
@@ -1905,8 +1904,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
@@ -2223,6 +2221,7 @@
     width: 27rem;
     text-align: center;
   }
+
   .waw__editguide-step-step {
     display: flex;
     justify-content: center;
@@ -2328,8 +2327,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
@@ -2646,6 +2644,7 @@
     width: 24rem;
     text-align: center;
   }
+
   .waw__editguide-step-step {
     display: flex;
     justify-content: center;
@@ -2751,8 +2750,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
@@ -3071,6 +3069,7 @@
     width: 22rem;
     text-align: center;
   }
+
   .waw__editguide-step-step {
     display: flex;
     justify-content: center;
@@ -3176,8 +3175,7 @@
     border: 1px solid white;
   }
 
-  .waw__editguide-uploadss {
-  }
+  .waw__editguide-uploadss {}
 
   .waw__editguide-newstep-div div input {
     font-size: 18px;
