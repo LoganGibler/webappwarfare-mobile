@@ -144,7 +144,9 @@ const Profile = () => {
                   Click here to create a guide. &nbsp; →
                 </a>
               </p> */}
-              <button href="/createGuide">Click here to create a guide. &nbsp; →</button>
+              <button onClick={()=>{
+                navigate("/createGuide")
+              }}>Click here to create a guide. &nbsp; →</button>
             </div>
 
             <div className="waw__profile-img-noguides-div-logo">

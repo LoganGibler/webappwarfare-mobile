@@ -163,3 +163,39 @@ export async function updateSteppie(id, index, newStepData) {
     throw error;
   }
 }
+
+export async function createGuide(
+  vmtitle,
+  hostedby,
+  description,
+  difficulty,
+  author
+) {
+  let published = false;
+  let featured = false;
+  let approved = false;
+  let preformattedDate = new Date();
+  let day = preformattedDate.getDate();
+  let month = preformattedDate.getMonth() + 1;
+  let year = preformattedDate.getFullYear();
+  let date = `${month}-${day}-${year}`;
+
+  try {
+    const { data } = await axios.post(`${BASE}/createPost`, {
+      vmtitle: vmtitle,
+      hostedby: hostedby,
+      description: description,
+      published: published,
+      author: author,
+      date: date,
+      difficulty: difficulty,
+      approved: approved,
+      featured: featured,
+    });
+
+    // console.log("this is data after frontend api", data);
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
