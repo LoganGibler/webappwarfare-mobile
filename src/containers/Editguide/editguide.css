@@ -70,10 +70,13 @@
 
 .waw__editguide-description-div {
   padding: 1rem 1rem 4rem;
-  max-width: 55rem;
+
+  align-self: center;
+  width: 57rem;
 }
 
 .waw__editguide-description-div p {
+  text-align: center;
   padding: 1rem;
   font-size: 18.5px;
   color: #c3d1db;

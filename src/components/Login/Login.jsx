@@ -9,7 +9,6 @@ import { storeToken, storeUser, logStatus, storeID } from "../../auth";
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
   const navigate = useNavigate();
 
   return (
@@ -26,17 +25,16 @@ const Login = () => {
           hashedPassword = hashedPassword.data.hashed_pass;
           //   console.log(hashedPassword);
           const user = await loginUser(username, hashedPassword);
-          console.log(user.data.user);
+
           const user_info = user.data.user;
           if (!user_info) {
             setUsername("");
             setPassword("");
             alert("Username or Password was incorrect. Please try again.");
           } else {
-            logStatus(true);
-            storeUser(user_info.username);
-            storeToken(user.data.token);
             storeID(user_info._id);
+            storeUser(user_info.username);
+            logStatus(true);
             setUsername("");
             setPassword("");
             navigate("/Profile");

@@ -9,22 +9,18 @@ import {
 } from "../../api/index.js";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
+import { useLiveQuery } from "dexie-react-hooks";
+import { db } from "../../indexedDB";
+import { getUser } from "../../auth";
 let imageListReg = ref(storage, "/guidepfp/");
 
 const Profile = () => {
   const navigate = useNavigate();
-  const activeUser = JSON.parse(localStorage.getItem("user"));
-  const userID = JSON.parse(localStorage.getItem("key"));
-  let [user, setUser] = useState("");
   let [guides, setGuides] = useState([]);
   let [unapprovedGuides, setUnapprovedGuides] = useState([]);
   let [imageDirectoryList, setImageDirectoryList] = useState([]);
   let list = [];
-
-  async function fetchUser(userID) {
-    let user = await getUserByID(userID);
-    setUser(user.user[0]);
-  }
+  let activeUser = getUser();
 
   async function fetchGuides() {
     const foundGuides = await getGuidesByUsername(activeUser);
@@ -38,8 +34,7 @@ const Profile = () => {
   }
 
   useEffect(() => {
-    fetchUser(userID);
-    fetchGuides(user);
+    fetchGuides(activeUser);
     fetchUnapprovedGuides();
     listAll(imageListReg).then((res) => {
       // console.log("this is res.items", res.items);
@@ -144,9 +139,13 @@ const Profile = () => {
                   Click here to create a guide. &nbsp; →
                 </a>
               </p> */}
-              <button onClick={()=>{
-                navigate("/createGuide")
-              }}>Click here to create a guide. &nbsp; →</button>
+              <button
+                onClick={() => {
+                  navigate("/createGuide");
+                }}
+              >
+                Click here to create a guide. &nbsp; →
+              </button>
             </div>
 
             <div className="waw__profile-img-noguides-div-logo">

@@ -19,7 +19,8 @@ import {
 } from "firebase/storage";
 import "./editguide.css";
 
-const Editguide = () => {
+const Editguide = (currentUser) => {
+  console.log("this is current User", currentUser);
   const { id } = useParams();
   const navigate = useNavigate();
   const key = getID();
@@ -32,8 +33,9 @@ const Editguide = () => {
 
   const [descriptionStatus, setDescriptionStatus] = useState(true);
   const [descriptionHtml, setDescriptionHtml] = useState(null);
-  const [showEditDescriptionButton, setShowEditDescriptionButton] =
-    useState(true);
+  const [showEditDescriptionButton, setShowEditDescriptionButton] = useState(
+    true
+  );
 
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
@@ -74,7 +76,7 @@ const Editguide = () => {
     //   });
     // console.log("this is image upload", imageUpload)
     const imageRef = ref(storage, `${"images/" + id + "/" + index}`);
-    console.log("this is imageRef", imageRef);
+
     uploadBytes(imageRef, inputed_img, metadata).then((snapshot) => {
       if (index === "_main") {
         alert("Guide PFP uploaded.");
@@ -109,7 +111,6 @@ const Editguide = () => {
 
   function renderDescriptionBox(id) {
     try {
-      console.log("passed in guide id:", id);
       async function getDescriptionData() {
         let newDescriptionData = await document.getElementById(
           "editguide-description-textarea"
@@ -212,15 +213,11 @@ const Editguide = () => {
 
   function renderEditStepBox(id, index, stepCounter, step) {
     try {
-      console.log("stepCounter: ", stepCounter);
-      console.log("index: ", index);
-      console.log("step: ", step);
-
       async function getNewStepData() {
         let newStepData = document.getElementById("editguide-step-data").value;
-        console.log("newStepData: ", newStepData);
+
         let newStep = await updateSteppie(id, stepCounter, newStepData);
-        console.log("updatedStep after api call:", newStep);
+
         return newStep;
       }
 
@@ -401,14 +398,7 @@ const Editguide = () => {
                               ? stepImages.map((image) => {
                                   let index = image.split("?")[0];
                                   index = index[index.length - 1];
-                                  console.log(
-                                    "This is index parsed out of url",
-                                    index
-                                  );
-                                  console.log(
-                                    "This is stepCounter Index",
-                                    stepCounterIndex
-                                  );
+
                                   if (index === stepCounterIndex.toString()) {
                                     return (
                                       <div className="editguide-uploaded-img-div">

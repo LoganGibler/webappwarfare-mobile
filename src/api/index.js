@@ -8,13 +8,15 @@ if (env === "main") {
 } else {
   var BASE = "http://localhost:8000";
 }
-
+// console.log(process.env.REACT_APP_API_PASS);
+const api_pass = process.env.REACT_APP_API_PASS;
 // USER API CALLS
 
 export async function getUserByID(_id) {
   try {
     const { data } = await axios.post(`${BASE}/getUserByID`, {
       _id: _id,
+      api_pass: api_pass,
     });
     console.log("data", data);
     return data;
@@ -28,6 +30,7 @@ export async function createUser(username, password) {
     const user = await axios.post(`${BASE}/Register`, {
       username: username,
       password: password,
+      api_pass: api_pass,
     });
     return user;
   } catch (error) {
@@ -40,8 +43,8 @@ export async function loginUser(username, password) {
     const user = await axios.post(`${BASE}/Login`, {
       username: username,
       password: password,
+      api_pass: api_pass,
     });
-    console.log(user);
     return user;
   } catch (error) {
     throw error;
@@ -51,7 +54,9 @@ export async function loginUser(username, password) {
 // GUIDE API CALLS
 export async function getAllPublishedGuides() {
   try {
-    const { data } = await axios.get(`${BASE}/allPublishedGuides`);
+    const { data } = await axios.post(`${BASE}/allPublishedGuides`, {
+      api_pass: api_pass,
+    });
     return data;
   } catch (error) {
     throw error;
@@ -62,6 +67,7 @@ export async function getGuidesBySearch(search) {
   try {
     const { data } = await axios.post(`${BASE}/getGuidesBySearch`, {
       search: search,
+      api_pass: api_pass,
     });
     return data;
   } catch (error) {
@@ -71,7 +77,9 @@ export async function getGuidesBySearch(search) {
 
 export async function getFeaturedGuides() {
   try {
-    const { data } = await axios.get(`${BASE}/getFeaturedGuides`);
+    const { data } = await axios.post(`${BASE}/getFeaturedGuides`, {
+      api_pass: api_pass,
+    });
     return data;
   } catch (error) {
     throw error;
@@ -82,6 +90,7 @@ export async function getGuideByID(_id) {
   try {
     const { data } = await axios.post(`${BASE}/getBlogById`, {
       _id: _id,
+      api_pass: api_pass,
     });
     return data;
   } catch (error) {
@@ -91,7 +100,9 @@ export async function getGuideByID(_id) {
 
 export async function getPublishedUnapprovedGuides() {
   try {
-    const { data } = await axios.get(`${BASE}/getPublishedUnapprovedGuides`);
+    const { data } = await axios.post(`${BASE}/getPublishedUnapprovedGuides`, {
+      api_pass: api_pass,
+    });
     return data;
   } catch (error) {
     throw error;
@@ -102,6 +113,7 @@ export async function getGuidesByUsername(author) {
   try {
     const { data } = await axios.post(`${BASE}/getGuidesByAuthor`, {
       author: author,
+      api_pass: api_pass,
     });
     return data;
   } catch (error) {
@@ -114,6 +126,7 @@ export async function updateDescription(id, description) {
     const { data } = await axios.post(`${BASE}/updateDescription`, {
       id: id,
       description: description,
+      api_pass: api_pass,
     });
     return data;
   } catch (error) {
@@ -128,6 +141,7 @@ export async function addStep(_id, step) {
     const { data } = await axios.post(`${BASE}/addstep`, {
       _id: _id,
       step: step,
+      api_pass: api_pass,
     });
 
     // console.log("this is data after frontend api", data);
@@ -143,6 +157,7 @@ export async function deleteStep(_id, index) {
     const deletedStep = await axios.post(`${BASE}/deleteStep`, {
       _id: _id,
       index: index,
+      api_pass: api_pass,
     });
 
     return deletedStep;
@@ -157,6 +172,7 @@ export async function updateSteppie(id, index, newStepData) {
       id: id,
       index: index,
       newStepData: newStepData,
+      api_pass: api_pass,
     });
     return data;
   } catch (error) {
@@ -191,6 +207,7 @@ export async function createGuide(
       difficulty: difficulty,
       approved: approved,
       featured: featured,
+      api_pass: api_pass,
     });
 
     // console.log("this is data after frontend api", data);

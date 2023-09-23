@@ -12,21 +12,15 @@ const Footer = () => {
 
       <div className="waw__footer-content">
         <div>
-          <p>Content Here</p>
-          <p>Content Here</p>
-          <p>Content Here</p>
+          <a href="https://github.com/LoganGibler">GitHub</a>
+          <a href="">LinkedIn</a>
+          <a href="">Portfolio</a>
         </div>
 
         <div>
-          <p>Content Here</p>
-          <p>Content Here</p>
-          <p>Content Here</p>
-        </div>
-
-        <div>
-          <p>Content Here</p>
-          <p>Content Here</p>
-          <p>Content Here</p>
+          <a href="https://en.wikipedia.org/wiki/Hacker_Manifesto">Manifesto</a>
+          <a href="https://tryhackme.com/">TryHackMe</a>
+          <a href="https://www.hackthebox.com/">HackTheBox</a>
         </div>
       </div>
     </div>

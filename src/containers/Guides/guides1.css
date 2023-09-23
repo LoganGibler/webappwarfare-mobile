@@ -20,6 +20,7 @@
     align-content: center; */
     justify-content: center;
     border: 1px solid grey;
+    border-radius: 5px;
 }
 
 .waw__guides-searchbar-div h4 {
@@ -41,6 +42,8 @@
     color: #60efff;
     padding: 0.6rem;
     width: 10rem;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 
 .waw__guides-searchbar-div button:hover {
@@ -57,6 +60,8 @@
     outline: none;
     color: #60efff;
     width: 25rem;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
 }
 
 .waw__guides-mainguide-div {
@@ -74,6 +79,7 @@
     border: 1px solid grey;
     transition: all 0.25s ease-in-out;
     font-family: var(--font-family);
+    border-radius: 5px;
 }
 
 .waw__guide:hover {

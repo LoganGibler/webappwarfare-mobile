@@ -34,8 +34,8 @@ const Register = () => {
           } else {
             let hashedPassword = await hashPassword(password);
             hashedPassword = hashedPassword.data.hashed_pass;
-            console.log(hashedPassword);
-            console.log(username, hashedPassword);
+            // console.log(hashedPassword);
+            // console.log(username, hashedPassword);
             let user = await createUser(username, hashedPassword);
             // console.log("this is user", user);
             if (user.data.token) {

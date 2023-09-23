@@ -7,7 +7,7 @@ import {
   Routes,
   Redirect,
 } from "react-router-dom";
-import React, { Fragment } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import { UserProfile, Guides, Header, Footer, Editguide } from "./containers";
 import {
   Navigation,
@@ -32,6 +32,7 @@ const App = () => {
           <Routes>
             <Route path="/Profile" element={<Profile />} />
             <Route path="/Home" element={<Header />} />
+            <Route path="/" element={<Header />} />
             <Route path="/Guides" element={<Guides />} />
             <Route path="/Guide/:id" element={<Guide />}></Route>
             <Route path="/Register" element={<Register />}></Route>

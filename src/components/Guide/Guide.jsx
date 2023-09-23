@@ -43,7 +43,7 @@ const Guide = () => {
 
   return (
     <div className="waw__guide-main-container">
-      {console.log("this is guide", guide)}
+   
       <div className="waw__guide-div">
         <div className="waw__guide-header-div">
           <div>
@@ -122,10 +122,7 @@ const Guide = () => {
                   stepImages.map((image) => {
                     let imageIndex = image.split("?")[0];
                     imageIndex = imageIndex[imageIndex.length - 1];
-                    {
-                    console.log(image);
-                    console.log("this is image index", imageIndex);
-                    }
+               
                     if (imageIndex === stepCounterIndex.toString()) {
                       return (
                         <div className="waw__step-image-div">
