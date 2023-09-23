@@ -85,7 +85,43 @@ export async function getFeaturedGuides() {
     throw error;
   }
 }
+export async function unpublishGuide(_id) {
+  try {
+    const { data } = axios.post(`${BASE}/unpublishGuide`, {
+      _id: _id,
+      api_pass: api_pass,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+export async function publishGuide(_id) {
+  try {
+    const { data } = await axios.post(`${BASE}/publishGuide`, {
+      _id: _id,
+      api_pass: api_pass,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
 
+export async function deleteGuide(_id) {
+  try {
+    const { data } = await axios.post(
+      `${BASE}/removeGuided126d2c7cd71ad50a20e59f89afaf380`,
+      {
+        _id: _id,
+        api_pass: api_pass,
+      }
+    );
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
 export async function getGuideByID(_id) {
   try {
     const { data } = await axios.post(`${BASE}/getBlogById`, {

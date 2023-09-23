@@ -6,6 +6,9 @@ import {
   addStep,
   deleteStep,
   updateSteppie,
+  publishGuide,
+  unpublishGuide,
+  deleteGuide,
 } from "../../api";
 import { useNavigate, useParams } from "react-router";
 import { getID, getUser } from "../../auth";
@@ -449,6 +452,41 @@ const Editguide = (currentUser) => {
                 >
                   Add New Step &nbsp; ↑
                 </button>
+                <div>
+                  {guide.published ? (
+                    <button
+                      classname="waw__editguide-publish-button"
+                      onClick={() => {
+                        unpublishGuide(guide._id);
+                        alert("Guide is now hidden from public view.");
+                      }}
+                    >
+                      Unpublish
+                    </button>
+                  ) : (
+                    <button
+                      className="waw__editguide-publish-button"
+                      onClick={() => {
+                        publishGuide(guide._id);
+                        alert(
+                          "Guide is now public. A dev will now review your guide."
+                        );
+                      }}
+                    >
+                      Publish
+                    </button>
+                  )}
+
+                  <button
+                    className="waw__editguide-delete-button"
+                    onClick={() => {
+                      deleteGuide(guide._id);
+                      alert("Guide has been deleted.");
+                    }}
+                  >
+                    Delete Guide
+                  </button>
+                </div>
               </div>
             )}
           </div>

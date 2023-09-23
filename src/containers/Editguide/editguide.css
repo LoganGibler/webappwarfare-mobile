@@ -392,6 +392,26 @@
   border: 1px solid grey;
 }
 
+.waw__editguide-addstep-div div {
+  display: flex;
+  margin-left: 25rem;
+}
+
+.waw__editguide-addstep-div div button {
+  width: 9rem;
+}
+
+.waw__editguide-delete-button {
+  background-color: red !important;
+  border: 1px solid grey;
+}
+
+.waw__editguide-delete-button:hover {
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 895px) {
   .waw__editguide {
     display: flex;
@@ -779,6 +799,10 @@
     border-radius: 5px;
     border: 1px solid grey;
   }
+
+  .waw__editguide-addstep-div div {
+    margin-left: 15rem;
+  }
 }
 
 @media screen and (max-width: 733px) {
@@ -787,6 +811,10 @@
     /* flex-direction: column; */
     justify-content: center;
     font-family: var(--font-family);
+  }
+
+  .waw__editguide-addstep-div div {
+    margin-left: 10rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -1014,7 +1042,7 @@
 
   .waw__editguide-editstep-button {
     display: flex;
-    padding: 0.5rem 33rem 0rem 0rem;
+    padding: 0.5rem 27rem 0rem 0rem;
   }
 
   .waw__editguide-editstep-button button {
@@ -1189,6 +1217,10 @@
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
+  }
+
+  .waw__editguide-addstep-div div {
+    margin-left: 7rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -1589,6 +1621,14 @@
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
+  }
+
+  .waw__editguide-addstep-div div {
+    margin-left: 6rem;
+  }
+
+  .waw__editguide-addstep-div div button {
+    width: 6rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -2011,6 +2051,15 @@
     margin: 0rem 0rem;
   }
 
+  .waw__editguide-addstep-div div {
+    margin-left: 0rem;
+  }
+
+  .waw__editguide-addstep-div div button {
+    width: 7rem;
+    padding: 0.2rem 0.5rem;
+  }
+
   /* background-color: #1e1e1e; */
   /* background-color: #1a2332 */
   /* background-color: #263143; */
@@ -2251,7 +2300,7 @@
 
   .waw__editguide-editstep-button {
     /* display: flex; */
-    padding: 0rem 22rem 0rem 0rem;
+    padding: 0rem 18.5rem 0rem 0rem;
     margin: 1rem;
   }
 
@@ -2432,6 +2481,14 @@
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
+  }
+
+  .waw__editguide-addstep-div div {
+    margin-left: 2rem;
+  }
+
+  .waw__editguide-addstep-div div button {
+    width: 5rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -2857,6 +2914,14 @@
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
+  }
+
+  .waw__editguide-addstep-div div {
+    margin-left: 1.5rem;
+  }
+
+  .waw__editguide-addstep-div div button {
+    width: 4.5rem;
   }
 
   /* background-color: #1e1e1e; */
