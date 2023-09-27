@@ -2,9 +2,9 @@ import { storage } from "../firebase.js";
 import { ref } from "firebase/storage";
 import axios from "axios";
 
-const env = "QA";
+const env = "main";
 if (env === "main") {
-  var BASE = "https://webappwarfare-api.onrender.com";
+  var BASE = "https://waw-node-js-api.onrender.com";
 } else {
   var BASE = "http://localhost:8000";
 }
