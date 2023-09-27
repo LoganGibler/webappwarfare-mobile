@@ -459,6 +459,7 @@ const Editguide = (currentUser) => {
                       onClick={() => {
                         unpublishGuide(guide._id);
                         alert("Guide is now hidden from public view.");
+                        window.location.reload();
                       }}
                     >
                       Unpublish
@@ -471,6 +472,7 @@ const Editguide = (currentUser) => {
                         alert(
                           "Guide is now public. A dev will now review your guide."
                         );
+                        window.location.reload();
                       }}
                     >
                       Publish
@@ -482,6 +484,7 @@ const Editguide = (currentUser) => {
                     onClick={() => {
                       deleteGuide(guide._id);
                       alert("Guide has been deleted.");
+                      window.location.reload();
                     }}
                   >
                     Delete Guide

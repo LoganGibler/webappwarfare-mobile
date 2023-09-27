@@ -52,7 +52,7 @@
 
 .waw__editguide_details-div h3 {
   padding: 0rem 0rem 0.3rem 0rem;
-  font-size: 35px;
+  font-size: 30px;
   font-weight: 550;
 }
 
@@ -94,7 +94,7 @@
   font-family: var(--font-family);
   margin-left: 0.8rem;
   background-color: #1a2332;
-  border: 1px solid #c3d1db;
+  border: 1px solid grey;
   outline: none;
   color: #c3d1db;
   border-radius: 5px;
@@ -3189,7 +3189,6 @@
     padding: 0.4rem;
     color: #c3d1db;
     font-family: var(--font-family);
-
   }
 
   .waw__editguide-editstep-button button:hover {
