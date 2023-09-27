@@ -1,8 +1,10 @@
 import React from "react";
 import "./header.css";
 import logo from "../../pics/pngegg (1).png";
+import { useNavigate } from "react-router";
 
 const Header = () => {
+  const navigate = useNavigate();
   return (
     <div className="waw__header" id="home">
       <div className="waw__header-content">
@@ -15,16 +17,26 @@ const Header = () => {
           granted permission to attack these Vulnerable boxes.
         </p>
         <p className="waw__header_subtext">
-          For those just starting out, learn how to setup your own
-          home lab here:
+          For those just starting out, learn how to setup your own home lab
+          here:
         </p>
-        <button className="waw__header-button-p-homelab">
+        <button
+          className="waw__header-button-p-homelab"
+          onClick={() => {
+            navigate("/guide/labguideid");
+          }}
+        >
           Create a Home Lab &nbsp; →
         </button>
         <p className="waw__header_subtext">
           For those ready to follow some guides, click below:
         </p>
-        <button className="waw__header-button-p-viewguides">
+        <button
+          className="waw__header-button-p-viewguides"
+          onClick={() => {
+            navigate("/Guides");
+          }}
+        >
           View Guides &nbsp; →
         </button>
       </div>

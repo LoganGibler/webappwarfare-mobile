@@ -229,6 +229,7 @@
 .waw__editguide-editstep-button {
   display: flex;
   padding: 0.5rem 33rem 0rem 0rem;
+  margin-left: 1.8rem;
 }
 
 .waw__editguide-editstep-button button {
@@ -394,17 +395,21 @@
 
 .waw__editguide-addstep-div div {
   display: flex;
-  margin-left: 25rem;
+  margin-left: 30rem;
 }
 
 .waw__editguide-addstep-div div button {
-  width: 9rem;
+  padding: 0.5 1rem;
 }
 
 .waw__editguide-delete-button {
   background-color: red !important;
   border: 1px solid grey;
 }
+
+/* .waw__editguide-publish-button {
+  width: 12rem;
+} */
 
 .waw__editguide-delete-button:hover {
   color: white;
@@ -653,7 +658,7 @@
 
   .waw__editguide-addstep-div {
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 1rem 3.8rem;
   }
 
   .waw__editguide-addstep-div button {
@@ -801,7 +806,7 @@
   }
 
   .waw__editguide-addstep-div div {
-    margin-left: 15rem;
+    margin-left: 13rem;
   }
 }
 
@@ -814,8 +819,16 @@
   }
 
   .waw__editguide-addstep-div div {
-    margin-left: 10rem;
+    margin-left: 7rem;
   }
+
+  .waw__editguide-delete-button {
+    width: 8rem !important;
+  }
+
+  /* .waw__editguide-publish-button {
+    width: 2rem !important;
+  } */
 
   /* background-color: #1e1e1e; */
   /* background-color: #1a2332 */
@@ -1062,7 +1075,7 @@
 
   .waw__editguide-addstep-div {
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 1rem 3.2rem;
   }
 
   .waw__editguide-addstep-div button {
@@ -1220,7 +1233,7 @@
   }
 
   .waw__editguide-addstep-div div {
-    margin-left: 7rem;
+    /* margin-left: 1rem; */
   }
 
   /* background-color: #1e1e1e; */
@@ -1463,7 +1476,7 @@
 
   .waw__editguide-addstep-div {
     display: flex;
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
   }
 
   .waw__editguide-addstep-div button {
@@ -1624,7 +1637,7 @@
   }
 
   .waw__editguide-addstep-div div {
-    margin-left: 6rem;
+    margin-left: 4.5rem;
   }
 
   .waw__editguide-addstep-div div button {
@@ -2484,11 +2497,11 @@
   }
 
   .waw__editguide-addstep-div div {
-    margin-left: 2rem;
+    margin-left: 0rem;
   }
 
   .waw__editguide-addstep-div div button {
-    width: 5rem;
+    width: 6rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -2731,7 +2744,7 @@
 
   .waw__editguide-editstep-button {
     /* display: flex; */
-    padding: 0rem 20rem 0rem 0rem;
+    padding: 0rem 17rem 0rem 0rem;
     margin: 1rem;
   }
 
@@ -2742,6 +2755,7 @@
     padding: 0.4rem;
     color: #c3d1db;
     font-family: var(--font-family);
+    width: 6rem;
   }
 
   .waw__editguide-editstep-button button:hover {
@@ -2917,11 +2931,11 @@
   }
 
   .waw__editguide-addstep-div div {
-    margin-left: 1.5rem;
+    margin-left: 0rem;
   }
 
   .waw__editguide-addstep-div div button {
-    width: 4.5rem;
+    width: 6rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -3164,7 +3178,7 @@
 
   .waw__editguide-editstep-button {
     /* display: flex; */
-    padding: 0rem 18rem 0rem 0rem;
+    padding: 0rem 14rem 0rem 0rem;
     margin: 1rem;
   }
 
@@ -3175,6 +3189,7 @@
     padding: 0.4rem;
     color: #c3d1db;
     font-family: var(--font-family);
+
   }
 
   .waw__editguide-editstep-button button:hover {
