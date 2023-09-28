@@ -16,7 +16,7 @@ const Header = () => {
           on this site are meant for practice only, and the Authors have been
           granted permission to attack these Vulnerable boxes.
         </p>
-        <p className="waw__header_subtext">
+        <p className="waw__header-subtext-p">
           For those just starting out, learn how to setup your own home lab
           here:
         </p>
@@ -28,7 +28,7 @@ const Header = () => {
         >
           Create a Home Lab &nbsp; →
         </button>
-        <p className="waw__header_subtext">
+        <p className="waw__header-subtext-p">
           For those ready to follow some guides, click below:
         </p>
         <button

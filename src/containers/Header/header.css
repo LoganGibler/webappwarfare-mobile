@@ -1,5 +1,7 @@
 .waw__header {
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .waw__header-content {
@@ -11,13 +13,14 @@
   /* margin-right: 1rem; */
   margin-left: 2.5rem;
   padding: 1rem 1rem 3rem 6rem;
+  max-width: 48rem;
 }
 
 .waw__header-content h1 {
   font-family: var(--font-family);
   font-weight: 720;
   line-height: 70px;
-  font-size: 57px;
+  font-size: 52px;
   margin-top: 7%;
   padding-bottom: 1rem;
   align-self: center;
@@ -28,15 +31,21 @@
   /* align-self: center; */
   /* margin-top: 5%; */
   font-family: var(--font-family);
-  font-size: 20px;
+  font-size: 17px;
   line-height: 27px;
   margin-top: 3rem;
   padding: 1rem;
 }
 
+.waw__header-subtext-p {
+  align-self: center;
+  text-align: center;
+  color: #c3d1db;
+}
+
 .waw__header-content button {
   font-family: var(--font-family);
-  margin-left: 1rem;
+  align-self: center;
 }
 
 .waw__header_subtext {
@@ -53,7 +62,7 @@
   text-align: center;
   border: none;
   outline: none;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .waw__header-button-p-viewguides:hover {
@@ -74,7 +83,7 @@
   border: none;
   outline: none;
   text-align: center;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 .waw__header-button-p-homelab:hover {
@@ -85,18 +94,22 @@
 }
 
 .waw__header-image {
-  flex: 1;
+  /* flex: 1; */
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-right: 0rem 2rem 2rem;
+  margin: 1rem 5rem 0rem 0rem;
+  width: 30rem;
 }
 
 .waw__header-image img {
   /* width: 80%;
     height: 75%; */
-  width: 100%;
-  margin-bottom: 10rem;
+  width: 38rem;
+  height: 38rem;
+  /* height: 80%; */
+  padding: 0rem;
+  margin: 0rem 0rem 0rem 3rem;
   /* min-height: 80%; */
 }
 
@@ -115,6 +128,10 @@
     /* margin: 0rem 2rem 2rem 0rem; */
     margin-left: 0rem;
     padding: 1rem 5rem;
+  }
+
+  .waw__header_subtext {
+    text-align: center;
   }
 
   .waw__header-image img {
