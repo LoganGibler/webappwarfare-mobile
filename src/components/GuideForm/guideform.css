@@ -8,7 +8,7 @@
     background-color: white;
     border-radius: 5px;
     padding: 1rem 1rem 2rem;
-    margin: 5rem 1rem;
+    margin: 1rem 1rem;
 }
 
 .waw__guideform form div div {
@@ -431,7 +431,6 @@
         cursor: pointer;
     }
 }
-
 
 @media screen and (max-width: 480px) {
     .waw__guideform {

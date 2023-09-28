@@ -33,7 +33,7 @@
 .waw__navigation-links-container {
   display: flex;
   flex-direction: row;
-  margin-left: 0rem;
+  margin-left: 3rem;
 }
 
 .waw__navigation-home {
@@ -151,6 +151,7 @@
 @media screen and (max-width: 1050px) {
   .waw__navigation-links-container {
     /* display: none; */
+    margin-left: 1rem;
   }
 
   .waw__navigation-menu {
