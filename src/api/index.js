@@ -18,7 +18,7 @@ export async function getUserByID(_id) {
       _id: _id,
       api_pass: api_pass,
     });
-    console.log("data", data);
+    // console.log("data", data);
     return data;
   } catch (error) {
     throw error;
@@ -50,6 +50,19 @@ export async function loginUser(username, password) {
     throw error;
   }
 }
+
+export async function getUserByUsername(username) {
+  try {
+    const user = await axios.post(`${BASE}/getUserByUsername`, {
+      username: username,
+      api_pass: api_pass,
+    });
+    // console.log("response from frontend api:", user);
+    return user;
+  } catch (error) {
+    throw error;
+  }
+}
 /////////////////////////////////////////////////////////////////
 // GUIDE API CALLS
 export async function getAllPublishedGuides() {
@@ -62,6 +75,17 @@ export async function getAllPublishedGuides() {
     throw error;
   }
 }
+
+// export async function getPublishedUnapprovedGuides() {
+//   try {
+//     const { data } = axios.post(`${BASE}/getPublishedunapprovedGuides`, {
+//       api_pass: api_pass,
+//     });
+//     return data
+//   } catch (error) {
+//     throw error;
+//   }
+// }
 
 export async function getGuidesBySearch(search) {
   try {
@@ -189,7 +213,7 @@ export async function addStep(_id, step) {
 
 export async function deleteStep(_id, index) {
   try {
-    console.log("This is passed in index", index);
+    // console.log("This is passed in index", index);
     const deletedStep = await axios.post(`${BASE}/deleteStep`, {
       _id: _id,
       index: index,

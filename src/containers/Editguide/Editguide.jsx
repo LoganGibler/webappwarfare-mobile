@@ -23,7 +23,7 @@ import {
 import "./editguide.css";
 
 const Editguide = (currentUser) => {
-  console.log("this is current User", currentUser);
+  // console.log("this is current User", currentUser);
   const { id } = useParams();
   const navigate = useNavigate();
   const key = getID();

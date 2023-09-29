@@ -6,12 +6,15 @@ import {
   getGuidesByUsername,
   getPublishedUnapprovedGuides,
   getUserByID,
+  getUserByUsername,
 } from "../../api/index.js";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { useLiveQuery } from "dexie-react-hooks";
 import { db } from "../../indexedDB";
-import { getUser } from "../../auth";
+import { getID, getUser } from "../../auth";
+import AdminView from "../adminview/AdminView";
+
 let imageListReg = ref(storage, "/guidepfp/");
 
 const Profile = () => {
@@ -19,8 +22,10 @@ const Profile = () => {
   let [guides, setGuides] = useState([]);
   let [unapprovedGuides, setUnapprovedGuides] = useState([]);
   let [imageDirectoryList, setImageDirectoryList] = useState([]);
+  let [userData, setUserData] = useState([]);
   let list = [];
   let activeUser = getUser();
+  let key = getID();
 
   async function fetchGuides() {
     const foundGuides = await getGuidesByUsername(activeUser);
@@ -33,7 +38,14 @@ const Profile = () => {
     setUnapprovedGuides(foundUnapprovedGuides);
   }
 
+  async function fetchUserData() {
+    const userData1 = await getUserByID(key);
+    const user1 = await getUserByUsername(userData1.user);
+    setUserData(user1.data.user);
+  }
+
   useEffect(() => {
+    fetchUserData();
     fetchGuides(activeUser);
     fetchUnapprovedGuides();
     listAll(imageListReg).then((res) => {
@@ -153,8 +165,10 @@ const Profile = () => {
             </div>
           </div>
         )}
+         {userData.admin === true && <AdminView />}
       </div>
 
+     
       {/* <div>{guides.length ? guides.map((guide) => {}) : null}</div> */}
     </div>
   );
