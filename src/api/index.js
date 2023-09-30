@@ -276,3 +276,27 @@ export async function createGuide(
     throw error;
   }
 }
+
+export async function approveGuide(_id) {
+  try {
+    const { data } = await axios.post(`${BASE}/approveGuide`, {
+      _id: _id,
+      api_pass: api_pass,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}
+
+export async function rejectGuide(_id) {
+  try {
+    const { data } = await axios.post(`${BASE}/rejectGuide`, {
+      _id: _id,
+      api_pass: api_pass,
+    });
+    return data;
+  } catch (error) {
+    throw error;
+  }
+}

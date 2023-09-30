@@ -33,7 +33,7 @@ const RecommendedGuides = () => {
   return (
     <div className="waw__rec-guides">
       <div className="waw__rec-guides-container">
-        <h2 className="gradient_text">Recommended Guides</h2>
+        <h2>~/Guides/RecommendedGuides</h2>
         <div className="waw__rec-guides-main-div">
           {guides.length
             ? guides.map((guide) => {

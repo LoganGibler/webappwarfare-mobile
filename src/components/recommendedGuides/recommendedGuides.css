@@ -12,7 +12,8 @@
     align-items: center;
     background-color: #263143;
     border-radius: 5px;
-    border: 1px solid grey;
+    /* border: 1px solid grey; */
+    border: none !important;
     flex-wrap: wrap;
     width: 58rem;
 }
@@ -23,22 +24,27 @@
 }
 
 .waw__rec-guide {
-    margin: 0.3rem 0.8rem;
+    margin: 1rem 0.8rem;
     display: flex;
     flex-direction: column;
-    padding: 0rem 0.5srem;
-    border: 1px solid grey;
-    background: var(--color-bg);
+    padding: 0.3rem 0.5rem 0.5rem;
+    /* border: 1px solid grey; */
+    /* background: var(--color-bg); */
+    background-color: #263143 !important;
+    border: none !important;
     border-radius: 5px;
     width: 12rem;
-    height: 10.5rem;
+    height: 11rem;
     transition: all 0.25s ease-in-out;
+    -webkit-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
+    -moz-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
+    box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
 }
 
 .waw__rec-guide:hover {
     cursor: pointer;
     transform: scale(103%);
-    border: 1px solid white;
+    /* border: 1px solid white; */
 }
 
 .waw__rec-guides-img-div {
@@ -51,19 +57,21 @@
     /* padding: 0.7rem 0rem 0.4rem; */
     height: 80px;
     width: 80px;
-    border-radius: 15px;
-    border: 1px solid grey;
+    border-radius: 25px;
+    /* border: 1px solid grey; */
 }
 
 .waw__rec-guides-container h2 {
     margin-left: 1rem;
     margin-bottom: 0.3rem;
     align-self: flex-start;
-    padding: 0.1rem 0.5rem 0.5rem 2rem;
+    padding: 0.1rem 0rem 0.5rem 0rem;
     border-bottom: 1px solid grey;
-    width: 21rem;
-    min-width: 21rem;
-    font-size: 20px;
+    width: 23rem;
+    /* min-width: 21rem; */
+    font-size: 20px !important;
+    color: white;
+    letter-spacing: 1px;
 }
 
 .waw__rec-guides-details {
@@ -520,13 +528,12 @@
         margin-left: 0rem;
         margin-bottom: 0.5rem;
         /* align-self: flex-start; */
-        text-align: center;
-        align-self: center;
+        /* text-align: center;
+        align-self: center; */
         padding: 0.1rem 0rem 0.6rem;
         border-bottom: 1px solid grey;
-        width: 15rem;
-        min-width: 15rem;
-        font-size: 16px;
+        width: 17rem !important;
+        font-size: 14px !important;
     }
 
     .waw__rec-guides-details {

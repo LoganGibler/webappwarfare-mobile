@@ -54,18 +54,25 @@
   padding: 0rem 0rem 0.3rem 0rem;
   font-size: 30px;
   font-weight: 550;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 20rem;
 }
 
 .waw__editguide_details-div p {
   color: #c3d1db;
   font-size: 20px;
   padding: 0.2rem 0rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .waw__editguide_details-div a {
   color: white;
   font-weight: 550;
   font-size: 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .waw__editguide-description-div {
@@ -81,6 +88,8 @@
   font-size: 18.5px;
   color: #c3d1db;
   word-wrap: break-word;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /* background-color: #1e1e1e; */

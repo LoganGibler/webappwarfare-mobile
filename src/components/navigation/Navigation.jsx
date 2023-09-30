@@ -12,6 +12,7 @@ const Navigation = () => {
   const allItems = useLiveQuery(() => user.toArray(), []);
   const [toggleMenu, setToggleMenu] = useState(false);
   const [activeUser, setActiveUser] = useState("");
+
   let navigate = useNavigate();
   useEffect(() => {
     if (allItems) {
@@ -23,25 +24,135 @@ const Navigation = () => {
   const loggedIn = getLogStatus();
 
   const Menu = () => {
+    const navLink = JSON.parse(localStorage.getItem("nav"));
     return (
       <>
-        <p>
-          <a href="/Home" className="waw__navigation-home">
-            Home
-          </a>
-        </p>
-        <p>
-          <a href="/Guides">Guides</a>
-        </p>
-        {loggedIn && (
-          <p>
-            <a href="/Profile">Profile</a>
+        {navLink === "Home" ? (
+          <p id="home-p">
+            <a
+              className="waw__navigation-home active-nav-link"
+              onClick={() => {
+                window.localStorage.setItem("nav", JSON.stringify("Home"));
+                navigate("/Home");
+              }}
+            >
+              Home
+            </a>
+          </p>
+        ) : (
+          <p id="home-p">
+            <a
+              href="/Home"
+              className="waw__navigation-home"
+              onClick={() => {
+                window.localStorage.setItem("nav", JSON.stringify("Home"));
+                navigate("/Home");
+              }}
+            >
+              Home
+            </a>
           </p>
         )}
-        {loggedIn && (
+
+        {navLink === "Guides" ? (
           <p>
-            <a href="/createGuide">CreateGuide</a>
+            <a
+              className="active-nav-link"
+              onClick={() => {
+                window.localStorage.setItem("nav", JSON.stringify("Guides"));
+                navigate("/Guides");
+                setToggleMenu(false);
+              }}
+            >
+              Guides
+            </a>
           </p>
+        ) : (
+          <p>
+            <a
+              onClick={() => {
+                window.localStorage.setItem("nav", JSON.stringify("Guides"));
+                navigate("/Guides");
+                setToggleMenu(false);
+              }}
+            >
+              Guides
+            </a>
+          </p>
+        )}
+
+        {loggedIn && (
+          <div>
+            {navLink === "Profile" ? (
+              <p>
+                <a
+                  className="active-nav-link"
+                  onClick={() => {
+                    window.localStorage.setItem(
+                      "nav",
+                      JSON.stringify("Profile")
+                    );
+                    navigate("/Profile");
+                    setToggleMenu(false);
+                  }}
+                >
+                  Profile
+                </a>
+              </p>
+            ) : (
+              <p>
+                <a
+                  onClick={() => {
+                    window.localStorage.setItem(
+                      "nav",
+                      JSON.stringify("Profile")
+                    );
+                    navigate("/Profile");
+                    setToggleMenu(false);
+                  }}
+                >
+                  Profile
+                </a>
+              </p>
+            )}
+          </div>
+        )}
+
+        {loggedIn && (
+          <div>
+            {navLink === "CreateGuide" ? (
+              <p>
+                <a
+                  className="active-nav-link"
+                  onClick={() => {
+                    window.localStorage.setItem(
+                      "nav",
+                      JSON.stringify("CreateGuide")
+                    );
+                    navigate("/createGuide");
+                    setToggleMenu(false);
+                  }}
+                >
+                  CreateGuide
+                </a>
+              </p>
+            ) : (
+              <p>
+                <a
+                  onClick={() => {
+                    window.localStorage.setItem(
+                      "nav",
+                      JSON.stringify("CreateGuide")
+                    );
+                    navigate("/createGuide");
+                    setToggleMenu(false);
+                  }}
+                >
+                  CreateGuide
+                </a>
+              </p>
+            )}
+          </div>
         )}
       </>
     );
@@ -62,6 +173,7 @@ const Navigation = () => {
           <p
             onClick={() => {
               navigate("/Login");
+              setToggleMenu(false);
             }}
           >
             Sign in
@@ -69,6 +181,7 @@ const Navigation = () => {
           <button
             onClick={() => {
               navigate("/Register");
+              setToggleMenu(false);
             }}
           >
             Sign up
@@ -113,6 +226,7 @@ const Navigation = () => {
                   <p
                     onClick={() => {
                       navigate("/Login");
+                      setToggleMenu(false);
                     }}
                   >
                     Sign In
@@ -121,6 +235,7 @@ const Navigation = () => {
                     className="waw__signupbutton"
                     onClick={() => {
                       navigate("/Register");
+                      setToggleMenu(false);
                     }}
                   >
                     Sign up

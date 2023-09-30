@@ -1,142 +1,147 @@
 .waw__guideform {
-    display: flex;
-    justify-content: center;
-    font-family: var(--font-family);
+  display: flex;
+  justify-content: center;
+  font-family: var(--font-family);
 }
 
 .waw__guideform form {
-    background-color: white;
-    border-radius: 5px;
-    padding: 1rem 1rem 2rem;
-    margin: 1rem 1rem;
+  background-color: white;
+  border-radius: 5px;
+  padding: 1rem 1rem 2rem;
+  margin: 1rem 1rem;
 }
 
 .waw__guideform form div div {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .waw__guideform form div div p {
-    font-size: 22px;
-    font-weight: 550;
+  font-size: 22px;
+  font-weight: 550;
 }
 
 .waw__guideform form div {
-    margin: rem 1rem 0rem;
-    display: flex;
-    /* border: 1px solid grey; */
-    align-items: center;
-    justify-content: center;
+  margin: rem 1rem 0rem;
+  display: flex;
+  /* border: 1px solid grey; */
+  align-items: center;
+  justify-content: center;
 }
 
 .waw__guideform form div h4 {
-    margin: 2rem 0.5rem 0rem;
-    font-size: 28px;
+  margin: 2rem 0.5rem 0rem;
+  font-size: 28px;
 }
 
 .waw__guideform form div img {
-    margin-top: 2.3rem;
-    height: 75px;
-    width: 95px;
+  margin-top: 2.3rem;
+  height: 75px;
+  width: 95px;
 }
 
 .waw__createguide-inputs {
-    display: flex;
-    flex-direction: column;
-    padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2rem;
 }
 
 .waw__createguide-inputs input {
-    margin: 0.4rem;
-    padding: 0.5rem;
-    font-size: 20px;
-    border: 1px solid #1a2332;
-    border-radius: 5px;
+  margin: 0.4rem;
+  padding: 0.5rem;
+  font-size: 20px;
+  border: 1px solid #1a2332;
+  border-radius: 5px;
 }
 
 .waw__guideform-vmtitle {
-    width: 35rem;
+  width: 35rem;
 }
 
 .waw__guideform-host {
-    width: 28rem;
-    align-self: flex-start;
+  width: 28rem;
+  align-self: flex-start;
 }
 
 .waw__guideform-host-diff {
-    margin: 0rem 0rem 0rem 0rem;
-    padding: 0rem 0rem 0rem 0rem;
-    display: flex;
-    flex-direction: row !important;
-    align-self: flex-start;
+  margin: 0rem 0rem 0rem 0rem;
+  padding: 0rem 0rem 0rem 0rem;
+  display: flex;
+  flex-direction: row !important;
+  align-self: flex-start;
 }
 
 .waw__createguide-inputs label {
-    margin-left: 0.45rem;
-    align-self: flex-start;
-    font-size: 22px;
-    font-weight: 700;
+  margin-left: 0.45rem;
+  align-self: flex-start;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .waw__createguide-inputs select {
-    padding: 0.41rem;
-    font-size: 18px;
-    border: 1px solid #1a2332;
-    border-radius: 5px;
-    font-family: var(--font-family);
+  padding: 0.41rem;
+  font-size: 18px;
+  border: 1px solid #1a2332;
+  border-radius: 5px;
+  font-family: var(--font-family);
 }
 
 .waw__guideform-hostname-label {
-    margin-top: 1rem;
+  margin-top: 1rem;
 }
 
 .waw__guideform-textarea {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 0.5rem;
 }
 
 .waw__guideform-textarea textarea {
-    width: 35.4rem;
-    height: 15rem;
-    border: 1px solid #1a2332;
-    font-size: 19px;
-    padding: 0.8rem;
-    resize: none;
-    border-radius: 5px;
+  width: 35.4rem;
+  height: 15rem;
+  border: 1px solid #1a2332;
+  font-size: 19px;
+  padding: 0.8rem;
+  resize: none;
+  border-radius: 5px;
 }
 
 .waw__guideform-desc-label-div {
-    display: flex;
+  display: flex;
 }
 
 .waw__guideform-desc-label {
-    margin: 1rem 25rem 0rem 0rem;
-    font-size: 22px;
-    font-weight: 700;
+  margin: 1rem 25rem 0rem 0rem;
+  font-size: 22px;
+  font-weight: 700;
 }
 
 .waw__guideform-createguide-button {
-    margin: 1rem 0rem;
-    display: flex;
+  margin: 1rem 0rem;
+  display: flex;
 }
 
 .waw__guideform-createguide-button button {
-    padding: 0.6rem 0rem;
-    background-color: #1a2332;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-weight: 600;
-    font-size: 18px;
-    border: 1px solid grey;
-    width: 35.5rem;
-    border-radius: 5px;
+  padding: 0.6rem 0rem;
+  background-color: #1a2332;
+  color: #c3d1db;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 18px;
+  border: 1px solid grey;
+  width: 35.5rem;
+  border-radius: 5px;
 }
 
 .waw__guideform-createguide-button button:hover {
-    color: white;
-    cursor: pointer;
+  color: white;
+  cursor: pointer;
+}
+
+.waw__guideform-requirements {
+  margin: 0.5rem;
+  font-size: 20px;
 }
 
 /* background-color: #1e1e1e; */
@@ -146,434 +151,434 @@
 /* color: #c3d1db; */
 
 @media screen and (max-width: 615px) {
-    .waw__guideform {
-        display: flex;
-        justify-content: center;
-        font-family: var(--font-family);
-    }
+  .waw__guideform {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
 
-    .waw__guideform form {
-        background-color: white;
-        border-radius: 5px;
-        padding: 1rem 1rem 2rem;
-        margin: 3rem 1rem;
-    }
+  .waw__guideform form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 1rem 2rem;
+    margin: 3rem 1rem;
+  }
 
-    .waw__guideform form div div {
-        display: flex;
-        flex-direction: column;
-    }
+  .waw__guideform form div div {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .waw__guideform form div div p {
-        font-size: 22px;
-        font-weight: 550;
-    }
+  .waw__guideform form div div p {
+    font-size: 22px;
+    font-weight: 550;
+  }
 
-    .waw__guideform form div {
-        margin: rem 1rem 0rem;
-        display: flex;
-        /* border: 1px solid grey; */
-        align-items: center;
-        justify-content: center;
-    }
+  .waw__guideform form div {
+    margin: rem 1rem 0rem;
+    display: flex;
+    /* border: 1px solid grey; */
+    align-items: center;
+    justify-content: center;
+  }
 
-    .waw__guideform form div h4 {
-        margin: 2rem 0.5rem 0rem;
-        font-size: 28px;
-    }
+  .waw__guideform form div h4 {
+    margin: 2rem 0.5rem 0rem;
+    font-size: 28px;
+  }
 
-    .waw__guideform form div img {
-        margin-top: 2.3rem;
-        height: 75px;
-        width: 95px;
-    }
+  .waw__guideform form div img {
+    margin-top: 2.3rem;
+    height: 75px;
+    width: 95px;
+  }
 
-    .waw__createguide-inputs {
-        display: flex;
-        flex-direction: column;
-        padding-top: 2rem;
-    }
+  .waw__createguide-inputs {
+    display: flex;
+    flex-direction: column;
+    padding-top: 2rem;
+  }
 
-    .waw__createguide-inputs input {
-        margin: 0.4rem;
-        padding: 0.5rem;
-        font-size: 20px;
-        border: 1px solid #1a2332;
-        border-radius: 5px;
-    }
+  .waw__createguide-inputs input {
+    margin: 0.4rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    border: 1px solid #1a2332;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-vmtitle {
-        width: 30rem;
-    }
+  .waw__guideform-vmtitle {
+    width: 30rem;
+  }
 
-    .waw__guideform-host {
-        width: 22.7rem;
-        align-self: flex-start;
-    }
+  .waw__guideform-host {
+    width: 22.7rem;
+    align-self: flex-start;
+  }
 
-    .waw__guideform-host-diff {
-        margin: 0rem 0rem 0rem 0rem;
-        padding: 0rem 0rem 0rem 0rem;
-        display: flex;
-        flex-direction: row !important;
-        align-self: flex-start;
-    }
+  .waw__guideform-host-diff {
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: row !important;
+    align-self: flex-start;
+  }
 
-    .waw__createguide-inputs label {
-        margin-left: 0.45rem;
-        align-self: flex-start;
-        font-size: 22px;
-        font-weight: 700;
-    }
+  .waw__createguide-inputs label {
+    margin-left: 0.45rem;
+    align-self: flex-start;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-    .waw__createguide-inputs select {
-        padding: 0.41rem;
-        font-size: 18px;
-        border: 1px solid #1a2332;
-        border-radius: 5px;
-        font-family: var(--font-family);
-    }
+  .waw__createguide-inputs select {
+    padding: 0.41rem;
+    font-size: 18px;
+    border: 1px solid #1a2332;
+    border-radius: 5px;
+    font-family: var(--font-family);
+  }
 
-    .waw__guideform-hostname-label {
-        margin-top: 1rem;
-    }
+  .waw__guideform-hostname-label {
+    margin-top: 1rem;
+  }
 
-    .waw__guideform-textarea {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
+  .waw__guideform-textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
 
-    .waw__guideform-textarea textarea {
-        width: 30rem;
-        height: 15rem;
-        border: 1px solid #1a2332;
-        font-size: 19px;
-        padding: 0.8rem;
-        resize: none;
-        border-radius: 5px;
-    }
+  .waw__guideform-textarea textarea {
+    width: 30rem;
+    height: 15rem;
+    border: 1px solid #1a2332;
+    font-size: 19px;
+    padding: 0.8rem;
+    resize: none;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-desc-label-div {
-        display: flex;
-    }
+  .waw__guideform-desc-label-div {
+    display: flex;
+  }
 
-    .waw__guideform-desc-label {
-        margin: 1rem 19.5rem 0rem 0rem;
-        font-size: 22px;
-        font-weight: 700;
-    }
+  .waw__guideform-desc-label {
+    margin: 1rem 19.5rem 0rem 0rem;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-    .waw__guideform-createguide-button {
-        margin: 1rem 0rem;
-        display: flex;
-    }
+  .waw__guideform-createguide-button {
+    margin: 1rem 0rem;
+    display: flex;
+  }
 
-    .waw__guideform-createguide-button button {
-        padding: 0.6rem 0rem;
-        background-color: #1a2332;
-        color: #c3d1db;
-        font-family: var(--font-family);
-        font-weight: 600;
-        font-size: 18px;
-        border: 1px solid grey;
-        width: 30rem;
-        border-radius: 5px;
-    }
+  .waw__guideform-createguide-button button {
+    padding: 0.6rem 0rem;
+    background-color: #1a2332;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid grey;
+    width: 30rem;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-createguide-button button:hover {
-        color: white;
-        cursor: pointer;
-    }
+  .waw__guideform-createguide-button button:hover {
+    color: white;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 528px) {
-    .waw__guideform {
-        display: flex;
-        justify-content: center;
-        font-family: var(--font-family);
-    }
+  .waw__guideform {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
 
-    .waw__guideform form {
-        background-color: white;
-        border-radius: 5px;
-        padding: 1rem 0rem 2rem;
-        margin: 2rem 1rem;
-    }
+  .waw__guideform form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 0rem 2rem;
+    margin: 2rem 1rem;
+  }
 
-    .waw__guideform form div div {
-        display: flex;
-        flex-direction: column;
-    }
+  .waw__guideform form div div {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .waw__guideform form div div p {
-        font-size: 22px;
-        font-weight: 550;
-    }
+  .waw__guideform form div div p {
+    font-size: 22px;
+    font-weight: 550;
+  }
 
-    .waw__guideform form div {
-        margin: 0rem 1rem 0rem;
-        display: flex;
-        /* border: 1px solid grey; */
-        align-items: center;
-        justify-content: center;
-    }
+  .waw__guideform form div {
+    margin: 0rem 1rem 0rem;
+    display: flex;
+    /* border: 1px solid grey; */
+    align-items: center;
+    justify-content: center;
+  }
 
-    .waw__guideform form div h4 {
-        margin: 2rem 0.5rem 0rem;
-        font-size: 28px;
-    }
+  .waw__guideform form div h4 {
+    margin: 2rem 0.5rem 0rem;
+    font-size: 28px;
+  }
 
-    .waw__guideform form div img {
-        margin-top: 2.3rem;
-        height: 75px;
-        width: 95px;
-    }
+  .waw__guideform form div img {
+    margin-top: 2.3rem;
+    height: 75px;
+    width: 95px;
+  }
 
-    .waw__createguide-inputs {
-        display: flex;
-        flex-direction: column;
-        padding: 2rem 0rem 0rem;
-        margin: 0rem;
-    }
+  .waw__createguide-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem 0rem 0rem;
+    margin: 0rem;
+  }
 
-    .waw__createguide-inputs input {
-        margin: 0.4rem;
-        padding: 0.5rem;
-        font-size: 20px;
-        border: 1px solid #1a2332;
-        border-radius: 5px;
-    }
+  .waw__createguide-inputs input {
+    margin: 0.4rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    border: 1px solid #1a2332;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-vmtitle {
-        width: 25rem;
-    }
+  .waw__guideform-vmtitle {
+    width: 25rem;
+  }
 
-    .waw__guideform-host {
-        width: 17.7rem;
-        align-self: flex-start;
-    }
+  .waw__guideform-host {
+    width: 17.7rem;
+    align-self: flex-start;
+  }
 
-    .waw__guideform-host-diff {
-        margin: 0rem 0rem 0rem 0rem;
-        padding: 0rem 0rem 0rem 0rem;
-        display: flex;
-        flex-direction: row !important;
-        align-self: flex-start;
-    }
+  .waw__guideform-host-diff {
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: row !important;
+    align-self: flex-start;
+  }
 
-    .waw__createguide-inputs label {
-        margin-left: 1.4rem;
-        align-self: flex-start;
-        font-size: 22px;
-        font-weight: 700;
-    }
+  .waw__createguide-inputs label {
+    margin-left: 1.4rem;
+    align-self: flex-start;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-    .waw__createguide-inputs select {
-        padding: 0.41rem;
-        font-size: 18px;
-        border: 1px solid #1a2332;
-        border-radius: 5px;
-        font-family: var(--font-family);
-    }
+  .waw__createguide-inputs select {
+    padding: 0.41rem;
+    font-size: 18px;
+    border: 1px solid #1a2332;
+    border-radius: 5px;
+    font-family: var(--font-family);
+  }
 
-    .waw__guideform-hostname-label {
-        margin-top: 1rem;
-    }
+  .waw__guideform-hostname-label {
+    margin-top: 1rem;
+  }
 
-    .waw__guideform-textarea {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
+  .waw__guideform-textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.5rem;
+  }
 
-    .waw__guideform-textarea textarea {
-        width: 25rem;
-        height: 15rem;
-        border: 1px solid #1a2332;
-        font-size: 19px;
-        padding: 0.8rem;
-        resize: none;
-        border-radius: 5px;
-    }
+  .waw__guideform-textarea textarea {
+    width: 25rem;
+    height: 15rem;
+    border: 1px solid #1a2332;
+    font-size: 19px;
+    padding: 0.8rem;
+    resize: none;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-desc-label-div {
-        display: flex;
-    }
+  .waw__guideform-desc-label-div {
+    display: flex;
+  }
 
-    .waw__guideform-desc-label {
-        margin: 1rem 14rem 0rem 0rem;
-        font-size: 22px;
-        font-weight: 700;
-    }
+  .waw__guideform-desc-label {
+    margin: 1rem 14rem 0rem 0rem;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-    .waw__guideform-createguide-button {
-        margin: 1rem 0rem;
-        display: flex;
-    }
+  .waw__guideform-createguide-button {
+    margin: 1rem 0rem;
+    display: flex;
+  }
 
-    .waw__guideform-createguide-button button {
-        padding: 0.6rem 0rem;
-        background-color: #1a2332;
-        color: #c3d1db;
-        font-family: var(--font-family);
-        font-weight: 600;
-        font-size: 18px;
-        border: 1px solid grey;
-        width: 25rem;
-        border-radius: 5px;
-    }
+  .waw__guideform-createguide-button button {
+    padding: 0.6rem 0rem;
+    background-color: #1a2332;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid grey;
+    width: 25rem;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-createguide-button button:hover {
-        color: white;
-        cursor: pointer;
-    }
+  .waw__guideform-createguide-button button:hover {
+    color: white;
+    cursor: pointer;
+  }
 }
 
 @media screen and (max-width: 480px) {
-    .waw__guideform {
-        display: flex;
-        justify-content: center;
-        font-family: var(--font-family);
-    }
+  .waw__guideform {
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+  }
 
-    .waw__guideform form {
-        background-color: white;
-        border-radius: 5px;
-        padding: 1rem 0rem 2rem;
-        margin: 2rem 0.2rem;
-    }
+  .waw__guideform form {
+    background-color: white;
+    border-radius: 5px;
+    padding: 1rem 0rem 2rem;
+    margin: 2rem 0.2rem;
+  }
 
-    .waw__guideform form div div {
-        display: flex;
-        flex-direction: column;
-    }
+  .waw__guideform form div div {
+    display: flex;
+    flex-direction: column;
+  }
 
-    .waw__guideform form div div p {
-        font-size: 20px;
-        font-weight: 550;
-    }
+  .waw__guideform form div div p {
+    font-size: 20px;
+    font-weight: 550;
+  }
 
-    .waw__guideform form div {
-        margin: 0rem 1rem 0rem;
-        display: flex;
-        /* border: 1px solid grey; */
-        align-items: center;
-        justify-content: center;
-    }
+  .waw__guideform form div {
+    margin: 0rem 1rem 0rem;
+    display: flex;
+    /* border: 1px solid grey; */
+    align-items: center;
+    justify-content: center;
+  }
 
-    .waw__guideform form div h4 {
-        margin: 2rem 0.5rem 0rem;
-        font-size: 25px;
-    }
+  .waw__guideform form div h4 {
+    margin: 2rem 0.5rem 0rem;
+    font-size: 25px;
+  }
 
-    .waw__guideform form div img {
-        margin-top: 2.3rem;
-        height: 65px;
-        width: 85px;
-    }
+  .waw__guideform form div img {
+    margin-top: 2.3rem;
+    height: 65px;
+    width: 85px;
+  }
 
-    .waw__createguide-inputs {
-        display: flex;
-        flex-direction: column;
-        padding: 1.5rem 0rem 0rem;
-        margin: 0rem;
-    }
+  .waw__createguide-inputs {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 0rem 0rem;
+    margin: 0rem;
+  }
 
-    .waw__createguide-inputs input {
-        margin: 0.4rem;
-        padding: 0.5rem;
-        font-size: 20px;
-        border: 1px solid #1a2332;
-        border-radius: 5px;
-    }
+  .waw__createguide-inputs input {
+    margin: 0.4rem;
+    padding: 0.5rem;
+    font-size: 20px;
+    border: 1px solid #1a2332;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-vmtitle {
-        width: 20rem;
-    }
+  .waw__guideform-vmtitle {
+    width: 20rem;
+  }
 
-    .waw__guideform-host {
-        width: 12.7rem;
-        align-self: flex-start;
-    }
+  .waw__guideform-host {
+    width: 12.7rem;
+    align-self: flex-start;
+  }
 
-    .waw__guideform-host-diff {
-        margin: 0rem 0rem 0rem 0rem;
-        padding: 0rem 0rem 0rem 0rem;
-        display: flex;
-        flex-direction: row !important;
-        align-self: flex-start;
-    }
+  .waw__guideform-host-diff {
+    margin: 0rem 0rem 0rem 0rem;
+    padding: 0rem 0rem 0rem 0rem;
+    display: flex;
+    flex-direction: row !important;
+    align-self: flex-start;
+  }
 
-    .waw__createguide-inputs label {
-        margin-left: 1.4rem;
-        align-self: flex-start;
-        font-size: 22px;
-        font-weight: 700;
-    }
+  .waw__createguide-inputs label {
+    margin-left: 1.4rem;
+    align-self: flex-start;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-    .waw__createguide-inputs select {
-        padding: 0.41rem;
-        font-size: 18px;
-        border: 1px solid #1a2332;
-        border-radius: 5px;
-        font-family: var(--font-family);
-    }
+  .waw__createguide-inputs select {
+    padding: 0.41rem;
+    font-size: 18px;
+    border: 1px solid #1a2332;
+    border-radius: 5px;
+    font-family: var(--font-family);
+  }
 
-    .waw__guideform-hostname-label {
-        margin-top: 1rem;
-    }
+  .waw__guideform-hostname-label {
+    margin-top: 1rem;
+  }
 
-    .waw__guideform-textarea {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: 0.5rem;
-        padding: 0rem;
-        margin: 0rem;
-    }
+  .waw__guideform-textarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 0.5rem;
+    padding: 0rem;
+    margin: 0rem;
+  }
 
-    .waw__guideform-textarea textarea {
-        width: 20rem;
-        height: 15rem;
-        border: 1px solid #1a2332;
-        font-size: 19px;
-        padding: 0.8rem;
-        resize: none;
-        border-radius: 5px;
-    }
+  .waw__guideform-textarea textarea {
+    width: 20rem;
+    height: 15rem;
+    border: 1px solid #1a2332;
+    font-size: 19px;
+    padding: 0.8rem;
+    resize: none;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-desc-label-div {
-        display: flex;
-    }
+  .waw__guideform-desc-label-div {
+    display: flex;
+  }
 
-    .waw__guideform-desc-label {
-        margin: 1rem 9.5rem 0rem 0rem;
-        font-size: 22px;
-        font-weight: 700;
-    }
+  .waw__guideform-desc-label {
+    margin: 1rem 9.5rem 0rem 0rem;
+    font-size: 22px;
+    font-weight: 700;
+  }
 
-    .waw__guideform-createguide-button {
-        margin: 1rem 0rem;
-        display: flex;
-    }
+  .waw__guideform-createguide-button {
+    margin: 1rem 0rem;
+    display: flex;
+  }
 
-    .waw__guideform-createguide-button button {
-        padding: 0.6rem 0rem;
-        background-color: #1a2332;
-        color: #c3d1db;
-        font-family: var(--font-family);
-        font-weight: 600;
-        font-size: 18px;
-        border: 1px solid grey;
-        width: 20rem;
-        border-radius: 5px;
-    }
+  .waw__guideform-createguide-button button {
+    padding: 0.6rem 0rem;
+    background-color: #1a2332;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 18px;
+    border: 1px solid grey;
+    width: 20rem;
+    border-radius: 5px;
+  }
 
-    .waw__guideform-createguide-button button:hover {
-        color: white;
-        cursor: pointer;
-    }
+  .waw__guideform-createguide-button button:hover {
+    color: white;
+    cursor: pointer;
+  }
 }

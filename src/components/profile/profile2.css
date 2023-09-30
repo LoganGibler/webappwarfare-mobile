@@ -1,0 +1,434 @@
+.waw__profile {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+}
+
+.waw__profile-container {
+    display: flex;
+    flex-direction: column;
+    width: 57.7rem;
+    padding-bottom: 2rem;
+}
+
+.waw__profile-header {
+    display: flex;
+    align-content: flex-start;
+    border-bottom: 1px solid grey;
+    margin: 1rem 0rem 1rem 0rem;
+}
+
+.waw__profile-header h1 {
+    padding: 1rem;
+    font-size: 20px;
+    color: white;
+}
+
+.waw__profile-guide {
+    display: flex;
+    align-items: center;
+    color: white;
+    background-color: #263143;
+    border: 1px solid grey;
+    transition: all 0.26s ease-in-out;
+}
+
+.waw__profile-guide:hover {
+    cursor: pointer;
+    border: 1px solid white;
+    transform: scale(103%);
+}
+
+.waw__profile-guide-img {
+    width: 70px;
+    height: 70px;
+    border-radius: 5px;
+}
+
+.waw__profile-vmtitle {
+    font-size: 20px;
+    padding: 1rem 1.5rem;
+    width: 13rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: 1.4px;
+}
+
+.waw__profile-difficulty {
+    font-size: 18px;
+    width: 10rem;
+    padding: 1rem 2rem;
+}
+
+.waw__profile-author {
+    font-size: 18px;
+    width: 10rem;
+    padding: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.waw__profile-date {
+    width: 11rem;
+    font-size: 18px;
+    padding: 1rem;
+}
+
+.waw__profile-published {
+    font-size: 18px;
+    width: 8rem;
+    padding: 1rem;
+}
+
+.waw__profile-noguides {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.waw__profile-p-noguides-div {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #c3d1db;
+    font-family: var(--font-family);
+    text-align: center;
+}
+
+.waw__profile-p-noguides-div p {
+    padding: 0.5rem;
+    font-size: 20px;
+}
+
+/* background-color: #1e1e1e; */
+/* background-color: #1a2332 */
+/* background-color: #263143; */
+/* color: #a4b1cd; */
+/* color: #c3d1db; */
+/* background-color: #60efff; */
+.waw__profile-p-noguides-div button {
+    font-family: var(--font-family);
+    margin-top: 1rem;
+    padding: 0.7rem;
+    border-radius: 5px;
+    background-color: #60efff;
+    font-size: 18px;
+    font-weight: 550;
+    border: 1px solid #263143;
+}
+
+.waw__profile-p-noguides-div button:hover {
+    color: white;
+    background-color: #263143;
+    cursor: pointer;
+}
+
+.waw__profile-img-noguides-div-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.waw__profile-img-noguides-div-logo img {
+    width: 500px;
+}
+
+@media screen and (max-width: 960px) {
+    .waw__profile-container {
+        display: flex;
+        flex-direction: column;
+        width: 45rem;
+        padding-bottom: 2rem;
+    }
+
+    .waw__profile-header {
+        display: flex;
+        align-content: flex-start;
+        border-bottom: 1px solid grey;
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    .waw__profile-header h1 {
+        padding: 1rem;
+        font-size: 20px;
+        color: white;
+    }
+
+    .waw__profile-guide {
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: #263143;
+        border: 1px solid grey;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .waw__profile-guide:hover {
+        cursor: pointer;
+        border: 1px solid white;
+        transform: scale(103%);
+    }
+
+    .waw__profile-guide-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .waw__profile-vmtitle {
+        font-size: 20px;
+        padding: 1rem 1.5rem;
+        width: 13rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        letter-spacing: 1.4px;
+    }
+
+    .waw__profile-difficulty {
+        font-size: 18px;
+        width: 10rem;
+        padding: 1rem 2rem;
+    }
+
+    .waw__profile-author {
+        font-size: 18px;
+        width: 9rem;
+        padding: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .waw__profile-date {
+        width: 11rem;
+        font-size: 18px;
+        padding: 1rem;
+    }
+
+    .waw__profile-published {
+        font-size: 18px;
+        width: 8rem;
+        padding: 1rem;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .waw__profile-container {
+        display: flex;
+        flex-direction: column;
+        width: 36.2rem;
+        padding-bottom: 2rem;
+    }
+
+    .waw__profile-header {
+        display: flex;
+        align-content: flex-start;
+        border-bottom: 1px solid grey;
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    .waw__profile-header h1 {
+        padding: 1rem;
+        font-size: 20px;
+        color: white;
+    }
+
+    .waw__profile-guide {
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: #263143;
+        border: 1px solid grey;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .waw__profile-guide:hover {
+        cursor: pointer;
+        border: 1px solid white;
+        transform: scale(103%);
+    }
+
+    .waw__profile-guide-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .waw__profile-vmtitle {
+        font-size: 20px;
+        padding: 1rem 1.5rem;
+        width: 13rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        letter-spacing: 1.4px;
+    }
+
+    .waw__profile-difficulty {
+        font-size: 18px;
+        width: 10rem;
+        padding: 1rem 2rem;
+    }
+
+    .waw__profile-author {
+        font-size: 18px;
+        width: 9rem;
+        padding: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .waw__profile-date {
+        width: 11rem;
+        font-size: 18px;
+        padding: 1rem;
+    }
+
+    .waw__profile-published {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 593px) {
+    .waw__profile-container {
+        display: flex;
+        flex-direction: column;
+        width: 29.2rem;
+        padding-bottom: 2rem;
+    }
+
+    .waw__profile-header {
+        display: flex;
+        align-content: flex-start;
+        border-bottom: 1px solid grey;
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    .waw__profile-header h1 {
+        padding: 1rem;
+        font-size: 20px;
+        color: white;
+    }
+
+    .waw__profile-guide {
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: #263143;
+        border: 1px solid grey;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .waw__profile-guide:hover {
+        cursor: pointer;
+        border: 1px solid white;
+        transform: scale(103%);
+    }
+
+    .waw__profile-guide-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 5px;
+    }
+
+    .waw__profile-vmtitle {
+        font-size: 17px;
+        padding: 1rem 1rem;
+        width: 13rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        letter-spacing: 1.4px;
+    }
+
+    .waw__profile-difficulty {
+        font-size: 15px;
+        width: 8rem;
+        padding: 1rem 1rem;
+    }
+
+    .waw__profile-author {
+        font-size: 15px;
+        width: 9rem;
+        padding: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    .waw__profile-date {
+        display: none;
+    }
+
+    .waw__profile-published {
+        display: none;
+    }
+
+    .waw__profile-img-noguides-div-logo img {
+        width: 350px;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .waw__profile-container {
+        display: flex;
+        flex-direction: column;
+        width: 23rem;
+        padding-bottom: 2rem;
+    }
+
+    .waw__profile-header {
+        display: flex;
+        align-content: flex-start;
+        border-bottom: 1px solid grey;
+        margin: 1rem 0rem 1rem 0rem;
+    }
+
+    .waw__profile-header h1 {
+        padding: 1rem;
+        font-size: 20px;
+        color: white;
+    }
+
+    .waw__profile-guide {
+        display: flex;
+        align-items: center;
+        color: white;
+        background-color: #263143;
+        border: 1px solid grey;
+        transition: all 0.26s ease-in-out;
+    }
+
+    .waw__profile-guide:hover {
+        cursor: pointer;
+        border: 1px solid white;
+        transform: scale(103%);
+    }
+
+    .waw__profile-guide-img {
+        width: 60px;
+        height: 60px;
+        border-radius: 5px;
+    }
+
+    .waw__profile-vmtitle {
+        font-size: 16px;
+        padding: 1rem 1rem;
+        width: 13rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        letter-spacing: 1.4px;
+    }
+
+    .waw__profile-difficulty {
+        font-size: 15px;
+        width: 8rem;
+        padding: 1rem 1rem;
+    }
+
+    .waw__profile-author {
+        font-size: 15px;
+        width: 9rem;
+        padding: 1rem;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
