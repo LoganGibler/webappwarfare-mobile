@@ -1,0 +1,291 @@
+.waw__admin-view {
+    display: flex;
+    justify-content: center;
+}
+
+.waw__admin-guide-container {
+    margin: 3rem 0.2rem 0.2rem;
+    padding: 0.2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.waw__admin-header {
+    display: flex;
+    border-bottom: 1px solid grey;
+    margin-bottom: 1rem;
+}
+
+.waw__admin-header h1 {
+    padding: 1rem;
+    color: white;
+    font-family: var(--font-family);
+    font-size: 20px;
+}
+
+.waw__admin-guide {
+    /* margin: 1rem; */
+    display: flex;
+    color: white;
+    align-items: center;
+    background-color: #263143;
+    border: 1px solid grey;
+    /* width: 55rem; */
+    transition: all 0.26s ease-in-out;
+}
+
+.waw__admin-guide:hover {
+    cursor: pointer;
+    transform: scale(103%);
+    border: 1px solid white;
+}
+
+/* background-color: #1a2332;
+        lighter-bacgkround: #263143;
+        highlight-color: white;
+        text-color: #B8B8B8; */
+/*   color: #c3d1db; */
+.waw__admin-guide h3 {
+    padding: 1.5rem;
+    width: 16rem;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    font-weight: 550;
+    letter-spacing: 1px;
+}
+
+.waw__admin-difficulty {
+    padding: 1rem;
+    width: 10rem;
+}
+
+.waw__admin-author {
+    padding: 1rem;
+    width: 9rem;
+}
+
+.waw__admin-date {
+    padding: 1rem;
+    width: 10rem;
+}
+
+.waw__admin-guide button {
+    padding: 0.5rem;
+    border-radius: 10px;
+    width: 6rem;
+    font-family: var(--font-family);
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: 1px;
+    border: 1px solid grey;
+}
+
+.waw__admin-approve {
+    background-color: #263143;
+    color: #c3d1db;
+}
+
+.waw__admin-approve:hover {
+    background-color: #c3d1db;
+    color: black;
+    cursor: pointer;
+    border: 1px solid black;
+}
+
+.waw__admin-reject {
+    margin-right: 1rem;
+    background-color: darkred;
+    color: #c3d1db;
+}
+
+.waw__admin-reject:hover {
+    background-color: red;
+    cursor: pointer;
+    border: 1px solid white;
+    color: white;
+}
+
+.waw__admin-noguides-label {
+    display: flex;
+    font-family: var(--font-family);
+    justify-content: center;
+}
+
+.waw__admin-noguides-label h3 {
+    text-align: center;
+    color: white;
+}
+
+@media screen and (max-width: 960px) {
+    .waw__admin-guide h3 {
+        padding: 1.5rem;
+        width: 14rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 550;
+        letter-spacing: 1px;
+    }
+
+    .waw__admin-difficulty {
+        padding: 1rem;
+        width: 9rem;
+    }
+
+    .waw__admin-author {
+        padding: 1rem;
+        width: 9rem;
+    }
+
+    .waw__admin-date {
+        display: none;
+    }
+
+    .waw__admin-guide button {
+        padding: 0.5rem;
+        border-radius: 10px;
+        width: 6rem;
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: 1px;
+        border: 1px solid grey;
+    }
+
+    .waw__admin-approve {
+        background-color: #263143;
+        color: #c3d1db;
+    }
+
+    .waw__admin-reject {
+        margin-right: 1rem;
+        background-color: darkred;
+        color: #c3d1db;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .waw__admin-guide h3 {
+        padding: 1.5rem;
+        width: 14rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 550;
+        letter-spacing: 1px;
+    }
+
+    .waw__admin-difficulty {
+        padding: 1rem;
+        width: 9rem;
+    }
+
+    .waw__admin-author {
+        display: none;
+    }
+
+    .waw__admin-date {
+        display: none;
+    }
+
+    .waw__admin-guide button {
+        padding: 0.5rem;
+        border-radius: 10px;
+        width: 6rem;
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: 1px;
+        border: 1px solid grey;
+    }
+
+    .waw__admin-approve {
+        background-color: #263143;
+        color: #c3d1db;
+    }
+
+    .waw__admin-reject {
+        margin-right: 1rem;
+        background-color: darkred;
+        color: #c3d1db;
+    }
+}
+
+@media screen and (max-width: 593px) {
+    .waw__admin-guide h3 {
+        padding: 1.5rem;
+        width: 16rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 550;
+        letter-spacing: 1px;
+        font-size: 17px;
+    }
+
+    .waw__admin-difficulty {
+        display: none;
+    }
+
+    .waw__admin-author {
+        display: none;
+    }
+
+    .waw__admin-date {
+        display: none;
+    }
+
+    .waw__admin-guide button {
+        padding: 0.5rem;
+        border-radius: 10px;
+        width: 6rem;
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: 1px;
+        border: 1px solid grey;
+    }
+
+    .waw__admin-approve {
+        background-color: #263143;
+        color: #c3d1db;
+    }
+
+    .waw__admin-reject {
+        margin-right: 1rem;
+        background-color: darkred;
+        color: #c3d1db;
+    }
+}
+
+@media screen and (max-width: 475px) {
+    .waw__admin-guide h3 {
+        padding: 1.5rem 0.5rem;
+        width: 12rem;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-weight: 550;
+        letter-spacing: 1px;
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .waw__admin-guide button {
+        padding: 0.5rem;
+        border-radius: 10px;
+        width: 5rem;
+        font-family: var(--font-family);
+        font-size: 15px;
+        font-weight: 650;
+        letter-spacing: 1px;
+        border: 1px solid grey;
+    }
+
+    .waw__admin-approve {
+        background-color: #263143;
+        color: #c3d1db;
+    }
+
+    .waw__admin-reject {
+        margin-right: 1rem;
+        background-color: darkred;
+        color: #c3d1db;
+    }
+}

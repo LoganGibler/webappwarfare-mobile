@@ -1,17 +1,18 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import "./profile1.css";
+import "./profile2.css";
 import logo from "../../pics/pngegg (1).png";
 import {
   getGuidesByUsername,
   getPublishedUnapprovedGuides,
   getUserByID,
+  getUserByUsername,
 } from "../../api/index.js";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
-import { useLiveQuery } from "dexie-react-hooks";
-import { db } from "../../indexedDB";
-import { getUser } from "../../auth";
+import { getID, getUser } from "../../auth";
+import AdminView from "../adminview/AdminView";
+
 let imageListReg = ref(storage, "/guidepfp/");
 
 const Profile = () => {
@@ -19,8 +20,10 @@ const Profile = () => {
   let [guides, setGuides] = useState([]);
   let [unapprovedGuides, setUnapprovedGuides] = useState([]);
   let [imageDirectoryList, setImageDirectoryList] = useState([]);
+  let [userData, setUserData] = useState([]);
   let list = [];
   let activeUser = getUser();
+  let key = getID();
 
   async function fetchGuides() {
     const foundGuides = await getGuidesByUsername(activeUser);
@@ -33,7 +36,14 @@ const Profile = () => {
     setUnapprovedGuides(foundUnapprovedGuides);
   }
 
+  async function fetchUserData() {
+    const userData1 = await getUserByID(key);
+    const user1 = await getUserByUsername(userData1.user);
+    setUserData(user1.data.user);
+  }
+
   useEffect(() => {
+    fetchUserData();
     fetchGuides(activeUser);
     fetchUnapprovedGuides();
     listAll(imageListReg).then((res) => {
@@ -48,97 +58,62 @@ const Profile = () => {
 
   return (
     <div className="waw__profile">
-      <div className="waw__profile-content">
+      <div className="waw__profile-container">
+        <div className="waw__profile-header">
+          <h1>Profile / Created Guides</h1>
+        </div>
         {guides.length ? (
-          <div className="waw__profile-guides-header">
-            <h1 className="gradient_text waw__profile-guides-header-title">
-              Created Guides
-            </h1>
-            <div className="waw__profile-outside-container">
-              {guides.map((guide) => {
-                return (
-                  <div
-                    className="waw__profile-guide-div"
-                    key={guide._id}
-                    onClick={() => {
-                      navigate(`/editguide/${guide._id}`);
-                    }}
-                  >
-                    {imageDirectoryList.length &&
-                      imageDirectoryList.map((image) => {
-                        let guide_id = image.split("_")[1];
-                        list.push(guide_id);
-                        if (guide_id === guide._id) {
-                          return (
-                            <div className="waw__profile-image-div">
-                              <img
-                                src={image}
-                                alt="img"
-                                className="waw__profile-guide-img"
-                              ></img>
-                            </div>
-                          );
-                        }
-                      })}
-                    {!list.includes(guide._id) && (
-                      <div className="waw__profile-image-div">
+          guides.map((guide) => {
+            return (
+              <div
+                className="waw__profile-guide"
+                key={guide._id}
+                onClick={() => {
+                  navigate(`/editguide/${guide._id}`);
+                }}
+              >
+                {imageDirectoryList.length &&
+                  imageDirectoryList.map((image) => {
+                    let guide_id = image.split("_")[1];
+                    list.push(guide_id);
+                    if (guide_id === guide._id) {
+                      return (
                         <img
-                          src="https://www.ecpi.edu/sites/default/files/whitehat.png"
-                          className="waw__profile-guide-img"
+                          src={image}
                           alt="img"
+                          className="waw__profile-guide-img"
                         ></img>
-                      </div>
-                    )}
-                    <div className="waw__profile-guide-info">
-                      <h4>{guide.vmtitle}</h4>
-                      {/* <p className="waw__profile-guide-description">
-                      {guide.description}
-                    </p> */}
-                      <div>
-                        <p className="waw__profile-difficulty">
-                          {guide.difficulty}
-                        </p>
-                        <p className="waw__profile-guide-info-author">
-                          {guide.hostedby}
-                        </p>
-                        <p className="waw__profile-guide-info-date">
-                          {guide.date}
-                        </p>
-                        {guide.published === "false" ? (
-                          <p className="waw__profile-guide-info-published">
-                            Private
-                          </p>
-                        ) : (
-                          <p className="waw__profile-guide-info-published">
-                            Public
-                          </p>
-                        )}
-                      </div>
-                    </div>
+                      );
+                    }
+                  })}
+                {!list.includes(guide._id) && (
+                  <div className="waw__profile-image-div">
+                    <img
+                      src="https://www.ecpi.edu/sites/default/files/whitehat.png"
+                      className="waw__profile-guide-img"
+                      alt="img"
+                    ></img>
                   </div>
-                );
-              })}
-            </div>
-          </div>
+                )}
+                <h3 className="waw__profile-vmtitle">{guide.vmtitle}</h3>
+                <p className="waw__profile-difficulty">{guide.difficulty}</p>
+                <p className="waw__profile-author">{guide.hostedby}</p>
+                <p className="waw__profile-date">{guide.date}</p>
+                {guide.published === "false" ? (
+                  <p className="waw__profile-published">Private</p>
+                ) : (
+                  <p className="waw__profile-published">Public</p>
+                )}
+              </div>
+            );
+          })
         ) : (
-          <div className="waw__profile-noguides-header">
-            <div className="waw__profile-header-noguides-div">
-              <h1 className="gradient_text">Welcome to your profile page.</h1>
-            </div>
+          <div>
             <div className="waw__profile-p-noguides-div">
               <p>This is where you can view and edit your created guides.</p>
               <p>
                 Any guides you create will not be public until you publish it.
               </p>
-              {/* <p>
-                <a
-                  onClick={() => {
-                    navigate("/createGuide");
-                  }}
-                >
-                  Click here to create a guide. &nbsp; →
-                </a>
-              </p> */}
               <button
                 onClick={() => {
                   navigate("/createGuide");
@@ -153,9 +128,8 @@ const Profile = () => {
             </div>
           </div>
         )}
+        {userData.admin && <AdminView />}
       </div>
-
-      {/* <div>{guides.length ? guides.map((guide) => {}) : null}</div> */}
     </div>
   );
 };

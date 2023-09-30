@@ -12,7 +12,7 @@
   flex-direction: column;
   /* border: 2px solid orange; */
   padding: 2rem 1rem;
-  margin: 2rem 1rem;
+  margin: 2rem 0.5rem;
   max-width: 900px;
   height: none;
   overflow: auto;
@@ -49,12 +49,13 @@
 
 .waw__guide-header-div h3 {
   text-align: center;
-  font-size: 37px;
+  font-size: 25px;
+  padding-bottom: 0.5rem;
 }
 
 .waw__guidepage_details-div p {
   padding: 0.3rem;
-  font-size: 15px;
+  font-size: 14px;
 }
 
 .waw__guidepage_details-div a {
@@ -63,8 +64,8 @@
 }
 
 .waw__guidepage-pfp-div img {
-  height: 180px;
-  width: 180px;
+  height: 150px;
+  width: 150px;
   border-radius: 15px;
   border: 1px solid #c3d1db;
 }
@@ -72,15 +73,16 @@
 .waw__guidepage-description-div {
   display: flex;
   padding: 1rem 1rem;
-  font-size: 18px;
+  font-size: 16px;
+
   /* border: 1px solid white; */
   /* text-align: center; */
 }
 
 .waw__guidepage-description-div p {
-  word-wrap: break-word;
   padding: 1rem;
-  overflow: wrap;
+  overflow: hidden;
+  word-wrap: break-word;
 }
 
 .waw__guidepage-step-div {
@@ -108,7 +110,7 @@
 .waw__step-div p {
   text-align: center;
   word-wrap: break-word;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .waw__step-image-div {}
@@ -146,7 +148,7 @@
 
   .waw__guide-header-div h3 {
     text-align: center;
-    font-size: 34px;
+    font-size: 25px;
   }
 
   .waw__guidepage_details-div p {
@@ -159,8 +161,8 @@
   }
 
   .waw__guidepage-pfp-div img {
-    height: 165px;
-    width: 165px;
+    height: 140px;
+    width: 140px;
     border-radius: 30px;
     border: 1px solid #c3d1db;
   }
@@ -432,6 +434,7 @@
   .waw__guide-header-div h3 {
     text-align: center;
     font-size: 25px;
+    padding-bottom: 0.1rem;
   }
 
   .waw__guidepage_details-div p {

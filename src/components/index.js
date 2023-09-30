@@ -7,3 +7,4 @@ export { default as Login } from "./Login/Login";
 export { default as Register } from "./Register/Register";
 export { default as RecommendedGuides } from "./recommendedGuides/RecommendedGuides";
 export {default as GuideForm} from "./GuideForm/GuideForm"
+export {default as AdminView} from "./adminview/AdminView"

@@ -12,6 +12,8 @@ const GuideForm = () => {
   let [hostedby, setHostedBy] = useState("");
   let [description, setDescription] = useState("");
   let [difficulty, setDifficulty] = useState("");
+  let [titleRequirements, setTitleRequirements] = useState(false);
+  let [hostRequirements, setHostRequirements] = useState(false);
 
   function getCategoryOption() {
     let selectElement = document.querySelector("#dropdown_difficulty");
@@ -25,23 +27,30 @@ const GuideForm = () => {
         onSubmit={async (e) => {
           e.preventDefault();
           try {
-            console.log("vmtitle:", vmtitle);
-            console.log(" hostedby:", hostedby);
-            console.log("description :", description);
-            console.log(" difficulty:", difficulty);
-            console.log(" author:", author);
-            const data = await createGuide(
-              vmtitle,
-              hostedby,
-              description,
-              difficulty,
-              author
-            );
-            if (data) {
-              alert("Guide created successfully.");
-              navigate("/Profile");
+            if (vmtitle.length > 16) {
+              alert("Vmtitle has to many characters. Please use 16 or less.");
+            } else if (hostedby.length > 16) {
+              alert("Hostname has to many characters. Please use 16 or less.");
+            } else if (description.length > 2000) {
+              alert(
+                "Please use less then 2000 characters for the description."
+              );
+            } else if (!vmtitle || !hostedby || !difficulty) {
+              alert("Please fill out all required fields.");
             } else {
-              alert("Guide creation failed. Please try again.");
+              const data = await createGuide(
+                vmtitle,
+                hostedby,
+                description,
+                difficulty,
+                author
+              );
+              if (data) {
+                alert("Guide created successfully.");
+                navigate("/Profile");
+              } else {
+                alert("Guide creation failed. Please try again.");
+              }
             }
           } catch (error) {
             throw error;
@@ -58,19 +67,34 @@ const GuideForm = () => {
         <div className="waw__createguide-inputs">
           <label>VM Title</label>
           <input
+            maxLength={16}
             placeholder="Enter VM name..."
             className="waw__guideform-vmtitle"
             onChange={(e) => {
               setvmtitle(e.target.value);
             }}
+            onClick={() => {
+              setTitleRequirements(true);
+              setHostRequirements(false);
+            }}
           ></input>
+          {titleRequirements && (
+            <li className="waw__guideform-requirements">
+              Title must be 16 characters or less.
+            </li>
+          )}
           <label className="waw__guideform-hostname-label">Hostname</label>
           <div className="waw__guideform-host-diff">
             <input
+              maxLength={16}
               placeholder="Where can this VM be found?"
               className="waw__guideform-host"
               onChange={(e) => {
                 setHostedBy(e.target.value);
+              }}
+              onClick={() => {
+                setHostRequirements(true);
+                setTitleRequirements(false);
               }}
             ></input>
             <select
@@ -91,13 +115,24 @@ const GuideForm = () => {
               <option value="Insane">Insane</option>
             </select>
           </div>
+          {hostRequirements && (
+            <li className="waw__guideform-requirements">
+              {" "}
+              Hostname must be 16 characters or less.
+            </li>
+          )}
         </div>
+
         <div className="waw__guideform-desc-label-div">
           <label className="waw__guideform-desc-label">VM Description</label>
         </div>
 
         <div className="waw__guideform-textarea">
           <textarea
+            maxLength={2000}
+            onClick={() => {
+              setHostRequirements(false);
+            }}
             onChange={(e) => {
               setDescription(e.target.value);
             }}

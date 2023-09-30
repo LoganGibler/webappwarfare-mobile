@@ -59,6 +59,7 @@ const Register = () => {
         </div>
         <label>Username</label>
         <input
+          maxLength={15}
           value={username}
           placeholder="Username"
           onClick={() => {
@@ -76,6 +77,7 @@ const Register = () => {
         )}
         <label>Password</label>
         <input
+          maxLength={30}
           value={password}
           placeholder="Password"
           type="password"
