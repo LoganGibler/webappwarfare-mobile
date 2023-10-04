@@ -51,13 +51,12 @@ const Guides = () => {
                 let sortedGuides = [];
                 if (search.length > 0) {
                   let foundGuides = await getGuidesBySearch(search);
-                  console.log("foundGuides", foundGuides.allFoundGuides[0]);
-                  foundGuides = foundGuides.allFoundGuides[0]
+                  foundGuides = foundGuides.allFoundGuides[0];
                   // setGuides(foundGuides.allFoundGuides);
-                  if (foundGuides!== null) {
+                  if (foundGuides !== null) {
                     foundGuides.map((guide) => {
                       // console.log("guidesfrom search:", guide);
-                      sortedGuides.push(guide)
+                      sortedGuides.push(guide);
                     });
                   }
                   setGuides(sortedGuides);

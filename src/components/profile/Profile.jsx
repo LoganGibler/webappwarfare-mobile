@@ -108,7 +108,7 @@ const Profile = () => {
             );
           })
         ) : (
-          <div>
+          <div classname="waw__profile-noguides">
             <div className="waw__profile-p-noguides-div">
               <p>This is where you can view and edit your created guides.</p>
               <p>
