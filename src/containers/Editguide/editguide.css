@@ -137,6 +137,7 @@
   font-size: 18.5px;
   height: 20rem;
   border-radius: 5px;
+  font-family: var(--font-family);
   /* flex-direction: column; */
 }
 
@@ -272,6 +273,10 @@
   font-size: 17px;
 }
 
+.waw__editguide-addstep-button {
+  margin-left: 3rem;
+}
+
 .waw__editguide-addstep-div button:hover {
   cursor: pointer;
   border: 1px solid white;
@@ -302,6 +307,7 @@
   height: 20rem;
   resize: vertical;
   font-size: 17px;
+  font-family: var(--font-family);
 }
 
 .waw__editguide-newstep-div div button {
@@ -348,6 +354,7 @@
   border: 1px solid grey;
   border-radius: 5px;
   font-size: 17px;
+  font-family: var(--font-family);
 }
 
 .waw__editguide-editstep-div div div {
@@ -404,7 +411,7 @@
 
 .waw__editguide-addstep-div div {
   display: flex;
-  margin-left: 30rem;
+  margin-left: 28rem;
 }
 
 .waw__editguide-addstep-div div button {
@@ -668,6 +675,10 @@
   .waw__editguide-addstep-div {
     display: flex;
     padding: 1rem 3.8rem;
+  }
+
+  .waw__editguide-addstep-button {
+    margin-left: 0.7rem;
   }
 
   .waw__editguide-addstep-div button {
@@ -2753,7 +2764,7 @@
 
   .waw__editguide-editstep-button {
     /* display: flex; */
-    padding: 0rem 17rem 0rem 0rem;
+    padding: 0rem 15rem 0rem 0rem;
     margin: 1rem;
   }
 
@@ -2775,6 +2786,7 @@
 
   .waw__editguide-addstep-div {
     display: flex;
+    flex-direction: column;
     padding: 1rem 1.5rem;
   }
 
@@ -2792,6 +2804,16 @@
     cursor: pointer;
     border: 1px solid white;
     color: white;
+  }
+
+  .waw__editguide-addstep-div div {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .waw__editguide-addstep-div div button {
+    padding: 0.5rem;
   }
 
   .waw__editguide-newstep-div {
@@ -2870,6 +2892,7 @@
     align-self: center;
     margin-right: 0rem;
     margin-left: 1.5rem;
+    font-family: var(--font-family);
   }
 
   .waw__editguide-editstep-div div div {

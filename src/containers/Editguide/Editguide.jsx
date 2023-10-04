@@ -445,6 +445,7 @@ const Editguide = (currentUser) => {
             {showAddStepButton && (
               <div className="waw__editguide-addstep-div">
                 <button
+                  className="waw__editguide-addstep-button"
                   onClick={() => {
                     setShowAddStepButton(false);
                     setNewStepHtml(renderNewStep(guide._id, stepCounter));
