@@ -11,6 +11,7 @@ button {
 
 button:hover {
   border: none !important;
+  cursor: pointer;
 }
 
 /* background-color: #1e1e1e; */
@@ -151,6 +152,7 @@ button:hover {
 }
 
 .waw__editguide-rendered-description-div div button {
+  margin: 1rem 1rem 0.5rem 1rem;
   font-size: 20px;
   padding: 0.3rem;
   border-radius: 5px;
@@ -227,7 +229,6 @@ button:hover {
 .waw__editguide-step-step div {
   /* max-width: 36rem; */
 }
-
 
 .waw__editguide-step-step {
   display: flex;
@@ -368,12 +369,13 @@ button:hover {
 }
 
 .waw__editguide-editstep-div div div {
+  margin: 0.4rem;
   display: flex;
 }
 
 .waw__editguide-editstep-div div div button {
   background-color: #1a2332;
-  padding: 0.4rem;
+  padding: 0.5rem;
   color: #c3d1db;
   border-radius: 5px;
   border: 1px solid grey;
@@ -391,9 +393,9 @@ button:hover {
   padding: 0.4rem;
   color: #c3d1db;
   border-radius: 5px;
-  border: 1px solid grey;
+  /* border: 1px solid grey; */
   font-size: 17px;
-  width: 15rem;
+  width: 14rem;
   margin-left: 12rem;
 }
 

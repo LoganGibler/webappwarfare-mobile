@@ -22,8 +22,7 @@ import {
 } from "firebase/storage";
 import "./editguide.css";
 
-const Editguide = (currentUser) => {
-  // console.log("this is current User", currentUser);
+const Editguide = () => {
   const { id } = useParams();
   const navigate = useNavigate();
   const key = getID();
@@ -33,20 +32,16 @@ const Editguide = (currentUser) => {
   let [imageList, setImageList] = useState([]);
   const [guidePFP, setGuidePFP] = useState([]);
   const [stepImages, setStepImages] = useState([]);
-
   const [descriptionStatus, setDescriptionStatus] = useState(true);
   const [descriptionHtml, setDescriptionHtml] = useState(null);
   const [showEditDescriptionButton, setShowEditDescriptionButton] = useState(
     true
   );
-
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
-
   const [showEditStepButton, setShowEditStepButton] = useState(true);
   const [editedStepIndex, setEditedStepIndex] = useState("");
   const [editedStepHtml, setEditedStepHtml] = useState(null);
-
   const stepImagesRef = ref(storage, "/images/" + id);
   const guidePFPRef = ref(storage, "/guidepfp/");
   let inputed_img;
@@ -137,17 +132,12 @@ const Editguide = (currentUser) => {
               id="editguide-description-textarea"
               type="text"
               max-length="700"
-            >
-              {guide.description}
-            </textarea>
+              defaultValue={guide.description}
+            ></textarea>
             <button
               className="waw__editguide-update-description-button"
               onClick={async () => {
-                // console.log("This is blog_id, passed to db", blog._id);
                 await getDescriptionData();
-                // location.reload();
-                // navigate("/editguide/" + id);
-                // document.location.reload();
               }}
             >
               Submit Update
@@ -184,8 +174,8 @@ const Editguide = (currentUser) => {
             ></textarea>
             <div>
               <button
-                onClick={() => {
-                  getStepData();
+                onClick={async () => {
+                  await getStepData();
                   window.location.reload();
                 }}
               >
@@ -217,22 +207,21 @@ const Editguide = (currentUser) => {
   function renderEditStepBox(id, index, stepCounter, step) {
     try {
       async function getNewStepData() {
-        let newStepData = document.getElementById("editguide-step-data").value;
-
+        let newStepData = await document.getElementById("editguide-step-data")
+          .value;
         let newStep = await updateSteppie(id, stepCounter, newStepData);
-
         return newStep;
       }
 
       return (
         <div className="waw__editguide-editstep-div">
           <div>
-            <textarea id="editguide-step-data">{step}</textarea>
+            <textarea id="editguide-step-data" defaultValue={step}></textarea>
             <div>
               <div>
                 <button
-                  onClick={() => {
-                    getNewStepData();
+                  onClick={async () => {
+                    await getNewStepData();
                     window.location.reload();
                   }}
                 >
