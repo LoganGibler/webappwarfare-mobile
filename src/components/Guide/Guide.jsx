@@ -118,7 +118,7 @@ const Guide = () => {
                     {step.step}
                   </p>
                 </div>
-                {stepImages.length &&
+                {stepImages.length ?
                   stepImages.map((image) => {
                     let imageIndex = image.split("?")[0];
                     imageIndex = imageIndex[imageIndex.length - 1];
@@ -126,17 +126,17 @@ const Guide = () => {
                     if (imageIndex === stepCounterIndex.toString()) {
                       return (
                         <div className="waw__step-image-div">
-                          <img src={image} alt="step-image"></img>
+                          <img src={image}></img>
                         </div>
                       );
                     }
-                  })}
+                  }): null}
               </div>
             );
           })
         ) : (
           <div>
-            <h4>This Guide has no steps yet.</h4>
+            {/* <h4>This Guide has no steps yet.</h4> */}
           </div>
         )}
       </div>

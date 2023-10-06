@@ -193,6 +193,7 @@ const Navigation = () => {
             onClick={async () => {
               window.localStorage.removeItem("isLoggedIn");
               alert("Successfully Logged out.");
+              setToggleMenu(false)
               localStorage.clear();
               navigate("/Login");
             }}
@@ -248,6 +249,7 @@ const Navigation = () => {
                     onClick={async () => {
                       window.localStorage.removeItem("isLoggedIn");
                       alert("Successfully Logged out.");
+                      setToggleMenu(false)
                       localStorage.clear();
                       navigate("/Login");
                     }}

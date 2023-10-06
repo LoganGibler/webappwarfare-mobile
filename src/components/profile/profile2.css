@@ -44,11 +44,12 @@
 .waw__profile-guide-img {
     width: 70px;
     height: 70px;
-    border-radius: 5px;
+    border-radius: 25px;
+    margin-left: 1rem;
 }
 
 .waw__profile-vmtitle {
-    font-size: 20px;
+    font-size: 18px;
     padding: 1rem 1.5rem;
     width: 13rem;
     text-overflow: ellipsis;

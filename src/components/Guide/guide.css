@@ -74,15 +74,16 @@
   display: flex;
   padding: 1rem 1rem;
   font-size: 16px;
-
+  justify-content: center;
   /* border: 1px solid white; */
-  /* text-align: center; */
+  text-align: center;
 }
 
 .waw__guidepage-description-div p {
   padding: 1rem;
   overflow: hidden;
   word-wrap: break-word;
+  white-space: pre-line;
 }
 
 .waw__guidepage-step-div {
@@ -92,6 +93,7 @@
   flex-direction: column;
   text-align: center;
   font-size: 16px;
+  justify-content: center;
   /* align-items: flex-start; */
 }
 
@@ -108,6 +110,7 @@
 }
 
 .waw__step-div p {
+  white-space: pre-line;
   text-align: center;
   word-wrap: break-word;
   font-size: 16px;
