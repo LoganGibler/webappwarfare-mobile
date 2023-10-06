@@ -93,20 +93,21 @@
   flex-direction: column;
   text-align: center;
   font-size: 16px;
-  justify-content: center;
+  /* justify-content: center; */
   /* align-items: flex-start; */
 }
 
 .waw__stepcounter-div {
-  padding: 2rem 0rem;
+  padding: 1rem 0rem;
   position: absolute;
+  /* margin-bottom: 2rem; */
 }
 
 .waw__step-div {
   display: flex;
   flex-direction: column;
   padding: 2rem 6rem;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .waw__step-div p {

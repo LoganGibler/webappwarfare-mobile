@@ -43,7 +43,6 @@ const Guide = () => {
 
   return (
     <div className="waw__guide-main-container">
-   
       <div className="waw__guide-div">
         <div className="waw__guide-header-div">
           <div>
@@ -118,26 +117,25 @@ const Guide = () => {
                     {step.step}
                   </p>
                 </div>
-                {stepImages.length ?
-                  stepImages.map((image) => {
-                    let imageIndex = image.split("?")[0];
-                    imageIndex = imageIndex[imageIndex.length - 1];
-               
-                    if (imageIndex === stepCounterIndex.toString()) {
-                      return (
-                        <div className="waw__step-image-div">
-                          <img src={image}></img>
-                        </div>
-                      );
-                    }
-                  }): null}
+                {stepImages.length
+                  ? stepImages.map((image) => {
+                      let imageIndex = image.split("?")[0];
+                      imageIndex = imageIndex[imageIndex.length - 1];
+
+                      if (imageIndex === stepCounterIndex.toString()) {
+                        return (
+                          <div className="waw__step-image-div">
+                            <img src={image}></img>
+                          </div>
+                        );
+                      }
+                    })
+                  : null}
               </div>
             );
           })
         ) : (
-          <div>
-            {/* <h4>This Guide has no steps yet.</h4> */}
-          </div>
+          <div>{/* <h4>This Guide has no steps yet.</h4> */}</div>
         )}
       </div>
     </div>
