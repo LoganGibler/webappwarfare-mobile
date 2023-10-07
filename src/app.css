@@ -10,7 +10,8 @@ lighter-bacgkround: #263143;
 highlight-color: white;
 text-color: #B8B8B8; */
 body {
-    background: var(--color-bg)
+    /* background: var(--color-bg) */
+    background-color: #263143;
 }
 
 a {

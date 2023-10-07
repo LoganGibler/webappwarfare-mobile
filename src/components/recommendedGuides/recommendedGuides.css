@@ -21,6 +21,7 @@
 .waw__rec-guides-main-div {
     display: flex;
     flex-wrap: wrap;
+    margin-top: 1rem;
 }
 
 .waw__rec-guide {
@@ -31,7 +32,6 @@
     /* border: 1px solid grey; */
     /* background: var(--color-bg); */
     background-color: #263143 !important;
-    border: none !important;
     border-radius: 5px;
     width: 12rem;
     height: 11rem;
@@ -39,6 +39,13 @@
     -webkit-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
     -moz-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
     box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
+
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+    border-left: 3px solid #60efff !important;
+
+    border-top-left-radius: 10px !important;
 }
 
 .waw__rec-guide:hover {
@@ -65,9 +72,9 @@
     margin-left: 1rem;
     margin-bottom: 0.3rem;
     align-self: flex-start;
-    padding: 0.1rem 0rem 0.5rem 0rem;
+    padding: 0.1rem 0rem 0.9rem 2rem;
     border-bottom: 1px solid grey;
-    width: 23rem;
+    width: 58rem;
     /* min-width: 21rem; */
     font-size: 20px !important;
     color: white;
@@ -157,6 +164,7 @@
     }
 
     .waw__rec-guides-container h2 {
+        width: 45rem;
         margin-left: 1rem;
         margin-bottom: 0.7rem;
         align-self: flex-start;
@@ -203,7 +211,7 @@
         background-color: #263143;
         border-radius: 5px;
         border: 1px solid grey;
-        width: 38rem;
+        width: 40rem;
     }
 
     .waw__rec-guides-main-div {
@@ -253,6 +261,7 @@
         text-align: center;
         align-self: center;
         /* align-self: flex-start; */
+        width: 30rem;
         padding: 0.1rem 0.2rem 1rem;
         border-bottom: 1px solid grey;
     }
@@ -342,11 +351,14 @@
     }
 
     .waw__rec-guides-container h2 {
-        margin-left: 1rem;
+        margin-left: 0rem;
         align-self: center;
+        text-align: center;
         padding: 0.1rem 0.2rem 1rem;
         border-bottom: 1px solid grey;
-        font-size: 22px;
+        font-size: 20px;
+        text-wrap: nowrap;
+        width: 22rem;
     }
 
     .waw__rec-guides-details {
@@ -398,7 +410,7 @@
     }
 
     .waw__rec-guide {
-        margin: 0.2rem;
+        margin: 0.3rem;
         display: flex;
         flex-direction: column;
         padding: 0rem 0.7rem;
@@ -438,7 +450,8 @@
         align-self: flex-start;
         padding: 0.1rem 0.2rem 1rem;
         border-bottom: 1px solid grey;
-        font-size: 20px;
+        font-size: 18px !important;
+        width: 20rem;
     }
 
     .waw__rec-guides-details {

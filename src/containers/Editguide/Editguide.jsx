@@ -54,37 +54,24 @@ const Editguide = () => {
     contentType: "image/jpg",
   };
 
-  const handleImageChange = (e) => {
+  const handleImageChange = (e, value) => {
     // console.log(e.target.files[0].name);
     if (e.target.files[0] === null) {
     } else {
       inputed_img = e.target.files[0];
+      if (value === "pfp") {
+        uploadImagePFP(id);
+        return;
+      } else {
+        uploadImage(id, value);
+      }
     }
   };
 
   function uploadImage(id, index) {
-    if (inputed_img === undefined) {
-      // console.log("IMAGE NULL");
-      alert("Please select an image to upload.");
-      return;
-    }
-    // const deleteRef = ref(storage, "/images/" + id + "/" + index);
-    //   deleteObject(deleteRef).then(() => {
-    //     // deletes existing image
-    //   });
-    // console.log("this is image upload", imageUpload)
     const imageRef = ref(storage, `${"images/" + id + "/" + index}`);
 
-    uploadBytes(imageRef, inputed_img, metadata).then((snapshot) => {
-      if (index === "_main") {
-        alert("Guide PFP uploaded.");
-        // location.reload();
-      } else {
-        alert(
-          "Image uploaded successfully. Once you submit the step, this image will appear below your Text."
-        );
-      }
-    });
+    uploadBytes(imageRef, inputed_img, metadata).then((snapshot) => {});
   }
 
   function uploadImagePFP(id) {
@@ -185,16 +172,19 @@ const Editguide = () => {
                 className="waw__editguide-step-image-input"
                 type="file"
                 accept="image/jpg, image/jpeg, image/png"
-                onChange={handleImageChange}
+                // onChange={handleImageChange}
+                onChange={(e) => {
+                  handleImageChange(e, stepIndex);
+                }}
               ></input>
-              <button
+              {/* <button
                 className="waw__editguide-uploadss"
                 onClick={() => {
                   uploadImage(id, stepIndex);
                 }}
               >
                 Upload Screenshot
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
@@ -241,15 +231,18 @@ const Editguide = () => {
                   className="waw__editguide-step-image-input"
                   type="file"
                   accept="image/jpg, image/jpeg, image/png"
-                  onChange={handleImageChange}
+                  // onChange={handleImageChange}
+                  onChange={(e) => {
+                    handleImageChange(e, stepCounter);
+                  }}
                 ></input>
-                <button
+                {/* <button
                   onClick={() => {
                     uploadImage(id, stepCounter);
                   }}
                 >
                   Upload/Change Img
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -331,18 +324,15 @@ const Editguide = () => {
             </div>
 
             <div className="waw__editguide-uploadpfp-div">
-              <button
-                onClick={() => {
-                  uploadImagePFP(id);
-                }}
-              >
-                Upload Guide PFP
-              </button>
+              <label>Upload Guide PFP</label>
               <input
                 className="editguide-image-input-PFP"
                 type="file"
                 accept="image/jpg, image/jpeg, image/png"
-                onChange={handleImageChange}
+                // onChange={handleImageChange}
+                onChange={(e) => {
+                  handleImageChange(e, "pfp");
+                }}
               ></input>
             </div>
 
