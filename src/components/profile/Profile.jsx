@@ -60,7 +60,7 @@ const Profile = () => {
     <div className="waw__profile">
       <div className="waw__profile-container">
         <div className="waw__profile-header">
-          <h1>Profile / Created Guides</h1>
+          <h1>~/ Profile / Created Guides</h1>
         </div>
         {guides.length ? (
           guides.map((guide) => {

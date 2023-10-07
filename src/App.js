@@ -39,6 +39,7 @@ const App = () => {
             <Route path="/Login" element={<Login />}></Route>
             <Route path="/createGuide" element={<GuideForm />}></Route>
             <Route path="/editguide/:id" element={<Editguide />}></Route>
+         
           </Routes>
           <Footer />
         </Fragment>

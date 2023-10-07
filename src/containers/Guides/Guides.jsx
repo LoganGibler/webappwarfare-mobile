@@ -39,7 +39,7 @@ const Guides = () => {
         <RecommendedGuides />
         <div className="waw__guides-searchbar-div">
           <div>
-            <h4>~/Guides/AllGuides</h4>
+            <h4>~/ Guides / AllGuides</h4>
             <input
               placeholder="Search Guides"
               onChange={(e) => {

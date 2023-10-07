@@ -24,13 +24,16 @@
 .waw__guides-searchbar-div div {
     display: flex;
     background-color: #263143;
-    padding: 0.5rem 0.5rem 1rem;
+    padding: 0.5rem 0.3rem 1rem;
     width: 58rem;
     /* align-items: center;
     align-content: center; */
+    border-top: none !important;
+    border-right: none !important;
+    border-left: none !important;
     justify-content: center;
     border-radius: 5px;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid grey !important;
     /* -webkit-box-shadow: 7px 7px 14px 1px rgba(49, 91, 133, 1);
     -moz-box-shadow: 7px 7px 14px 1px rgba(49, 91, 133, 1);
     box-shadow: 7px 7px 14px 1px rgba(49, 91, 133, 1); */
@@ -70,8 +73,11 @@
     text-indent: 8px;
     margin-left: 1rem;
     background-color: #1a2332;
-    border: 1px solid grey;
-    outline: none;
+    /* border: 1px solid grey; */
+    border-right: 1px solid grey !important;
+    border-bottom: none !important;
+    border-top: none !important;
+    outline: none !important;
     color: #60efff;
     width: 25rem;
     border-bottom-left-radius: 5px;
@@ -81,7 +87,7 @@
 .waw__guides-mainguide-div {
     display: flex;
     flex-direction: column;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     align-items: center;
 }
 
@@ -95,10 +101,13 @@
     transition: all 0.25s ease-in-out;
     font-family: var(--font-family);
     border-radius: 5px;
-    border: none !important;
-    /* -webkit-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
-  -moz-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);
-  box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1); */
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    border-left: 3px solid #60efff !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-right: none !important;
+    border-bottom: none !important;
     -webkit-box-shadow: 15px 17px 9px -6px rgba(26, 35, 50, 1);
     -moz-box-shadow: 15px 17px 9px -6px rgba(26, 35, 50, 1);
     box-shadow: 15px 17px 9px -6px rgba(26, 35, 50, 1);
@@ -317,19 +326,19 @@
         display: flex;
         background-color: #263143;
         /* padding: 1rem; */
-        width: 38rem;
+        width: 36rem;
         /* width: 58rem; */
         /* align-items: center;
         align-content: center; */
         justify-content: center;
         /* border: 1px solid grey; */
-        border: none !important;
         border-radius: 5px;
     }
 
     .waw__guides-searchbar-div h4 {
-        font-size: 20px;
+        font-size: 15px;
         align-self: center;
+        text-wrap: nowrap;
     }
 
     /* background-color: #1e1e1e; */
@@ -345,7 +354,7 @@
         outline: none;
         color: #60efff;
         padding: 0.6rem;
-        width: 7rem;
+        width: 6rem;
     }
 
     .waw__guides-searchbar-div button:hover {
@@ -354,7 +363,7 @@
 
     .waw__guides-searchbar-div input {
         font-size: 20px;
-        padding: 0.6rem;
+        padding: 0.2rem;
         text-indent: 8px;
         margin-left: 1rem;
         background-color: #1a2332;
