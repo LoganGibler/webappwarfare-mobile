@@ -140,7 +140,7 @@ const Editguide = () => {
   function renderNewStep(id, stepIndex) {
     try {
       async function getStepData() {
-        let newStepData = document.getElementById("step-area").value;
+        let newStepData = await document.getElementById("step-area").value;
         // console.log("this should be new step data:", newStepData);
         if (newStepData !== null) {
           let addedSteppie = await addStep(id, newStepData);
@@ -156,7 +156,7 @@ const Editguide = () => {
           <div>
             <textarea
               id="step-area"
-              maxLength="1000"
+              maxLength="2000"
               placeholder="Enter new step here..."
             ></textarea>
             <div>
@@ -196,17 +196,17 @@ const Editguide = () => {
 
   function renderEditStepBox(id, index, stepCounter, step) {
     try {
-      async function getNewStepData() {
+      async function getNewStepData() { 
         let newStepData = await document.getElementById("editguide-step-data")
           .value;
         let newStep = await updateSteppie(id, stepCounter, newStepData);
-        return newStep;
+        // return newStep;
       }
 
       return (
         <div className="waw__editguide-editstep-div">
           <div>
-            <textarea id="editguide-step-data" defaultValue={step}></textarea>
+            <textarea id="editguide-step-data">{step}</textarea>
             <div>
               <div>
                 <button
@@ -356,7 +356,7 @@ const Editguide = () => {
 
             <div className="waw__editguide-step-div">
               {steppies ? (
-                steppies.map((step) => {
+                steppies.map((step, i) => {
                   if (step.step === null) {
                     stepCounter += 1;
                     var stepCounterIndex = stepCounter - 1;
@@ -368,7 +368,7 @@ const Editguide = () => {
                   stepCounter += 1;
 
                   return (
-                    <div className="waw__editguide-step">
+                    <div className="waw__editguide-step" key={i}>
                       <div className="waw__editguide-step-step">
                         {editedStepIndex === index ? (
                           <div> {editedStepHtml}</div>
@@ -435,7 +435,7 @@ const Editguide = () => {
                 <div>
                   {guide.published ? (
                     <button
-                      classname="waw__editguide-publish-button"
+                      className="waw__editguide-publish-button"
                       onClick={() => {
                         unpublishGuide(guide._id);
                         alert("Guide is now hidden from public view.");

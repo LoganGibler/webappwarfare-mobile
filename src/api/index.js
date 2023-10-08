@@ -228,7 +228,7 @@ export async function deleteStep(_id, index) {
 
 export async function updateSteppie(id, index, newStepData) {
   try {
-    const { data } = await axios.post(`${BASE}/updateStep`, {
+    const { data } = await axios.post(`${BASE}/updateStep`,{
       id: id,
       index: index,
       newStepData: newStepData,
