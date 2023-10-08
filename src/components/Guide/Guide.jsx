@@ -97,11 +97,12 @@ const Guide = () => {
         {steps ? (
           steps.map((step) => {
             // console.log(step);
-            if (step.step === null) {
+            if (step === null || step.step === null) {
               stepCounter += 1;
               var stepCounterIndex = stepCounter - 1;
               return;
             }
+            
             counter = counter + 1;
             var index = counter - 1;
             var stepCounterIndex = stepCounter;
@@ -119,10 +120,10 @@ const Guide = () => {
                 </div>
                 {stepImages.length
                   ? stepImages.map((image) => {
-                      let imageIndex = image.split("?")[0];
-                      imageIndex = imageIndex[imageIndex.length - 1];
+                      let index = image.split("!")[1];
+                      // index = index[index.length - 1];
 
-                      if (imageIndex === stepCounterIndex.toString()) {
+                      if (index === stepCounterIndex.toString()) {
                         return (
                           <div className="waw__step-image-div">
                             <img src={image}></img>

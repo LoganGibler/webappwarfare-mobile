@@ -69,8 +69,7 @@ const Editguide = () => {
   };
 
   function uploadImage(id, index) {
-    const imageRef = ref(storage, `${"images/" + id + "/" + index}`);
-
+    const imageRef = ref(storage, `${"images/" + id + "/" + "!"+index+"!"}`);
     uploadBytes(imageRef, inputed_img, metadata).then((snapshot) => {});
   }
 
@@ -357,9 +356,15 @@ const Editguide = () => {
             <div className="waw__editguide-step-div">
               {steppies ? (
                 steppies.map((step, i) => {
-                  if (step.step === null) {
+                  if (step === null) {
                     stepCounter += 1;
                     var stepCounterIndex = stepCounter - 1;
+                    return;
+                  }
+
+                  if (step.step === null){
+                    stepCounter += 1;
+                    stepCounterIndex = stepCounter - 1;
                     return;
                   }
                   counter = counter + 1;
@@ -374,13 +379,17 @@ const Editguide = () => {
                           <div> {editedStepHtml}</div>
                         ) : (
                           <div>
+                           
                             <p>{step.step}</p>
 
                             {stepImages
                               ? stepImages.map((image) => {
-                                  let index = image.split("?")[0];
-                                  index = index[index.length - 1];
-
+                                  let index = image.split("!")[1];
+                                  // console.log("first index after split:",index)
+                                  // index = index[index.length - 2 ] + index[index.length - 1];
+                                  // console.log(index)
+              
+                                  // console.log(stepCounterIndex)
                                   if (index === stepCounterIndex.toString()) {
                                     return (
                                       <div className="editguide-uploaded-img-div">
