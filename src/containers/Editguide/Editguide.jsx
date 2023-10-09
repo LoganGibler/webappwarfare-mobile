@@ -13,6 +13,11 @@ import {
 import { useNavigate, useParams } from "react-router";
 import { getID, getUser } from "../../auth";
 import { storage } from "../../firebase.js";
+import { FiEdit } from "react-icons/fi";
+import { BsCardImage } from "react-icons/bs";
+import { GrDocumentUpdate } from "react-icons/gr";
+import { FaUpload } from "react-icons/fa";
+import { TfiTrash } from "react-icons/tfi";
 import {
   ref,
   uploadBytes,
@@ -34,9 +39,8 @@ const Editguide = () => {
   const [stepImages, setStepImages] = useState([]);
   const [descriptionStatus, setDescriptionStatus] = useState(true);
   const [descriptionHtml, setDescriptionHtml] = useState(null);
-  const [showEditDescriptionButton, setShowEditDescriptionButton] = useState(
-    true
-  );
+  const [showEditDescriptionButton, setShowEditDescriptionButton] =
+    useState(true);
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
   const [showEditStepButton, setShowEditStepButton] = useState(true);
@@ -69,7 +73,10 @@ const Editguide = () => {
   };
 
   function uploadImage(id, index) {
-    const imageRef = ref(storage, `${"images/" + id + "/" + "!"+index+"!"}`);
+    const imageRef = ref(
+      storage,
+      `${"images/" + id + "/" + "!" + index + "!"}`
+    );
     uploadBytes(imageRef, inputed_img, metadata).then((snapshot) => {});
   }
 
@@ -120,14 +127,17 @@ const Editguide = () => {
               max-length="700"
               defaultValue={guide.description}
             ></textarea>
-            <button
-              className="waw__editguide-update-description-button"
-              onClick={async () => {
-                await getDescriptionData();
-              }}
-            >
-              Submit Update
-            </button>
+            <div>
+              <button
+                className="waw__editguide-update-description-button"
+                onClick={async () => {
+                  await getDescriptionData();
+                }}
+              >
+                Update &nbsp;
+                <FaUpload />
+              </button>
+            </div>
           </div>
         </div>
       );
@@ -195,7 +205,7 @@ const Editguide = () => {
 
   function renderEditStepBox(id, index, stepCounter, step) {
     try {
-      async function getNewStepData() { 
+      async function getNewStepData() {
         let newStepData = await document.getElementById("editguide-step-data")
           .value;
         let newStep = await updateSteppie(id, stepCounter, newStepData);
@@ -214,7 +224,7 @@ const Editguide = () => {
                     window.location.reload();
                   }}
                 >
-                  Update Step
+                  Update &nbsp; <FaUpload />
                 </button>
                 <button
                   className="caution"
@@ -224,8 +234,9 @@ const Editguide = () => {
                     window.location.reload();
                   }}
                 >
-                  Delete &nbsp; ↑
+                  Delete &nbsp; <TfiTrash />
                 </button>
+
                 <input
                   className="waw__editguide-step-image-input"
                   type="file"
@@ -235,13 +246,6 @@ const Editguide = () => {
                     handleImageChange(e, stepCounter);
                   }}
                 ></input>
-                {/* <button
-                  onClick={() => {
-                    uploadImage(id, stepCounter);
-                  }}
-                >
-                  Upload/Change Img
-                </button> */}
               </div>
             </div>
           </div>
@@ -323,7 +327,9 @@ const Editguide = () => {
             </div>
 
             <div className="waw__editguide-uploadpfp-div">
-              <label>Upload Guide PFP</label>
+              <label>
+                &nbsp; <BsCardImage /> &nbsp;
+              </label>
               <input
                 className="editguide-image-input-PFP"
                 type="file"
@@ -346,7 +352,7 @@ const Editguide = () => {
                       setDescriptionHtml(renderDescriptionBox(guide._id));
                     }}
                   >
-                    Update Description &nbsp; ↑
+                    <FiEdit />
                   </button>
                 )}
               </div>
@@ -362,7 +368,7 @@ const Editguide = () => {
                     return;
                   }
 
-                  if (step.step === null){
+                  if (step.step === null) {
                     stepCounter += 1;
                     stepCounterIndex = stepCounter - 1;
                     return;
@@ -379,7 +385,6 @@ const Editguide = () => {
                           <div> {editedStepHtml}</div>
                         ) : (
                           <div>
-                           
                             <p>{step.step}</p>
 
                             {stepImages
@@ -388,7 +393,7 @@ const Editguide = () => {
                                   // console.log("first index after split:",index)
                                   // index = index[index.length - 2 ] + index[index.length - 1];
                                   // console.log(index)
-              
+
                                   // console.log(stepCounterIndex)
                                   if (index === stepCounterIndex.toString()) {
                                     return (
@@ -418,7 +423,7 @@ const Editguide = () => {
                               );
                             }}
                           >
-                            Edit &nbsp; →
+                            <FiEdit />
                           </button>
                         )}
                       </div>

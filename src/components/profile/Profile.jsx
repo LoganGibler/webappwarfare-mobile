@@ -47,7 +47,7 @@ const Profile = () => {
     fetchGuides(activeUser);
     fetchUnapprovedGuides();
     listAll(imageListReg).then((res) => {
-      // console.log("this is res.items", res.items);
+      console.log("this is res.items", res.items);
       res.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImageDirectoryList((prev) => [...prev, url]);
@@ -74,17 +74,18 @@ const Profile = () => {
               >
                 {imageDirectoryList.length &&
                   imageDirectoryList.map((image) => {
-                    let guide_id = image.split("_")[1];
-                    list.push(guide_id);
-                    if (guide_id === guide._id) {
-                      return (
-                        <img
-                          src={image}
-                          alt="img"
-                          className="waw__profile-guide-img"
-                        ></img>
-                      );
-                    }
+                    console.log("imageID", image);
+                    // let guide_id = image.split("_")[1];
+                    // list.push(guide_id);
+                    // if (guide_id === guide._id) {
+                    //   return (
+                    //     <img
+                    //       src={image}
+                    //       alt="img"
+                    //       className="waw__profile-guide-img"
+                    //     ></img>
+                    //   );
+                    // }
                   })}
                 {!list.includes(guide._id) && (
                   <div className="waw__profile-image-div">

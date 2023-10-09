@@ -15,9 +15,11 @@ button:hover {
 }
 
 .waw__editguide-uploadpfp-div label {
+  margin-top: 0.4rem;
   color: #c3d1db;
   align-self: center;
-  padding: 0rem 0.5rem;
+  padding: 0.1rem 0.3rem;
+  font-size: 30px;
 }
 
 /* background-color: #1e1e1e; */
@@ -35,7 +37,6 @@ button:hover {
   /* border: 1px solid grey; */
   border: none !important;
 }
-
 .waw__editguide-guide {
   display: flex;
   flex-direction: column;
@@ -115,19 +116,20 @@ button:hover {
 /* color: #c3d1db; */
 .waw__editguide-description-div button {
   padding: 0.5rem;
-  font-size: 17px;
+  font-size: 35px !important;
   font-family: var(--font-family);
   margin-left: 0.8rem;
-  background-color: #1a2332;
-  border: 1px solid grey;
+  /* background-color: #1a2332; */
+  background-color: #263143 !important;
+  /* border: 1px solid grey; */
   outline: none;
-  color: #c3d1db;
+  color:#c3d1db !important;
+  /* color: #c3d1db; */
   border-radius: 5px;
 }
 
 .waw__editguide-description-div button:hover {
-  color: white;
-  border: 1px solid white;
+  color: white !important;
   cursor: pointer;
 }
 
@@ -156,6 +158,12 @@ button:hover {
   font-family: var(--font-family);
   /* flex-direction: column; */
 }
+.waw__editguide-rendered-description-div div div{
+  display: flex;
+  flex-direction: row;
+}
+
+
 
 .waw__editguide-rendered-description-div div button {
   margin: 1rem 1rem 0.5rem 1rem;
@@ -163,7 +171,6 @@ button:hover {
   padding: 0.3rem;
   border-radius: 5px;
   background-color: #1a2332;
-  border: 1px solid grey;
   color: #c3d1db;
   width: 10rem;
 }
@@ -207,7 +214,7 @@ button:hover {
 .waw__editguide-uploadpfp-div input::-webkit-file-upload-button {
   border-radius: 5px;
   font-size: 17px;
-  padding: 0.4rem;
+  padding: 0.2rem;
   /* border: 1px solid grey; */
   font-weight: 550;
 }
@@ -255,18 +262,18 @@ button:hover {
 
 .waw__editguide-editstep-button {
   display: flex;
-  padding: 0.5rem 40rem 0rem 0rem;
+  padding: 0.5rem 45rem 0rem 0rem;
   margin-left: 1.8rem;
 }
 
 .waw__editguide-editstep-button button {
-  background-color: #1a2332;
+  /* background-color: #1a2332; */
+  background-color:#263143 !important;
   border-radius: 5px;
-  border: 1px solid grey;
   padding: 0.4rem;
   color: #c3d1db;
   font-family: var(--font-family);
-  font-size: 17px;
+  font-size: 33px !important;
 }
 
 .waw__editguide-editstep-button button:hover {
@@ -382,7 +389,7 @@ button:hover {
 
 .waw__editguide-editstep-div div div button {
   background-color: #1a2332;
-  padding: 0.5rem;
+  padding: 0.4rem;
   color: #c3d1db;
   border-radius: 5px;
   border: 1px solid grey;
@@ -405,9 +412,12 @@ button:hover {
   border: none !important;
   font-size: 17px;
   width: 14rem;
-  margin-left: 22rem;
+  margin-left: 17rem;
 }
-
+.waw__editguide-editstep-div label{
+  margin: 0.24rem 0.5rem !important;
+  font-size: 25px !important;
+}
 .waw__editguide-editstep-div div div input::-webkit-file-upload-button {
   border-radius: 5px;
   padding: 0.1rem;
@@ -967,7 +977,7 @@ button:hover {
     outline: none;
     color: #c3d1db;
     border-radius: 5px;
-    width: 14rem;
+    width: 5rem;
   }
 
   .waw__editguide-description-div button:hover {
@@ -1497,7 +1507,7 @@ button:hover {
 
   .waw__editguide-editstep-button {
     display: flex;
-    padding: 0.5rem 24rem 0rem 0rem;
+    padding: 0.5rem 29rem 0rem 0rem;
   }
 
   .waw__editguide-editstep-button button {
@@ -1923,7 +1933,7 @@ button:hover {
   .waw__editguide-editstep-button {
     /* display: flex; */
     padding: 0rem 22rem 0rem 0rem;
-    margin: 1rem;
+    margin: 0rem !important;
   }
 
   .waw__editguide-editstep-button button {
@@ -2636,7 +2646,7 @@ button:hover {
     padding: 0.2rem;
     font-size: 15px;
     font-family: var(--font-family);
-    margin-left: 2rem;
+    margin-left: 0.2rem;
     background-color: #1a2332;
     border: 1px solid #c3d1db;
     outline: none;
@@ -3082,12 +3092,13 @@ button:hover {
     padding: 0.2rem;
     font-size: 15px;
     font-family: var(--font-family);
-    margin-left: 2rem;
+    margin-left: 0.2rem;
     background-color: #1a2332;
     border: 1px solid #c3d1db;
     outline: none;
     color: #c3d1db;
     border-radius: 5px;
+    width: 5rem;
   }
 
   .waw__editguide-description-div button:hover {
