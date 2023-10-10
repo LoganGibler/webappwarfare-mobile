@@ -74,18 +74,17 @@ const Profile = () => {
               >
                 {imageDirectoryList.length &&
                   imageDirectoryList.map((image) => {
-                    console.log("imageID", image);
-                    // let guide_id = image.split("_")[1];
-                    // list.push(guide_id);
-                    // if (guide_id === guide._id) {
-                    //   return (
-                    //     <img
-                    //       src={image}
-                    //       alt="img"
-                    //       className="waw__profile-guide-img"
-                    //     ></img>
-                    //   );
-                    // }
+                    let guide_id = image.split("_")[1];           
+                    list.push(guide_id);
+                    if (guide_id === guide._id) {
+                      return (
+                        <img
+                          src={image}
+                          alt="img"
+                          className="waw__profile-guide-img"
+                        ></img>
+                      );
+                    }
                   })}
                 {!list.includes(guide._id) && (
                   <div className="waw__profile-image-div">
