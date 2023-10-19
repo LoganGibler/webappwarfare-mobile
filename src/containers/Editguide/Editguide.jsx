@@ -10,6 +10,7 @@ import {
   unpublishGuide,
   deleteGuide,
 } from "../../api";
+
 import { useNavigate, useParams } from "react-router";
 import { getID, getUser } from "../../auth";
 import { storage } from "../../firebase.js";
@@ -18,6 +19,9 @@ import { BsCardImage } from "react-icons/bs";
 import { GrDocumentUpdate } from "react-icons/gr";
 import { FaUpload } from "react-icons/fa";
 import { TfiTrash } from "react-icons/tfi";
+import { BiSolidHide, BiSolidMessageAdd } from "react-icons/bi";
+import { AiOutlineUpload } from "react-icons/ai";
+import { IconContext } from "react-icons";
 import {
   ref,
   uploadBytes,
@@ -39,8 +43,9 @@ const Editguide = () => {
   const [stepImages, setStepImages] = useState([]);
   const [descriptionStatus, setDescriptionStatus] = useState(true);
   const [descriptionHtml, setDescriptionHtml] = useState(null);
-  const [showEditDescriptionButton, setShowEditDescriptionButton] =
-    useState(true);
+  const [showEditDescriptionButton, setShowEditDescriptionButton] = useState(
+    true
+  );
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
   const [showEditStepButton, setShowEditStepButton] = useState(true);
@@ -444,7 +449,10 @@ const Editguide = () => {
                     setNewStepHtml(renderNewStep(guide._id, stepCounter));
                   }}
                 >
-                  Add New Step &nbsp; ↑
+                  Add New Step &nbsp;
+                  <p className="addstep-icon">
+                    <BiSolidMessageAdd />
+                  </p>
                 </button>
                 <div>
                   {guide.published ? (
@@ -456,7 +464,7 @@ const Editguide = () => {
                         window.location.reload();
                       }}
                     >
-                      Unpublish
+                      Unpublish &nbsp; <p className="unpublish-icon"><BiSolidHide /></p>
                     </button>
                   ) : (
                     <button
@@ -469,7 +477,7 @@ const Editguide = () => {
                         window.location.reload();
                       }}
                     >
-                      Publish
+                      Publish &nbsp; <p className="publish-icon">&nbsp;<AiOutlineUpload /></p>
                     </button>
                   )}
 
@@ -481,7 +489,7 @@ const Editguide = () => {
                       window.location.reload();
                     }}
                   >
-                    Delete Guide
+                    Delete Guide &nbsp; <p className="delete-guide-icon"><TfiTrash /></p>
                   </button>
                 </div>
               </div>

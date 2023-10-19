@@ -47,7 +47,7 @@ const Profile = () => {
     fetchGuides(activeUser);
     fetchUnapprovedGuides();
     listAll(imageListReg).then((res) => {
-      console.log("this is res.items", res.items);
+      // console.log("this is res.items", res.items);
       res.items.forEach((item) => {
         getDownloadURL(item).then((url) => {
           setImageDirectoryList((prev) => [...prev, url]);

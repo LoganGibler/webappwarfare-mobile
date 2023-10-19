@@ -37,6 +37,7 @@ button:hover {
   /* border: 1px solid grey; */
   border: none !important;
 }
+
 .waw__editguide-guide {
   display: flex;
   flex-direction: column;
@@ -123,7 +124,7 @@ button:hover {
   background-color: #263143 !important;
   /* border: 1px solid grey; */
   outline: none;
-  color:#c3d1db !important;
+  color: #c3d1db !important;
   /* color: #c3d1db; */
   border-radius: 5px;
 }
@@ -158,7 +159,8 @@ button:hover {
   font-family: var(--font-family);
   /* flex-direction: column; */
 }
-.waw__editguide-rendered-description-div div div{
+
+.waw__editguide-rendered-description-div div div {
   display: flex;
   flex-direction: row;
 }
@@ -268,7 +270,7 @@ button:hover {
 
 .waw__editguide-editstep-button button {
   /* background-color: #1a2332; */
-  background-color:#263143 !important;
+  background-color: #263143 !important;
   border-radius: 5px;
   padding: 0.4rem;
   color: #c3d1db;
@@ -288,7 +290,7 @@ button:hover {
 }
 
 .waw__editguide-addstep-div button {
-  padding: 0.4rem;
+  padding: 0.6rem 0.6rem 0.4rem;
   border-radius: 5px;
   background-color: #1a2332;
   border: 1px solid grey;
@@ -298,7 +300,24 @@ button:hover {
 }
 
 .waw__editguide-addstep-button {
-  margin-left: 3rem;
+  margin-left: 2rem;
+  display: flex;
+}
+
+.addstep-icon {
+  font-size: 23px;
+}
+
+.unpublish-icon {
+  font-size: 23px;
+}
+
+.publish-icon {
+  font-size: 23px;
+}
+
+.delete-guide-icon {
+  font-size: 23px;
 }
 
 .waw__editguide-addstep-div button:hover {
@@ -414,10 +433,12 @@ button:hover {
   width: 14rem;
   margin-left: 17rem;
 }
-.waw__editguide-editstep-div label{
+
+.waw__editguide-editstep-div label {
   margin: 0.24rem 0.5rem !important;
   font-size: 25px !important;
 }
+
 .waw__editguide-editstep-div div div input::-webkit-file-upload-button {
   border-radius: 5px;
   padding: 0.1rem;
@@ -442,21 +463,24 @@ button:hover {
 
 .waw__editguide-addstep-div div {
   display: flex;
-  margin-left: 28rem;
+  margin-left: 23rem;
+  text-align: center;
 }
 
 .waw__editguide-addstep-div div button {
-  padding: 0.5 1rem;
+  padding: 0.5 0.5rem;
 }
 
 .waw__editguide-delete-button {
+  display: flex;
   background-color: red !important;
   border: 1px solid grey;
 }
 
-/* .waw__editguide-publish-button {
-  width: 12rem;
-} */
+.waw__editguide-publish-button {
+  display: flex;
+  text-align: center;
+}
 
 .waw__editguide-delete-button:hover {
   color: white;
