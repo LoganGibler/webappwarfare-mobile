@@ -443,7 +443,7 @@ const Editguide = () => {
             {showAddStepButton && (
               <div className="waw__editguide-addstep-div">
                 <button
-                  className="waw__editguide-addstep-button"
+                  className="waw__editguide-addstep-button1"
                   onClick={() => {
                     setShowAddStepButton(false);
                     setNewStepHtml(renderNewStep(guide._id, stepCounter));
@@ -454,21 +454,24 @@ const Editguide = () => {
                     <BiSolidMessageAdd />
                   </p>
                 </button>
-                <div>
+                <div className="waw__editguide_publish_delete_buttons">
                   {guide.published ? (
                     <button
-                      className="waw__editguide-publish-button"
+                      className="waw__editguide-publish-button1"
                       onClick={() => {
                         unpublishGuide(guide._id);
                         alert("Guide is now hidden from public view.");
                         window.location.reload();
                       }}
                     >
-                      Unpublish &nbsp; <p className="unpublish-icon"><BiSolidHide /></p>
+                      Unpublish &nbsp;{" "}
+                      <p className="unpublish-icon">
+                        <BiSolidHide />
+                      </p>
                     </button>
                   ) : (
                     <button
-                      className="waw__editguide-publish-button"
+                      className="waw__editguide-publish-button1"
                       onClick={() => {
                         publishGuide(guide._id);
                         alert(
@@ -477,19 +480,26 @@ const Editguide = () => {
                         window.location.reload();
                       }}
                     >
-                      Publish &nbsp; <p className="publish-icon">&nbsp;<AiOutlineUpload /></p>
+                      Publish &nbsp;{" "}
+                      <p className="publish-icon">
+                        &nbsp;
+                        <AiOutlineUpload />
+                      </p>
                     </button>
                   )}
 
                   <button
-                    className="waw__editguide-delete-button"
+                    className="waw__editguide-delete-button1"
                     onClick={() => {
                       deleteGuide(guide._id);
                       alert("Guide has been deleted.");
                       window.location.reload();
                     }}
                   >
-                    Delete Guide &nbsp; <p className="delete-guide-icon"><TfiTrash /></p>
+                    Delete Guide &nbsp;{" "}
+                    <p className="delete-guide-icon">
+                      <TfiTrash />
+                    </p>
                   </button>
                 </div>
               </div>

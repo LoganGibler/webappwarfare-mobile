@@ -275,7 +275,7 @@ button:hover {
   padding: 0.4rem;
   color: #c3d1db;
   font-family: var(--font-family);
-  font-size: 33px !important;
+  font-size: 30px !important;
 }
 
 .waw__editguide-editstep-button button:hover {
@@ -287,38 +287,18 @@ button:hover {
 .waw__editguide-addstep-div {
   display: flex;
   padding: 1rem 1.5rem;
+  justify-content: center;
 }
 
-.waw__editguide-addstep-div button {
-  padding: 0.6rem 0.6rem 0.4rem;
-  border-radius: 5px;
-  background-color: #1a2332;
-  border: 1px solid grey;
-  color: #c3d1db;
-  font-family: var(--font-family);
-  font-size: 17px;
-}
+
 
 .waw__editguide-addstep-button {
-  margin-left: 2rem;
+  /* margin-left: 2rem;
   display: flex;
+  text-wrap: none; */
 }
 
-.addstep-icon {
-  font-size: 23px;
-}
 
-.unpublish-icon {
-  font-size: 23px;
-}
-
-.publish-icon {
-  font-size: 23px;
-}
-
-.delete-guide-icon {
-  font-size: 23px;
-}
 
 .waw__editguide-addstep-div button:hover {
   cursor: pointer;
@@ -461,32 +441,82 @@ button:hover {
   border: 1px solid grey;
 }
 
-.waw__editguide-addstep-div div {
+.waw__editguide_publish_delete_buttons {
   display: flex;
-  margin-left: 23rem;
-  text-align: center;
 }
 
-.waw__editguide-addstep-div div button {
-  padding: 0.5 0.5rem;
+.waw__editguide-addstep-div button {
+  padding: 0.2rem 0.5rem;
+  align-items: center;
+  border-radius: 5px;
+  margin: 0.2rem;
 }
 
-.waw__editguide-delete-button {
+.waw__editguide-addstep-button1 {
   display: flex;
-  background-color: red !important;
-  border: 1px solid grey;
+  color: #c3d1db;
+  background-color: #1a2332;
 }
 
-.waw__editguide-publish-button {
-  display: flex;
-  text-align: center;
-}
-
-.waw__editguide-delete-button:hover {
-  color: white;
-  border: 1px solid white;
+.waw__editguide-addstep-button1:hover {
+  background-color: #263143;
   cursor: pointer;
+  color: white;
 }
+
+.waw__editguide-publish-button1 {
+  display: flex;
+  color: #c3d1db;
+  background-color: #1a2332;
+}
+
+.waw__editguide-publish-button1:hover {
+  background-color: #263143;
+  cursor: pointer;
+  color: white;
+}
+
+.waw__editguide-delete-button1 {
+  display: flex;
+  background-color: darkred;
+  color: #c3d1db;
+  font-weight: 550;
+}
+
+.waw__editguide-delete-button1:hover {
+  background-color: red;
+  color: white;
+}
+
+.addstep-icon {
+  margin-top: 0.4rem;
+  font-size: 23px;
+}
+
+.unpublish-icon {
+  font-size: 23px;
+}
+
+.publish-icon {
+  font-size: 23px;
+}
+
+.delete-guide-icon {
+  margin-top: 0.3rem;
+  font-size: 23px;
+}
+
+
+@media screen and (max-width: 460px) {
+  .unpublish-icon {
+    display: none !important;
+  }
+
+  .waw__editguide-addstep-div button {
+    margin: 0.05rem;
+  }
+}
+
 
 @media screen and (max-width: 895px) {
   .waw__editguide {
@@ -721,36 +751,6 @@ button:hover {
     font-family: var(--font-family);
   }
 
-  .waw__editguide-editstep-button button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
-
-  .waw__editguide-addstep-div {
-    display: flex;
-    padding: 1rem 3.8rem;
-  }
-
-  .waw__editguide-addstep-button {
-    margin-left: 0.7rem;
-  }
-
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -880,9 +880,6 @@ button:hover {
     border: 1px solid grey;
   }
 
-  .waw__editguide-addstep-div div {
-    margin-left: 13rem;
-  }
 }
 
 @media screen and (max-width: 733px) {
@@ -893,23 +890,6 @@ button:hover {
     font-family: var(--font-family);
   }
 
-  .waw__editguide-addstep-div div {
-    margin-left: 7rem;
-  }
-
-  .waw__editguide-delete-button {
-    width: 8rem !important;
-  }
-
-  /* .waw__editguide-publish-button {
-    width: 2rem !important;
-  } */
-
-  /* background-color: #1e1e1e; */
-  /* background-color: #1a2332 */
-  /* background-color: #263143; */
-  /* color: #a4b1cd; */
-  /* color: #c3d1db; */
   .waw__editguide-container {
     margin: 1rem 1rem 0rem 1rem;
     padding: 0rem 1rem;
@@ -1148,26 +1128,7 @@ button:hover {
     color: white;
   }
 
-  .waw__editguide-addstep-div {
-    display: flex;
-    padding: 1rem 3.2rem;
-  }
 
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -1305,10 +1266,6 @@ button:hover {
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
-  }
-
-  .waw__editguide-addstep-div div {
-    /* margin-left: 1rem; */
   }
 
   /* background-color: #1e1e1e; */
@@ -1543,32 +1500,7 @@ button:hover {
     font-family: var(--font-family);
   }
 
-  .waw__editguide-editstep-button button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
-  .waw__editguide-addstep-div {
-    display: flex;
-    padding: 1rem 1rem;
-  }
-
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -1709,14 +1641,6 @@ button:hover {
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
-  }
-
-  .waw__editguide-addstep-div div {
-    margin-left: 4.5rem;
-  }
-
-  .waw__editguide-addstep-div div button {
-    width: 6rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -1975,26 +1899,6 @@ button:hover {
     color: white;
   }
 
-  .waw__editguide-addstep-div {
-    display: flex;
-    padding: 1rem 1.5rem;
-  }
-
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -2139,20 +2043,7 @@ button:hover {
     margin: 0rem 0rem;
   }
 
-  .waw__editguide-addstep-div div {
-    margin-left: 0rem;
-  }
 
-  .waw__editguide-addstep-div div button {
-    width: 7rem;
-    padding: 0.2rem 0.5rem;
-  }
-
-  /* background-color: #1e1e1e; */
-  /* background-color: #1a2332 */
-  /* background-color: #263143; */
-  /* color: #a4b1cd; */
-  /* color: #c3d1db; */
   .waw__editguide-container {
     /* margin: 1rem 4rem 0rem 2rem; */
     /* display: flex; */
@@ -2228,11 +2119,6 @@ button:hover {
     text-align: center;
   }
 
-  /* background-color: #1e1e1e; */
-  /* background-color: #1a2332 */
-  /* background-color: #263143; */
-  /* color: #a4b1cd; */
-  /* color: #c3d1db; */
   .waw__editguide-description-div button {
     padding: 0.2rem;
     font-size: 15px;
@@ -2409,26 +2295,7 @@ button:hover {
     color: white;
   }
 
-  .waw__editguide-addstep-div {
-    display: flex;
-    padding: 1rem 1.5rem;
-  }
 
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -2571,14 +2438,6 @@ button:hover {
     justify-content: center;
     font-family: var(--font-family);
     margin: 0rem 0rem;
-  }
-
-  .waw__editguide-addstep-div div {
-    margin-left: 0rem;
-  }
-
-  .waw__editguide-addstep-div div button {
-    width: 6rem;
   }
 
   /* background-color: #1e1e1e; */
@@ -2841,37 +2700,7 @@ button:hover {
     color: white;
   }
 
-  .waw__editguide-addstep-div {
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1.5rem;
-  }
 
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
-
-  .waw__editguide-addstep-div div {
-    margin-top: 2rem;
-    display: flex;
-    justify-content: center;
-  }
-
-  .waw__editguide-addstep-div div button {
-    padding: 0.5rem;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -3019,13 +2848,6 @@ button:hover {
     margin: 0rem 0rem;
   }
 
-  .waw__editguide-addstep-div div {
-    margin-left: 0rem;
-  }
-
-  .waw__editguide-addstep-div div button {
-    width: 6rem;
-  }
 
   /* background-color: #1e1e1e; */
   /* background-color: #1a2332 */
@@ -3287,26 +3109,7 @@ button:hover {
     color: white;
   }
 
-  .waw__editguide-addstep-div {
-    display: flex;
-    padding: 1rem 1.5rem;
-  }
 
-  .waw__editguide-addstep-div button {
-    padding: 0.4rem;
-    border-radius: 5px;
-    background-color: #1a2332;
-    border: 1px solid grey;
-    color: #c3d1db;
-    font-family: var(--font-family);
-    font-size: 17px;
-  }
-
-  .waw__editguide-addstep-div button:hover {
-    cursor: pointer;
-    border: 1px solid white;
-    color: white;
-  }
 
   .waw__editguide-newstep-div {
     display: flex;
