@@ -2,11 +2,12 @@
   display: flex;
   justify-content: center;
   font-family: var(--font-family);
-  margin: 0rem 2rem;
+  margin: 4rem 2rem 0rem;
 }
 
 button {
   border: none !important;
+  font-family: var(--font-family);
 }
 
 button:hover {
@@ -165,8 +166,6 @@ button:hover {
   flex-direction: row;
 }
 
-
-
 .waw__editguide-rendered-description-div div button {
   margin: 1rem 1rem 0.5rem 1rem;
   font-size: 20px;
@@ -290,15 +289,11 @@ button:hover {
   justify-content: center;
 }
 
-
-
 .waw__editguide-addstep-button {
   /* margin-left: 2rem;
   display: flex;
   text-wrap: none; */
 }
-
-
 
 .waw__editguide-addstep-div button:hover {
   cursor: pointer;
@@ -506,7 +501,6 @@ button:hover {
   font-size: 23px;
 }
 
-
 @media screen and (max-width: 460px) {
   .unpublish-icon {
     display: none !important;
@@ -516,7 +510,6 @@ button:hover {
     margin: 0.05rem;
   }
 }
-
 
 @media screen and (max-width: 895px) {
   .waw__editguide {
@@ -751,7 +744,6 @@ button:hover {
     font-family: var(--font-family);
   }
 
-
   .waw__editguide-newstep-div {
     display: flex;
     justify-content: center;
@@ -879,7 +871,6 @@ button:hover {
     border-radius: 5px;
     border: 1px solid grey;
   }
-
 }
 
 @media screen and (max-width: 733px) {
@@ -1127,8 +1118,6 @@ button:hover {
     border: 1px solid white;
     color: white;
   }
-
-
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -1499,8 +1488,6 @@ button:hover {
     color: #c3d1db;
     font-family: var(--font-family);
   }
-
-
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -1899,7 +1886,6 @@ button:hover {
     color: white;
   }
 
-
   .waw__editguide-newstep-div {
     display: flex;
     justify-content: center;
@@ -2042,7 +2028,6 @@ button:hover {
     font-family: var(--font-family);
     margin: 0rem 0rem;
   }
-
 
   .waw__editguide-container {
     /* margin: 1rem 4rem 0rem 2rem; */
@@ -2294,8 +2279,6 @@ button:hover {
     border: 1px solid white;
     color: white;
   }
-
-
 
   .waw__editguide-newstep-div {
     display: flex;
@@ -2700,8 +2683,6 @@ button:hover {
     color: white;
   }
 
-
-
   .waw__editguide-newstep-div {
     display: flex;
     justify-content: center;
@@ -2847,7 +2828,6 @@ button:hover {
     font-family: var(--font-family);
     margin: 0rem 0rem;
   }
-
 
   /* background-color: #1e1e1e; */
   /* background-color: #1a2332 */
@@ -3108,8 +3088,6 @@ button:hover {
     border: 1px solid white;
     color: white;
   }
-
-
 
   .waw__editguide-newstep-div {
     display: flex;

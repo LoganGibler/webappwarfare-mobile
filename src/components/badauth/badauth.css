@@ -1,0 +1,38 @@
+.waw__bad-auth {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    text-align: center;
+    margin: 4rem 1rem 24rem;
+    font-family: var(--font-family);
+}
+
+/* background-color: #1e1e1e; */
+/* background-color: #1a2332 */
+/* background-color: #263143; */
+/* color: #a4b1cd; */
+/* color: #c3d1db; */
+/* background-color: #60efff; */
+.waw__bad_auth div {
+    display: flex;
+}
+
+.waw__bad-auth h2 {
+    font-size: 30px;
+}
+
+.waw__bad-auth button {
+    font-family: var(--font-family);
+    margin: 2rem 1rem;
+    /* width: 10rem; */
+    font-size: 18px;
+    padding: 0.4rem 2rem;
+    border-radius: 5px;
+    font-weight: 650;
+    background-color: #60efff;
+}
+
+.waw__bad-auth button:hover {
+    background-color: #263143;
+    color: white;
+}

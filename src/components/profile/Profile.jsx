@@ -7,11 +7,13 @@ import {
   getPublishedUnapprovedGuides,
   getUserByID,
   getUserByUsername,
+  userAuthenticated,
 } from "../../api/index.js";
 import { storage } from "../../firebase.js";
 import { ref, listAll, getDownloadURL } from "firebase/storage";
 import { getID, getUser } from "../../auth";
 import AdminView from "../adminview/AdminView";
+import BadAuth from "../badauth/BadAuth";
 
 let imageListReg = ref(storage, "/guidepfp/");
 
@@ -24,6 +26,13 @@ const Profile = () => {
   let list = [];
   let activeUser = getUser();
   let key = getID();
+  let [userAuth, setUserAuth] = useState(false);
+
+  async function fetchUserAuth() {
+    const userAuth = await userAuthenticated(activeUser);
+    console.log(userAuth.data.auth)
+    setUserAuth(userAuth.data.auth);
+  }
 
   async function fetchGuides() {
     const foundGuides = await getGuidesByUsername(activeUser);
@@ -43,6 +52,7 @@ const Profile = () => {
   }
 
   useEffect(() => {
+    fetchUserAuth();
     fetchUserData();
     fetchGuides(activeUser);
     fetchUnapprovedGuides();
@@ -55,6 +65,11 @@ const Profile = () => {
       });
     });
   }, []);
+
+  if (userAuth !== true) {
+    // localStorage.clear()
+    return <BadAuth />;
+  }
 
   return (
     <div className="waw__profile">
@@ -74,7 +89,7 @@ const Profile = () => {
               >
                 {imageDirectoryList.length &&
                   imageDirectoryList.map((image) => {
-                    let guide_id = image.split("_")[1];           
+                    let guide_id = image.split("_")[1];
                     list.push(guide_id);
                     if (guide_id === guide._id) {
                       return (
@@ -108,7 +123,7 @@ const Profile = () => {
             );
           })
         ) : (
-          <div classname="waw__profile-noguides">
+          <div className="waw__profile-noguides1">
             <div className="waw__profile-p-noguides-div">
               <p>This is where you can view and edit your created guides.</p>
               <p>

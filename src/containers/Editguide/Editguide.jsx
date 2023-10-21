@@ -9,6 +9,7 @@ import {
   publishGuide,
   unpublishGuide,
   deleteGuide,
+  userAuthenticated,
 } from "../../api";
 
 import { useNavigate, useParams } from "react-router";
@@ -16,12 +17,11 @@ import { getID, getUser } from "../../auth";
 import { storage } from "../../firebase.js";
 import { FiEdit } from "react-icons/fi";
 import { BsCardImage } from "react-icons/bs";
-import { GrDocumentUpdate } from "react-icons/gr";
 import { FaUpload } from "react-icons/fa";
 import { TfiTrash } from "react-icons/tfi";
 import { BiSolidHide, BiSolidMessageAdd } from "react-icons/bi";
 import { AiOutlineUpload } from "react-icons/ai";
-import { IconContext } from "react-icons";
+
 import {
   ref,
   uploadBytes,
@@ -30,15 +30,11 @@ import {
   deleteObject,
 } from "firebase/storage";
 import "./editguide.css";
+import { BadAuth } from "../../components";
 
 const Editguide = () => {
-  const { id } = useParams();
-  const navigate = useNavigate();
-  const key = getID();
   const [guide, setGuide] = useState([]);
   const [user, setUser] = useState("");
-  let [imageUpload, setImageUpload] = useState({});
-  let [imageList, setImageList] = useState([]);
   const [guidePFP, setGuidePFP] = useState([]);
   const [stepImages, setStepImages] = useState([]);
   const [descriptionStatus, setDescriptionStatus] = useState(true);
@@ -48,9 +44,13 @@ const Editguide = () => {
   );
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
-  const [showEditStepButton, setShowEditStepButton] = useState(true);
   const [editedStepIndex, setEditedStepIndex] = useState("");
   const [editedStepHtml, setEditedStepHtml] = useState(null);
+  const [userAuth, setUserAuth] = useState(false);
+
+  const { id } = useParams();
+  const key = getID();
+  const activeUser = getUser();
   const stepImagesRef = ref(storage, "/images/" + id);
   const guidePFPRef = ref(storage, "/guidepfp/");
   let inputed_img;
@@ -58,6 +58,7 @@ const Editguide = () => {
   let counter = 0;
   let stepCounter = 0;
   let list = [];
+  let navigate = useNavigate();
 
   const metadata = {
     contentType: "image/jpg",
@@ -115,12 +116,18 @@ const Editguide = () => {
           alert("Description too long. Please use less then 1000 characters.");
           document.location.reload();
         } else {
-          let updatedDescription = await updateDescription(
-            id,
-            newDescriptionData
-          );
-          document.location.reload();
-          return updatedDescription;
+          const authCheck = await userAuthenticated(activeUser);
+          // console.log(authCheck.data.auth);
+          if (authCheck.data.auth === true) {
+            let updatedDescription = await updateDescription(
+              id,
+              newDescriptionData
+            );
+            document.location.reload();
+            return updatedDescription;
+          } else {
+            alert("Auth check has failed. Please log in again.");
+          }
         }
       }
       return (
@@ -214,6 +221,10 @@ const Editguide = () => {
         let newStepData = await document.getElementById("editguide-step-data")
           .value;
         let newStep = await updateSteppie(id, stepCounter, newStepData);
+        console.log(newStep);
+        if (!newStep) {
+          alert("Auth check has failed. Please relog.");
+        }
         // return newStep;
       }
 
@@ -268,7 +279,13 @@ const Editguide = () => {
     setUser(user.user);
   }
 
+  async function fetchUserAuth() {
+    const userAuth = await userAuthenticated(activeUser);
+    setUserAuth(userAuth.data.auth);
+  }
+
   useEffect(() => {
+    fetchUserAuth();
     fetchGuide();
     listAll(stepImagesRef).then((res) => {
       res.items.forEach((item) => {
@@ -285,6 +302,10 @@ const Editguide = () => {
       });
     });
   }, []);
+
+  if (userAuth !== true) {
+    return <BadAuth />;
+  }
 
   return (
     <div className="waw__editguide">
@@ -493,6 +514,7 @@ const Editguide = () => {
                     onClick={() => {
                       deleteGuide(guide._id);
                       alert("Guide has been deleted.");
+                      navigate("/Profile");
                       window.location.reload();
                     }}
                   >
