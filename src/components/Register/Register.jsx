@@ -38,10 +38,10 @@ const Register = () => {
             // console.log(username, hashedPassword);
             let user = await createUser(username, hashedPassword);
             // console.log("this is user", user);
-            if (user.data.token) {
+            if (user.data) {
               let loggedInUser = await loginUser(username, hashedPassword);
-              //   console.log(loggedInUser);
-              let userData = loggedInUser.data.user;
+                console.log(loggedInUser);
+              let userData = await loggedInUser.data.user;
               logStatus(true);
               storeUser(userData.username);
               storeToken(loggedInUser.data.token);
@@ -49,6 +49,8 @@ const Register = () => {
               setUsername("");
               setPassword("");
               navigate("/Guides");
+            } else{
+              alert("Sign up failed. Please use another username.")
             }
           }
         }}

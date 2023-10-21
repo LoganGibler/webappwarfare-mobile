@@ -2,7 +2,7 @@ import { storage } from "../firebase.js";
 import { ref } from "firebase/storage";
 import axios from "axios";
 
-const env = "main";
+const env = "";
 if (env === "main") {
   var BASE = "https://waw-node-js-api.onrender.com";
 } else {
@@ -62,6 +62,16 @@ export async function getUserByUsername(username) {
   } catch (error) {
     throw error;
   }
+}
+
+export async function userAuthenticated(username) {
+  const response = await axios.get(`${BASE}/userauth`, {
+    headers: {
+      "x-access-token": localStorage.getItem("token"),
+      username: username,
+    },
+  });
+  return response;
 }
 /////////////////////////////////////////////////////////////////
 // GUIDE API CALLS
@@ -139,6 +149,12 @@ export async function deleteGuide(_id) {
       {
         _id: _id,
         api_pass: api_pass,
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+          username: localStorage.getItem("user"),
+        },
       }
     );
     return data;
@@ -183,11 +199,20 @@ export async function getGuidesByUsername(author) {
 
 export async function updateDescription(id, description) {
   try {
-    const { data } = await axios.post(`${BASE}/updateDescription`, {
-      id: id,
-      description: description,
-      api_pass: api_pass,
-    });
+    const { data } = await axios.post(
+      `${BASE}/updateDescription`,
+      {
+        id: id,
+        description: description,
+        api_pass: api_pass,
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+          username: localStorage.getItem("user"),
+        },
+      }
+    );
     return data;
   } catch (error) {
     throw error;
@@ -198,11 +223,20 @@ export async function addStep(_id, step) {
   // console.log("_id on api:", _id);
   // console.log("step on api:", step);
   try {
-    const { data } = await axios.post(`${BASE}/addstep`, {
-      _id: _id,
-      step: step,
-      api_pass: api_pass,
-    });
+    const { data } = await axios.post(
+      `${BASE}/addstep`,
+      {
+        _id: _id,
+        step: step,
+        api_pass: api_pass,
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+          username: localStorage.getItem("user"),
+        },
+      }
+    );
 
     // console.log("this is data after frontend api", data);
     return data;
@@ -214,11 +248,20 @@ export async function addStep(_id, step) {
 export async function deleteStep(_id, index) {
   try {
     // console.log("This is passed in index", index);
-    const deletedStep = await axios.post(`${BASE}/deleteStep`, {
-      _id: _id,
-      index: index,
-      api_pass: api_pass,
-    });
+    const deletedStep = await axios.post(
+      `${BASE}/deleteStep`,
+      {
+        _id: _id,
+        index: index,
+        api_pass: api_pass,
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+          username: localStorage.getItem("user"),
+        },
+      }
+    );
 
     return deletedStep;
   } catch (error) {
@@ -228,12 +271,21 @@ export async function deleteStep(_id, index) {
 
 export async function updateSteppie(id, index, newStepData) {
   try {
-    const { data } = await axios.post(`${BASE}/updateStep`,{
-      id: id,
-      index: index,
-      newStepData: newStepData,
-      api_pass: api_pass,
-    });
+    const { data } = await axios.post(
+      `${BASE}/updateStep`,
+      {
+        id: id,
+        index: index,
+        newStepData: newStepData,
+        api_pass: api_pass,
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+          username: localStorage.getItem("user"),
+        },
+      }
+    );
     return data;
   } catch (error) {
     throw error;
@@ -257,18 +309,27 @@ export async function createGuide(
   let date = `${month}-${day}-${year}`;
 
   try {
-    const { data } = await axios.post(`${BASE}/createPost`, {
-      vmtitle: vmtitle,
-      hostedby: hostedby,
-      description: description,
-      published: published,
-      author: author,
-      date: date,
-      difficulty: difficulty,
-      approved: approved,
-      featured: featured,
-      api_pass: api_pass,
-    });
+    const { data } = await axios.post(
+      `${BASE}/createPost`,
+      {
+        vmtitle: vmtitle,
+        hostedby: hostedby,
+        description: description,
+        published: published,
+        author: author,
+        date: date,
+        difficulty: difficulty,
+        approved: approved,
+        featured: featured,
+        api_pass: api_pass,
+      },
+      {
+        headers: {
+          "x-access-token": localStorage.getItem("token"),
+          username: localStorage.getItem("user"),
+        },
+      }
+    );
 
     // console.log("this is data after frontend api", data);
     return data;

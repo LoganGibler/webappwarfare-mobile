@@ -25,19 +25,20 @@ const Login = () => {
           hashedPassword = hashedPassword.data.hashed_pass;
           //   console.log(hashedPassword);
           const user = await loginUser(username, hashedPassword);
-
+          console.log(user.data.auth);
           const user_info = user.data.user;
-          if (!user_info) {
-            setUsername("");
-            setPassword("");
-            alert("Username or Password was incorrect. Please try again.");
-          } else {
+          if (user.data.auth === true) {
+            localStorage.setItem("token", JSON.stringify(user.data.token));
             storeID(user_info._id);
             storeUser(user_info.username);
             logStatus(true);
             setUsername("");
             setPassword("");
-            navigate("/Profile");
+            navigate("/Guides");
+          } else {
+            setUsername("");
+            setPassword("");
+            alert("Username or Password was incorrect. Please try again.");
           }
         }}
       >

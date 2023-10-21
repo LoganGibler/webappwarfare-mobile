@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./guideform.css";
 import logo from "../../pics/logoBlue.png";
 import { getUser } from "../../auth";
-import { createGuide } from "../../api";
+import { createGuide, userAuthenticated } from "../../api";
 import { useNavigate } from "react-router-dom";
+import BadAuth from "../badauth/BadAuth";
 
 const GuideForm = () => {
   let navigate = useNavigate();
@@ -14,11 +15,25 @@ const GuideForm = () => {
   let [difficulty, setDifficulty] = useState("");
   let [titleRequirements, setTitleRequirements] = useState(false);
   let [hostRequirements, setHostRequirements] = useState(false);
+  let [userAuth, setUserAuth] = useState(false);
 
   function getCategoryOption() {
     let selectElement = document.querySelector("#dropdown_difficulty");
     let output = selectElement.options[selectElement.selectedIndex].value;
     return output;
+  }
+
+  async function fetchUserAuth() {
+    const userAuth = await userAuthenticated(author);
+    setUserAuth(userAuth.data.auth);
+  }
+
+  useEffect(() => {
+    fetchUserAuth();
+  }, []);
+
+  if (userAuth !== true) {
+    return <BadAuth />;
   }
 
   return (
