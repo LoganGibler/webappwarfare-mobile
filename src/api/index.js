@@ -2,7 +2,7 @@ import { storage } from "../firebase.js";
 import { ref } from "firebase/storage";
 import axios from "axios";
 
-const env = "";
+const env = "main";
 if (env === "main") {
   var BASE = "https://waw-node-js-api.onrender.com";
 } else {
