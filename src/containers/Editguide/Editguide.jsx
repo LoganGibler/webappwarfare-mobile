@@ -39,9 +39,8 @@ const Editguide = () => {
   const [stepImages, setStepImages] = useState([]);
   const [descriptionStatus, setDescriptionStatus] = useState(true);
   const [descriptionHtml, setDescriptionHtml] = useState(null);
-  const [showEditDescriptionButton, setShowEditDescriptionButton] = useState(
-    true
-  );
+  const [showEditDescriptionButton, setShowEditDescriptionButton] =
+    useState(true);
   const [showAddStepButton, setShowAddStepButton] = useState(true);
   const [newStepHtml, setNewStepHtml] = useState(null);
   const [editedStepIndex, setEditedStepIndex] = useState("");
@@ -187,7 +186,8 @@ const Editguide = () => {
                   window.location.reload();
                 }}
               >
-                Submit Step
+                Add Step &nbsp;
+                <FaUpload />
               </button>
               <input
                 className="waw__editguide-step-image-input"

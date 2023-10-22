@@ -7,7 +7,7 @@
     display: flex;
     align-content: space-evenly;
     flex-direction: column;
-    padding: 1rem 1rem;
+    padding: 1rem 0.5rem;
     margin: 1rem 0rem 2rem;
     align-items: center;
     background-color: #263143;
@@ -25,7 +25,7 @@
 }
 
 .waw__rec-guide {
-    margin: 1rem 0.8rem;
+    margin: 1rem 0.6rem;
     display: flex;
     flex-direction: column;
     padding: 0.3rem 0.5rem 0.5rem;
@@ -33,7 +33,7 @@
     /* background: var(--color-bg); */
     background-color: #263143 !important;
     border-radius: 5px;
-    width: 12rem;
+    width: 13rem;
     height: 11rem;
     transition: all 0.25s ease-in-out;
     -webkit-box-shadow: 0px 0px 12px 9px rgba(26, 35, 50, 1);

@@ -4,22 +4,19 @@ import { RiMenu3Line, RiCloseLine } from "react-icons/ri";
 import logo from "../../pics/logoBlue.png";
 import { useNavigate } from "react-router-dom";
 import { useLiveQuery } from "dexie-react-hooks";
-import { db } from "../../indexedDB";
 import { getLogStatus } from "../../auth";
 
 const Navigation = () => {
-  const { user } = db;
-  const allItems = useLiveQuery(() => user.toArray(), []);
   const [toggleMenu, setToggleMenu] = useState(false);
   const [activeUser, setActiveUser] = useState("");
 
   let navigate = useNavigate();
-  useEffect(() => {
-    if (allItems) {
-      var userQuery = allItems[0];
-      setActiveUser(userQuery);
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (allItems) {
+  //     var userQuery = allItems[0];
+  //     setActiveUser(userQuery);
+  //   }
+  // }, []);
 
   const loggedIn = getLogStatus();
 

@@ -180,6 +180,7 @@ button:hover {
   cursor: pointer;
   color: white;
   border: 1px solid white;
+  background-color: #263143;
 }
 
 .waw__editguide-uploadpfp-div {
@@ -281,6 +282,7 @@ button:hover {
   cursor: pointer;
   border: 1px solid white;
   color: white;
+  background-color: #263143 !important;
 }
 
 .waw__editguide-addstep-div {
@@ -344,6 +346,7 @@ button:hover {
   cursor: pointer;
   color: white;
   border: 1px solid white;
+  background-color: #263143;
 }
 
 .waw__editguide-uploadss {}
@@ -394,6 +397,7 @@ button:hover {
   cursor: pointer;
   color: white;
   border: 1px solid white;
+  background-color: #263143;
 }
 
 .waw__editguide-editstep-div div div input {
@@ -445,6 +449,7 @@ button:hover {
   align-items: center;
   border-radius: 5px;
   margin: 0.2rem;
+  font-size: 17px;
 }
 
 .waw__editguide-addstep-button1 {
@@ -501,13 +506,18 @@ button:hover {
   font-size: 23px;
 }
 
-@media screen and (max-width: 460px) {
+@media screen and (max-width: 520px) {
+  .waw__editguide-addstep-div{
+    flex-wrap: wrap;
+  }
+
   .unpublish-icon {
     display: none !important;
   }
 
   .waw__editguide-addstep-div button {
     margin: 0.05rem;
+    font-size: 14px;
   }
 }
 
