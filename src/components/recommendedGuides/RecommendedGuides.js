@@ -38,7 +38,9 @@ const RecommendedGuides = () => {
           {guides.length
             ? guides.map((guide) => {
                 return (
-                  <div className="waw__rec-guide" key={guide._id}>
+                  <div className="waw__rec-guide" key={guide._id} onClick={()=>{
+                    navigate(`/guide/${guide._id}`);
+                  }}>
                     {guideImgs &&
                       guideImgs.map((image) => {
                         const imageGuideID = image.split("_")[1];
